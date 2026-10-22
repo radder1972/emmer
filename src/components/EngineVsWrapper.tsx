@@ -13,16 +13,16 @@ export const EngineVsWrapper: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-left max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono mb-4 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono mb-4 shadow-sm">
             <RadderIconZap size={14} strokeWidth={2} color="#ff451a" />
-            <span>VERGELIJKING // PLACEHOLDER</span>
+            <span>VERGELIJKING // HET FUNDAMENT</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
-            Lorem ipsum dolor sit amet <br />
-            <span className="text-neutral-500">Consectetur adipiscing elit</span>
+            De Motor versus Het Sausje: <br />
+            <span className="text-neutral-500">Waarom traditionele bureaus vastlopen.</span>
           </h2>
           <p className="mt-4 text-neutral-600 text-base sm:text-lg leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            Klassieke bureaus verkopen uren, meetings en een mooie visuele schil over logge standaardsoftware. RaddeR bouwt direct aan de kern: vlijmscherpe domeinlogica, schaalbare architectuur en 100% eigenaarschap.
           </p>
         </div>
 

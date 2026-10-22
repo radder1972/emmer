@@ -33,18 +33,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
           <div className="relative z-10 max-w-4xl text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm mb-4">
               <RadderIconManifest size={14} strokeWidth={2} color="#ff451a" />
-              <span>HET MANIFEST // PLACEHOLDER</span>
+              <span>HET MANIFEST // ONZE REIS IN CODE</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 leading-[1.08]">
-              Lorem ipsum dolor sit amet, <br />
+              Van de eerste AI-stappen <br />
               <span className="text-neutral-600">
-                consectetur adipiscing elit.
+                tot de snelle development van whatever.
               </span>
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed">
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Wat begon met nieuwsgierige prompts en vroege experimenten, is geëvolueerd tot een ongekende symbiose tussen menselijke architectuur en agentic IDE-kracht. We bouwen niet met trage overdrachtslagen, maar vangen strategie, datamodellen en code in één directe creatiestroom.
             </p>
 
             {/* Quick Action CTAs */}
@@ -86,7 +86,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <span>01. DE STRATEEG</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+              Vlijmscherpe domeinanalyse en focus. We bepalen direct wat de kernwaarde van het product is en elimineren bureaucratische ruis.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <span>02. DE ARCHITECT</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.
+              Robuuste datamodellen en schaalbare enterprise infrastructuren, ontworpen voor zero-lag en 100% eigenaarschap.
             </p>
           </div>
 
@@ -106,7 +106,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <span>03. DE MAKER</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+              Agentic executiekracht. Samen met autonome AI realiseren we in uren wat voorheen hele ontwikkelteams maanden kostte.
             </p>
           </div>
         </div>
@@ -117,11 +117,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
             <span className="w-2 h-2 rounded-full bg-[#ff451a] animate-pulse"></span>
             <span className="text-neutral-950 font-semibold">RaddeR STUDIO</span>
           </div>
-          <div className="flex flex-wrap gap-4 text-[11px] text-neutral-500">
-            <span>• LOREM IPSUM DOLOR</span>
-            <span>• CONSECTETUR ADIPISCING</span>
-            <span>• SED DO EIUSMOD</span>
-            <span>• TEMPOR INCIDIDUNT</span>
+          <div className="flex flex-wrap gap-4 text-[11px] text-neutral-500 font-mono">
+            <span>• VAN PROMPT NAAR PRODUCTIE</span>
+            <span>• DIRECTE FEEDBACKLOOP</span>
+            <span>• 100% CODE-EIGENAARSCHAP</span>
+            <span>• DIRECT AAN DE MOTOR</span>
           </div>
         </div>
       </div>

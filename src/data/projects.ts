@@ -287,59 +287,59 @@ export const PHILOSOPHY_PILLARS = [
 
 export const ENGINE_COMPARISONS = [
   {
-    category: 'Domein Alpha',
+    category: 'B2B Configuratoren & Maakindustrie',
     standardBureau: {
-      title: 'Standaard Aanpak',
+      title: 'Standaard Marketingbureau',
       items: [
-        'Lorem ipsum dolor sit amet consectetur',
-        'Sed do eiusmod tempor incididunt ut labore',
-        'Ut enim ad minim veniam quis nostrud',
+        'Wekenlange vergadersessies en trage functionele ontwerpen',
+        'Statische PDF-catalogus met handmatige e-mailopvolging die dagen kost',
+        'Fragiele plugins bovenop generieke e-commerce templates',
       ],
     },
     mrEngine: {
-      title: 'RaddeR Aanpak',
+      title: 'RaddeR Architectuur',
       items: [
-        'Duis aute irure dolor in reprehenderit in voluptate',
-        'Excepteur sint occaecat cupidatat non proident',
-        'Sunt in culpa qui officia deserunt mollit anim',
+        'Realtime parametrische rekenmotor met maattolerantie-validatie',
+        'Directe offerte-calculatie en foutloze productiedata-dispatch in seconden',
+        'High-performance Next.js architectuur met 100% code-eigenaarschap',
       ],
     },
   },
   {
-    category: 'Domein Beta',
+    category: 'HealthTech & Zorgapplicaties',
     standardBureau: {
-      title: 'Standaard Aanpak',
+      title: 'Standaard Marketingbureau',
       items: [
-        'Temporibus autem quibusdam et aut officiis',
-        'Debitis aut rerum necessitatibus saepe eveniet',
-        'Ut et voluptates repudiandae sint et molestiae',
+        'Generieke formulier-plugins zonder begrip van klinische protocollen',
+        'Papieren vragenlijsten en fysieke opstellingen blijven handmatig werk',
+        'Privacy-risico’s door overbodige externe trackers en server-opslag',
       ],
     },
     mrEngine: {
-      title: 'RaddeR Aanpak',
+      title: 'RaddeR Architectuur',
       items: [
-        'Itaque earum rerum hic tenetur a sapiente delectus',
-        'Ut aut reiciendis voluptatibus maiores alias consequatur',
-        'Perferendis doloribus asperiores repellat labore et dolore',
+        'Interactief 2D werkbord voor live therapeutische tafelopstellingen',
+        'Geautomatiseerde normering en scoring van gevalideerde vragenlijsten (YSQ/SMI)',
+        'Client-side privacy architectuur conform medische richtlijnen',
       ],
     },
   },
   {
-    category: 'Domein Gamma',
+    category: 'Lokale Dominantie & Performance',
     standardBureau: {
-      title: 'Standaard Aanpak',
+      title: 'Standaard Marketingbureau',
       items: [
-        'Nemo enim ipsam voluptatem quia voluptas',
-        'Sit aspernatur aut odit aut fugit sed quia',
-        'Consequuntur magni dolores eos qui ratione',
+        'Zware templates vol logge plugins en mobiele laadtijden boven 3 seconden',
+        'Oppervlakkige SEO-zoekwoorddumping zonder semantische datastructuur',
+        'Complexe formulieren en pop-ups die senioren en bezoekers afschrikken',
       ],
     },
     mrEngine: {
-      title: 'RaddeR Aanpak',
+      title: 'RaddeR Architectuur',
       items: [
-        'Neque porro quisquam est qui dolorem ipsum quia dolor',
-        'Sit amet consectetur adipisci velit sed quia non numquam',
-        'Eius modi tempora incidunt ut labore et dolore magnam',
+        'Sub-300ms laadtijd met 100/100 Core Web Vitals op mobiel en desktop',
+        'Diepe Schema.org LocalBusiness entiteiten voor #1 Google Maps posities',
+        'Frictieloze, toegankelijke conversietrechter voor afspraken en advies',
       ],
     },
   },

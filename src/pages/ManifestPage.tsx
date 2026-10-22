@@ -34,10 +34,10 @@ export const ManifestPage: React.FC<ManifestPageProps> = ({
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-left">
             <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 tracking-tight">
-              Lorem ipsum dolor sit amet consectetur?
+              Klaar om direct te bouwen aan de motor?
             </h3>
             <p className="text-sm text-neutral-600 mt-1">
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Bekijk onze geselecteerde productiecases of ontmoet de maker achter RaddeR.
             </p>
           </div>
           <div className="flex items-center gap-3">
