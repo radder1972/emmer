@@ -27,41 +27,37 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-start justify-between gap-10 pb-12 border-b border-neutral-300">
           {/* Identity & Emblem */}
-          <div className="space-y-4 max-w-md">
+          <div className="space-y-6 max-w-md text-left">
             <a
               href="/"
               onClick={(e) => {
                 e.preventDefault();
                 handleNav('manifest');
               }}
-              className="inline-flex items-start gap-4 group cursor-pointer text-left"
+              className="flex flex-col items-start gap-4 group cursor-pointer text-left"
               title="RaddeR — Naar Manifest"
             >
-              {/* Scaled logo flush-aligned at the top */}
-              <div className="shrink-0 flex items-start text-neutral-950 group-hover:opacity-85 transition-opacity">
-                <RadderLogo height={56} tight={true} color="#0a0a0a" glow={false} />
+              {/* Logo flush left */}
+              <div className="text-neutral-950 group-hover:opacity-80 transition-opacity">
+                <RadderLogo size={64} tight={true} color="#0a0a0a" glow={false} />
               </div>
 
-              {/* Wordmark + Subtitle flush-aligned at the top to form a rectangular block */}
-              <div className="flex flex-col justify-between" style={{ height: 56 }}>
+              {/* Wordmark + Subtitle flush left */}
+              <div className="space-y-1.5 text-left">
                 <RadderWordmark
-                  height={36}
+                  height={38}
                   tight={true}
                   color="#0a0a0a"
                   glow={false}
-                  className="text-neutral-950 group-hover:opacity-85 transition-opacity"
+                  className="text-neutral-950 group-hover:opacity-80 transition-opacity"
                 />
-                <div className="text-[10px] sm:text-[11px] font-mono text-neutral-600 uppercase tracking-wider font-semibold leading-none group-hover:text-neutral-950 transition-colors">
+                <div className="text-[10px] sm:text-[11px] font-mono text-neutral-600 uppercase tracking-wider font-semibold group-hover:text-neutral-950 transition-colors">
                   SYSTEMS & PRODUCT ARCHITECTURE
                 </div>
               </div>
             </a>
 
-            <p className="text-xs text-neutral-700 leading-relaxed font-sans max-w-sm">
-              Complexe domeinlogica direct vertaald naar werkende, schaalbare software.
-            </p>
-
-            <div className="text-[11px] text-neutral-500 space-y-1">
+            <div className="text-[11px] text-neutral-500 space-y-1 pt-1">
               <div>// STUDIO: RaddeR // FOUNDED: NETHERLANDS</div>
               <div>// BUILT WITH: ANTIGRAVITY AGENTIC IDE + REACT + TAILWIND</div>
             </div>
