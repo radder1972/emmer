@@ -47,7 +47,7 @@ export const RadderLogo: React.FC<RadderLogoProps> = ({
     return (
       <div
         className={`relative inline-flex items-center justify-center select-none ${className} ${
-          glow ? "drop-shadow-[0_10px_25px_rgba(255,255,255,0.25)]" : "drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
+          glow ? "drop-shadow-[0_10px_25px_rgba(255,255,255,0.25)]" : ""
         }`}
         style={{ width: pixelWidth, height: pixelHeight }}
       >
@@ -64,7 +64,7 @@ export const RadderLogo: React.FC<RadderLogoProps> = ({
   return (
     <div
       className={`relative inline-flex items-center justify-center select-none ${className} ${
-        glow ? "drop-shadow-[0_0_24px_rgba(255,255,255,0.4)]" : "drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+        glow ? "drop-shadow-[0_0_24px_rgba(255,255,255,0.4)]" : ""
       }`}
       style={{ width: pixelWidth, height: pixelHeight }}
     >

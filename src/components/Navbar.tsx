@@ -98,7 +98,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               title="RaddeR — Naar Manifest"
               className="relative flex items-center justify-center p-1.5 rounded-2xl hover:bg-black/[0.04] transition-all group cursor-pointer"
             >
-              <div className="transition-transform duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_4px_16px_rgba(0,0,0,0.15)]">
+              <div className="transition-transform duration-300 group-hover:scale-105">
                 <RadderLogo
                   size={scrolled ? 74 : 96}
                   variant="vector"
