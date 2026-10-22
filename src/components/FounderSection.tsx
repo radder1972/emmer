@@ -29,8 +29,8 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 leading-[1.08]">
-              Complexe softwareproblemen los je op <br />
-              <span className="text-neutral-600">door direct te bouwen aan de motor.</span>
+              Complexe problemen los je op <br />
+              <span className="text-neutral-600">door te bouwen aan de motor.</span>
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed">
@@ -71,7 +71,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
           {/* Right Column: Authentic Narrative & Philosophy */}
           <div className="lg:col-span-7 text-left space-y-7">
             <p className="text-base sm:text-lg text-neutral-800 leading-relaxed font-normal">
-              Mijn werk draait om één fundamentele overtuiging: complexe softwareproblemen los je niet op met overdrachtsmomenten en managementlagen, maar door direct te bouwen aan de motor. Ik elimineer de ruis tussen analist, designer en bouwer door strategie, architectuur en code in één directe feedbackloop te vangen. Je spreekt met degene die het systeem daadwerkelijk ontwerpt en bouwt.
+              Mijn werk draait om één fundamentele overtuiging: complexe problemen los je niet op met overdrachtsmomenten en managementlagen, maar door te bouwen aan de motor. Ik elimineer de ruis tussen analist, designer en bouwer door strategie, architectuur en code in één directe feedbackloop te vangen. Je spreekt met degene die het systeem daadwerkelijk ontwerpt en bouwt.
             </p>
 
             {/* Two Core Competence Pillars */}
