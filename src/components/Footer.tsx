@@ -25,9 +25,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="bg-[#ece9e1] border-t border-neutral-300/90 py-16 text-neutral-600 font-mono text-xs text-left relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-neutral-300">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-10 pb-12 border-b border-neutral-300">
           {/* Identity & Emblem */}
-          <div className="md:col-span-5 space-y-4">
+          <div className="space-y-4 max-w-md">
             <div className="flex items-center gap-4">
               <a
                 href="/"
@@ -67,65 +67,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          {/* Core Case References */}
-          <div className="md:col-span-4 space-y-3">
-            <div className="text-neutral-950 font-bold uppercase tracking-wider text-[11px]">
-              DOMEIN ARCHITECTUREN
-            </div>
-            <ul className="space-y-2 text-neutral-600">
-              <li>
-                <a
-                  href="/cases"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNav('cases');
-                  }}
-                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
-                >
-                  • Schematherapie Suite (Local-First GGZ)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/cases"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNav('cases');
-                  }}
-                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
-                >
-                  • Nieuwbouw Perceelkiezer (PDOK / Kadaster)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/cases"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNav('cases');
-                  }}
-                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
-                >
-                  • True Time Thai (Pattaya App & Storefront)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/cases"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNav('cases');
-                  }}
-                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
-                >
-                  • Palrom Products ("From Tree to Trade" Fleet)
-                </a>
-              </li>
-            </ul>
-          </div>
-
           {/* Quick Navigation & Back to top */}
-          <div className="md:col-span-3 flex flex-col justify-between space-y-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end md:items-start gap-10 sm:gap-16">
             <div className="space-y-2">
               <div className="text-neutral-950 font-bold uppercase tracking-wider text-[11px]">
                 MENU
@@ -176,7 +119,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-2 text-xs text-neutral-600 hover:text-neutral-950 transition-colors group cursor-pointer pt-4"
+              className="flex items-center gap-2 text-xs text-neutral-600 hover:text-neutral-950 transition-colors group cursor-pointer pt-0 sm:pt-6"
             >
               <div className="p-2 rounded-lg bg-neutral-200/70 border border-neutral-300 group-hover:bg-neutral-950 group-hover:text-white transition-all text-neutral-950">
                 <ArrowUp className="w-3.5 h-3.5" />
