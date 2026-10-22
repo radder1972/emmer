@@ -23,18 +23,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
         <div className="max-w-4xl text-left space-y-7">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-neutral-900" />
-            <span>Niet het oppervlakkige sausje. <strong className="text-neutral-950 font-bold">De motor.</strong></span>
+            <span>Lorem Ipsum Dolor // <strong className="text-neutral-950 font-bold">Placeholder</strong></span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-neutral-950 leading-[1.05]">
-            Waar een standaard bureau stopt bij de buitenkant,{' '}
+            Lorem ipsum dolor sit amet,{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-950 via-neutral-800 to-neutral-600">
-              bouwen wij de motor.
+              consectetur adipiscing elit.
             </span>
           </h1>
 
           <p className="text-lg sm:text-xl text-neutral-600 max-w-2xl font-normal leading-relaxed">
-            Wij vertalen complexe domeinlogica direct naar werkende, schaalbare software. Geen oppervlakkig sausje, maar robuuste productontwikkeling.
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
 
           {/* Quick Action CTAs */}
@@ -55,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               className="px-5 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-neutral-900 border border-neutral-300 font-mono text-sm tracking-wide transition-all flex items-center gap-2 shadow-sm cursor-pointer"
             >
               <Layers className="w-4 h-4 text-neutral-900" />
-              <span>Motor vs. Sausje</span>
+              <span>Vergelijking</span>
             </button>
 
             <button
@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <span>01. DE ARCHITECT</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              Local-first applicaties, robuuste data-architectuur en veilige webtechnologie.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.
             </p>
           </div>
 
@@ -85,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <span>02. DE STRATEEG</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              Zorgdiagnostiek, kadastrale geodata en schaalbare B2B ketenmodellen.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
             </p>
           </div>
 
@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <span>03. DE MAKER</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              Van webapplicaties en design tokens tot fysieke storefronts en vloten.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
             </p>
           </div>
         </div>
@@ -104,13 +104,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
         <div className="mt-6 p-4 rounded-xl bg-white/70 border border-neutral-200/90 shadow-sm flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-neutral-600">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-neutral-950"></span>
-            <span className="text-neutral-950 font-semibold">RaddeR STUDIO ENGINE</span>
+            <span className="text-neutral-950 font-semibold">RaddeR STUDIO</span>
           </div>
           <div className="flex flex-wrap gap-4 text-[11px] text-neutral-500">
-            <span>• 100% AVG LOCAL-FIRST</span>
-            <span>• LIVE PDOK / KADASTER</span>
-            <span>• VEILIGE DATA-ARCHITECTUUR</span>
-            <span>• PHYSICAL STOREFRONTS & FLEETS</span>
+            <span>• LOREM IPSUM DOLOR</span>
+            <span>• CONSECTETUR ADIPISCING</span>
+            <span>• SED DO EIUSMOD</span>
+            <span>• TEMPOR INCIDIDUNT</span>
           </div>
         </div>
       </div>

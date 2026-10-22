@@ -7,10 +7,10 @@ import { SparrenPage } from './pages/SparrenPage';
 import { Footer } from './components/Footer';
 
 const PAGE_TITLES: Record<PageId, string> = {
-  manifest: 'RaddeR — Manifest | Systems & Product Architecture',
-  cases: 'RaddeR — Cases | Geselecteerde Domein-Architecturen',
-  'over-ons': 'RaddeR — Over Ons | De Interdisciplinaire Driehoek',
-  sparren: 'RaddeR — Sparren | Plan Direct een Sparringsessie & Blauwdruk',
+  manifest: 'RaddeR — Manifest',
+  cases: 'RaddeR — Cases',
+  'over-ons': 'RaddeR — Over Ons',
+  sparren: 'RaddeR — Sparren',
 };
 
 const resolvePageFromLocation = (): PageId => {

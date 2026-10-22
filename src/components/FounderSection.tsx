@@ -43,16 +43,16 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
           <div className="lg:col-span-7 text-left space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono">
               <Terminal className="w-3.5 h-3.5 text-neutral-950" />
-              <span>OVER RaddeR // DE MAKER ACHTER DE MOTOR</span>
+              <span>OVER ONS // PLACEHOLDER</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight leading-[1.1]">
-              Geen accountmanagers. <br />
-              <span className="text-neutral-600">Direct sparren met de maker.</span>
+              Lorem ipsum dolor sit amet, <br />
+              <span className="text-neutral-600">consectetur adipiscing elit.</span>
             </h1>
 
             <p className="text-base sm:text-lg text-neutral-700 leading-relaxed font-normal">
-              RaddeR is opgericht door <strong>Matthias Radder</strong> vanuit één heldere overtuiging: complexe softwareproblemen los je niet op met bureau-lagen, tussenpersonen of mooie praatjes. Je lost ze op door direct te bouwen aan de motor.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
 
             {/* Three direct guarantees */}
@@ -60,19 +60,19 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
               <div className="flex items-start gap-3 text-sm text-neutral-700 font-mono">
                 <CheckCircle2 className="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" />
                 <span>
-                  <strong className="text-neutral-950">Eén inhoudelijk aanspreekpunt:</strong> Strategie, architectuur en code in één directe feedbackloop.
+                  <strong className="text-neutral-950">Lorem ipsum dolor:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna.
                 </span>
               </div>
               <div className="flex items-start gap-3 text-sm text-neutral-700 font-mono">
                 <CheckCircle2 className="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" />
                 <span>
-                  <strong className="text-neutral-950">Van abstracte logica tot realiteit:</strong> Ervaring met zorgprotocollen, kadastrale geodata én fysieke signing.
+                  <strong className="text-neutral-950">Consectetur adipiscing:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                 </span>
               </div>
               <div className="flex items-start gap-3 text-sm text-neutral-700 font-mono">
                 <CheckCircle2 className="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" />
                 <span>
-                  <strong className="text-neutral-950">Eigenaarschap & transparantie:</strong> 100% eigenaarschap van alle code en intellectuele eigendom voor de opdrachtgever.
+                  <strong className="text-neutral-950">Sed do eiusmod:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse.
                 </span>
               </div>
             </div>

@@ -22,13 +22,13 @@ export const CasesPage: React.FC<CasesPageProps> = ({
           <div className="text-left">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-[11px] font-mono text-neutral-700 mb-2">
               <Terminal className="w-3 h-3 text-neutral-900" />
-              <span>INTERDISCIPLINAIRE AANPAK</span>
+              <span>AANPAK // PLACEHOLDER</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 tracking-tight">
-              Benieuwd naar de stack en filosofie achter deze cases?
+              Lorem ipsum dolor sit amet consectetur?
             </h3>
             <p className="text-sm text-neutral-600 mt-1">
-              Ontdek de driehoek van De Architect, De Strateeg en De Maker.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
             </p>
           </div>
           <div className="flex items-center gap-3">

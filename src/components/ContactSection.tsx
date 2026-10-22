@@ -42,14 +42,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
                 <Terminal className="w-3.5 h-3.5 text-neutral-950" />
-                <span>DIRECT SPARREN MET RaddeR</span>
+                <span>SPARREN // PLACEHOLDER</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-950 tracking-tight">
-                Laten we de motor <br />
-                <span className="text-neutral-600">voor jullie visie bouwen.</span>
+                Lorem ipsum dolor <br />
+                <span className="text-neutral-600">sit amet consectetur.</span>
               </h2>
               <p className="mt-4 text-neutral-600 text-base leading-relaxed">
-                Geen accountmanagers of tussenlagen. Spar direct met ons over architectuur, domeinlogica en realisatie.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
 

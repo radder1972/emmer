@@ -13,7 +13,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Alle');
   const [activeModalCase, setActiveModalCase] = useState<CaseStudy | null>(null);
 
-  const categories = ['Alle', 'Zorg & Healthtech', 'Proptech & Geodata', 'Fysiek & Digitaal', 'B2B & E-commerce'];
+  const categories = ['Alle', 'Domein Alpha', 'Domein Beta', 'Domein Gamma', 'Domein Delta'];
 
   const filteredCases = selectedCategory === 'Alle'
     ? CASE_STUDIES
@@ -21,13 +21,13 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Zorg & Healthtech':
+      case 'Domein Alpha':
         return <Cpu className="w-4 h-4 text-neutral-900" />;
-      case 'Proptech & Geodata':
+      case 'Domein Beta':
         return <MapPin className="w-4 h-4 text-neutral-800" />;
-      case 'Fysiek & Digitaal':
+      case 'Domein Gamma':
         return <Globe className="w-4 h-4 text-neutral-800" />;
-      case 'B2B & E-commerce':
+      case 'Domein Delta':
         return <Truck className="w-4 h-4 text-neutral-800" />;
       default:
         return <Layers className="w-4 h-4 text-neutral-700" />;
@@ -41,14 +41,14 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="text-left max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
-              <span>VOLWAARDIGE PRODUCTONTWIKKELING</span>
+              <span>PORTFOLIO // PLACEHOLDER</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
               Geselecteerde Projecten & <br />
-              <span className="text-neutral-600">Domein-Architecturen</span>
+              <span className="text-neutral-600">Architectuur Cases</span>
             </h2>
             <p className="mt-4 text-neutral-600 text-base sm:text-lg">
-              Werkende producten met diepe logica, privacy-first data en tastbare realiteit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
 

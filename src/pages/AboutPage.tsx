@@ -26,13 +26,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           <div className="text-left">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-[11px] font-mono text-neutral-700 mb-2">
               <Terminal className="w-3 h-3 text-neutral-900" />
-              <span>DIRECTE UITVOERING</span>
+              <span>SPARREN // PLACEHOLDER</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 tracking-tight">
-              Klaar om direct met de makers te sparren?
+              Lorem ipsum dolor sit amet consectetur?
             </h3>
             <p className="text-sm text-neutral-600 mt-1">
-              Geen accountmanagers. Direct inhoudelijk sparren over jullie technische motor.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
             </p>
           </div>
           <div className="flex items-center gap-3">

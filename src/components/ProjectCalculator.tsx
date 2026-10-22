@@ -12,26 +12,26 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
   const [primaryFocus, setPrimaryFocus] = useState<string[]>(['domain-logic', 'local-first']);
 
   const goals = [
-    { id: 'new-product', title: 'Nieuw Product Bouwen', desc: 'Van nulpunt naar werkend product' },
-    { id: 'rebuild', title: 'Platform Herbouwen', desc: 'Van template naar schaalbare motor' },
-    { id: 'api-architecture', title: 'Cloud & API Koppeling', desc: 'Robuuste data-architectuur' },
-    { id: 'omnichannel', title: 'Fysiek + Digitaal', desc: 'App + storefront of wagenpark' }
+    { id: 'goal-alpha', title: 'Doelstelling Alpha', desc: 'Lorem ipsum dolor sit amet consectetur' },
+    { id: 'goal-beta', title: 'Doelstelling Beta', desc: 'Sed do eiusmod tempor incididunt ut labore' },
+    { id: 'goal-gamma', title: 'Doelstelling Gamma', desc: 'Ut enim ad minim veniam quis nostrud' },
+    { id: 'goal-delta', title: 'Doelstelling Delta', desc: 'Duis aute irure dolor in reprehenderit' }
   ];
 
   const domains = [
-    { id: 'health', name: 'Zorg & Healthtech', hint: 'Diagnostiek, local-first' },
-    { id: 'geo', name: 'Vastgoed & Ruimtelijk', hint: 'Kadaster, PDOK, kavels' },
-    { id: 'b2b-trade', name: 'B2B & Logistiek', hint: 'Supply chain, fleet livery' },
-    { id: 'retail-mobility', name: 'Retail & Mobiliteit', hint: 'Verhuur, storefront' }
+    { id: 'domain-alpha', name: 'Domein Alpha', hint: 'Lorem ipsum dolor' },
+    { id: 'domain-beta', name: 'Domein Beta', hint: 'Consectetur adipiscing' },
+    { id: 'domain-gamma', name: 'Domein Gamma', hint: 'Sed do eiusmod' },
+    { id: 'domain-delta', name: 'Domein Delta', hint: 'Tempor incididunt' }
   ];
 
   const focusOptions = [
-    { id: 'domain-logic', label: 'Domeinlogica & Beslisbomen' },
-    { id: 'local-first', label: 'Local-First Data Privacy' },
-    { id: 'spatial-data', label: 'Kadaster & PDOK Koppelingen' },
-    { id: 'ai-reasoning', label: 'AI Hypothese Engines' },
-    { id: 'fleet-storefront', label: 'Storefront & Wagenpark' },
-    { id: 'agentic-speed', label: 'Agentic IDE Snelheid' }
+    { id: 'focus-01', label: 'Placeholder Focus Alpha' },
+    { id: 'focus-02', label: 'Placeholder Focus Beta' },
+    { id: 'focus-03', label: 'Placeholder Focus Gamma' },
+    { id: 'focus-04', label: 'Placeholder Focus Delta' },
+    { id: 'focus-05', label: 'Placeholder Focus Epsilon' },
+    { id: 'focus-06', label: 'Placeholder Focus Zeta' }
   ];
 
   const toggleFocus = (id: string) => {
@@ -43,20 +43,11 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
   };
 
   const getEstimatedTimeline = () => {
-    if (goal === 'api-architecture') return '2 tot 4 weken gerichte sprint';
-    if (goal === 'new-product') return '4 tot 8 weken van nulpunt tot live motor';
-    if (goal === 'rebuild') return '3 tot 6 weken refactoring & migratie';
-    return '4 tot 6 weken integraal concept';
+    return '2 tot 4 weken // Placeholder';
   };
 
   const getRecommendedStack = () => {
-    const stack = ['TypeScript', 'Modern React', 'Tailwind CSS'];
-    if (domain === 'health' || primaryFocus.includes('local-first')) stack.push('IndexedDB Local-First', 'WebCrypto');
-    if (domain === 'geo' || primaryFocus.includes('spatial-data')) stack.push('PDOK Open Data API', 'Kadaster WFS', 'WebGIS');
-    if (primaryFocus.includes('ai-reasoning')) stack.push('AI Hypothese Engine', 'Structured Reasoning');
-    if (domain === 'retail-mobility' || primaryFocus.includes('fleet-storefront')) stack.push('Vector Livery CAD', 'Signage Specs');
-    stack.push('API Architecture & Edge Deployments');
-    return stack;
+    return ['Stack Item 01', 'Stack Item 02', 'Stack Item 03', 'Stack Item 04', 'Stack Item 05'];
   };
 
   const handleSendConfig = () => {
@@ -75,14 +66,14 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
         <div className="text-left max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
             <Sliders className="w-3.5 h-3.5 text-neutral-950" />
-            <span>INTERACTIEVE PROJECT CONFIGURATOR</span>
+            <span>CONFIGURATOR // PLACEHOLDER</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
-            Ontwerp Jouw <br />
-            <span className="text-neutral-600">Architectuur-Blauwdruk</span>
+            Lorem Ipsum Dolor <br />
+            <span className="text-neutral-600">Consectetur Adipiscing</span>
           </h2>
           <p className="mt-4 text-neutral-600 text-base sm:text-lg">
-            Kies doel, domein en technische focus voor een direct architectuurvoorstel.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
 
@@ -93,7 +84,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
             {/* Step 1: Goal */}
             <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm">
               <label className="text-xs font-mono uppercase text-neutral-950 font-bold tracking-wider block mb-3">
-                01. WAT IS HET PRIMAIRE DOEL?
+                01. LOREM IPSUM PRIMAIR DOEL
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {goals.map((g) => (
@@ -116,7 +107,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
             {/* Step 2: Domain */}
             <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm">
               <label className="text-xs font-mono uppercase text-neutral-950 font-bold tracking-wider block mb-3">
-                02. IN WELK DOMEIN BEVINDT ZICH DE LOGICA?
+                02. CONSECTETUR DOMEIN
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {domains.map((d) => (
@@ -139,7 +130,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
             {/* Step 3: Critical Requirements */}
             <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm">
               <label className="text-xs font-mono uppercase text-neutral-950 font-bold tracking-wider block mb-3">
-                03. KRITISCHE ARCHITECTUUR-EISEN (SELECTEER MEERDERE)
+                03. SED DO EIUSMOD FOCUSGEBIEDEN
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {focusOptions.map((opt) => {
@@ -216,10 +207,10 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
                 </div>
 
                 <div className="p-4 rounded-xl bg-neutral-900/90 border border-neutral-800 space-y-2 text-xs text-neutral-300 font-mono">
-                  <div className="text-white font-bold">&gt; MR_DIRECT_APPROACH</div>
-                  <div>• Geen overbodige meetings met tussenpersonen</div>
-                  <div>• Direct sparren met de architect & maker</div>
-                  <div>• Eigenaarschap van alle intellectuele eigendom & code</div>
+                  <div className="text-white font-bold">&gt; LOREM_IPSUM_APPROACH</div>
+                  <div>• Lorem ipsum dolor sit amet consectetur</div>
+                  <div>• Sed do eiusmod tempor incididunt ut labore</div>
+                  <div>• Ut enim ad minim veniam quis nostrud</div>
                 </div>
               </div>
 

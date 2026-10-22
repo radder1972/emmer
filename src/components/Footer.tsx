@@ -137,7 +137,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
           <div className="flex items-center gap-2 text-neutral-700">
             <Cpu className="w-3.5 h-3.5 text-neutral-950" />
-            <span className="font-semibold">WAAR EEN STANDAARD BUREAU STOPT, BOUWT RaddeR DE MOTOR.</span>
+            <span className="font-semibold">RaddeR — SYSTEMS & PRODUCT ARCHITECTURE</span>
           </div>
         </div>
       </div>

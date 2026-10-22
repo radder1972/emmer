@@ -14,15 +14,15 @@ export const Manifesto: React.FC = () => {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono mb-8 shadow-sm">
           <Terminal className="w-3.5 h-3.5 text-neutral-900" />
-          <span>HET MANIFEST // WAAROM WIJ BESTAAN</span>
+          <span>HET MANIFEST // PLACEHOLDER</span>
         </div>
 
         {/* Big quote statement */}
         <div className="relative pl-6 sm:pl-10 border-l-2 border-neutral-950 mb-12">
           <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-neutral-950 leading-relaxed tracking-tight">
-            "Waar een standaard bureau stopt bij een mooi laagje verf,{' '}
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
             <span className="text-neutral-950 font-bold underline decoration-neutral-400 underline-offset-8">
-              bouwen wij de motor: complexe domeinlogica direct vertaald naar werkende software.
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </span>"
           </p>
         </div>
@@ -31,19 +31,19 @@ export const Manifesto: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-neutral-700 text-base leading-relaxed">
           <div className="space-y-3">
             <h3 className="text-lg font-bold text-neutral-950 font-mono uppercase tracking-wide">
-              De Illusie van de Buitenkant
+              Lorem Ipsum Dolor
             </h3>
             <p>
-              Standaard bureaus leveren gelikte mockups, maar haken af zodra het aankomt op echte domeinlogica, privacy-by-design of live datakoppelingen. IT-consultancies verdrinken daarentegen in logge rapporten zonder commerciële executiekracht.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
 
           <div className="space-y-3">
             <h3 className="text-lg font-bold text-neutral-950 font-mono uppercase tracking-wide">
-              Waarom RaddeR de Motor Bouwt
+              Consectetur Adipiscing
             </h3>
             <p>
-              RaddeR combineert diepe systeemarchitectuur met snelle executie. Van local-first zorgprotocollen en kadaster-koppelingen tot fysieke storefronts en complete transportvloten: wij bouwen systemen die direct renderen.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
         </div>
@@ -51,20 +51,20 @@ export const Manifesto: React.FC = () => {
         {/* 4 Truths Callout Grid */}
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm">
-            <div className="text-neutral-950 font-mono text-sm font-bold mb-1">01 / GEEN SAUSJES</div>
-            <p className="text-xs text-neutral-600">Design dient de onderliggende logica, nooit andersom.</p>
+            <div className="text-neutral-950 font-mono text-sm font-bold mb-1">01 / LOREM IPSUM</div>
+            <p className="text-xs text-neutral-600">Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
           </div>
           <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm">
-            <div className="text-neutral-950 font-mono text-sm font-bold mb-1">02 / LOCAL-FIRST</div>
-            <p className="text-xs text-neutral-600">Data en privacy blijven gegarandeerd bij de eindgebruiker.</p>
+            <div className="text-neutral-950 font-mono text-sm font-bold mb-1">02 / DOLOR SIT</div>
+            <p className="text-xs text-neutral-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
           </div>
           <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm">
-            <div className="text-neutral-950 font-mono text-sm font-bold mb-1">03 / SCHAALBAAR</div>
-            <p className="text-xs text-neutral-600">Moderne webarchitectuur, veilige dataopslag en robuuste API-koppelingen.</p>
+            <div className="text-neutral-950 font-mono text-sm font-bold mb-1">03 / CONSECTETUR</div>
+            <p className="text-xs text-neutral-600">Duis aute irure dolor in reprehenderit in voluptate velit.</p>
           </div>
           <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm">
-            <div className="text-neutral-950 font-mono text-sm font-bold mb-1">04 / TASTBAAR</div>
-            <p className="text-xs text-neutral-600">Van app-interface tot winkelgevel en complete vloten.</p>
+            <div className="text-neutral-950 font-mono text-sm font-bold mb-1">04 / ADIPISCING</div>
+            <p className="text-xs text-neutral-600">Excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
           </div>
         </div>
       </div>

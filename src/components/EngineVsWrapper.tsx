@@ -14,14 +14,14 @@ export const EngineVsWrapper: React.FC = () => {
         <div className="text-left max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono mb-4 shadow-sm">
             <Zap className="w-3.5 h-3.5 text-neutral-900" />
-            <span>HET ONDERSCHEIDEND VERMOGEN</span>
+            <span>VERGELIJKING // PLACEHOLDER</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
-            Waar stopt een standaard bureau? <br />
-            <span className="text-neutral-500">En waar begint de motor?</span>
+            Lorem ipsum dolor sit amet <br />
+            <span className="text-neutral-500">Consectetur adipiscing elit</span>
           </h2>
           <p className="mt-4 text-neutral-600 text-base sm:text-lg leading-relaxed">
-            De meeste bureaus verkopen een brochure in een nieuwe jas. Maar wanneer de klantervaring afhankelijk is van diagnostische protocollen, openbare kadastrale geodata of enterprise kernel-telemetrie, vallen oppervlakkige templates door de mand.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export const EngineVsWrapper: React.FC = () => {
             </div>
 
             <div className="mt-8 pt-4 border-t border-neutral-200 text-xs font-mono text-neutral-500">
-              RESULTAAT: Oppervlakkige brochure, hoge doorlopende kosten, geen echte automatisering.
+              RESULTAAT: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </div>
           </div>
 
@@ -94,7 +94,7 @@ export const EngineVsWrapper: React.FC = () => {
                       Product Level
                     </span>
                   </h3>
-                  <p className="text-xs font-mono text-neutral-300">Domeinspecifieke logica + Schaalbare software</p>
+                  <p className="text-xs font-mono text-neutral-300">Lorem ipsum dolor sit amet</p>
                 </div>
               </div>
 
@@ -109,7 +109,7 @@ export const EngineVsWrapper: React.FC = () => {
             </div>
 
             <div className="mt-8 pt-4 border-t border-white/15 text-xs font-mono text-neutral-300 flex items-center justify-between">
-              <span>RESULTAAT: Volledig eigenaarschap, volwaardig product, 100% schaalbaar.</span>
+              <span>RESULTAAT: Sed do eiusmod tempor incididunt ut labore et dolore magna.</span>
               <ShieldCheck className="w-4 h-4 text-white" />
             </div>
           </div>
@@ -118,10 +118,10 @@ export const EngineVsWrapper: React.FC = () => {
         {/* Quote banner from the brief */}
         <div className="mt-12 p-8 rounded-2xl bg-white border border-neutral-200/90 shadow-sm text-center relative overflow-hidden">
           <div className="text-base sm:text-lg italic text-neutral-900 font-medium max-w-4xl mx-auto">
-            "Wij combineren de creatieve executiesnelheid van een modern designbureau met de architectuurkennis van een softwareontwikkelaar en de commerciële blik van een business strateeg."
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
           </div>
           <div className="mt-3 text-xs font-mono text-neutral-500 uppercase tracking-wider">
-            — HET INTERDISCIPLINAIRE SCHAKELEN WAARDOOR ONZE OPLOSSINGEN DIEPER GAAN
+            — LOREM IPSUM // PLACEHOLDER QUOTE
           </div>
         </div>
       </div>
