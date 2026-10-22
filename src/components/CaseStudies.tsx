@@ -5,6 +5,7 @@ import { CaseModal } from './CaseModal';
 import { Cpu, Layers, Globe, MapPin, Truck, ChevronRight, ExternalLink } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderIconCases, RadderIconTableTennis } from './RadderNavIcons';
+import { CornerReticles, CalibrationScale } from './RadderStudioDetails';
 
 interface CaseStudiesProps {
   onOpenContact: () => void;
@@ -95,8 +96,10 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
           {filteredCases.map((study) => (
             <div
               key={study.id}
-              className="rounded-2xl bg-white border border-neutral-200/90 shadow-sm overflow-hidden flex flex-col justify-between hover:border-neutral-400 hover:shadow-md transition-all duration-300 group relative"
+              className="rounded-2xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between hover:border-neutral-400 hover:shadow-md transition-all duration-300 group relative"
             >
+              <CornerReticles color="rgba(0,0,0,0.18)" />
+
               {/* Subtle top right watermark */}
               <div className="absolute top-4 right-4 w-12 h-12 opacity-[0.06] pointer-events-none group-hover:opacity-20 transition-opacity">
                 <RadderLogo size={48} color="#0a0a0a" />
@@ -109,7 +112,10 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
                     {getCategoryIcon(study.category)}
                     <span>{study.category}</span>
                   </div>
-                  <span className="text-xs font-mono text-neutral-500">{study.year}</span>
+                  <div className="flex items-center gap-2">
+                    <CalibrationScale label="SPEC // PROD" ticks={6} className="hidden sm:inline-flex" />
+                    <span className="text-xs font-mono text-neutral-500">{study.year}</span>
+                  </div>
                 </div>
 
                 <h3 className="text-2xl font-bold text-neutral-950 group-hover:text-black transition-colors">
@@ -158,7 +164,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
               </div>
 
               {/* Card Footer / Action */}
-              <div className="px-6 sm:px-8 py-4 bg-neutral-50/80 border-t border-neutral-200/80 flex flex-wrap items-center justify-between gap-3">
+              <div className="px-6 sm:px-8 py-4 bg-neutral-50/80 border-t border-neutral-200/80 rounded-b-2xl flex flex-wrap items-center justify-between gap-3">
                 <span className="text-xs font-mono text-neutral-600 truncate max-w-full sm:max-w-[260px]">
                   Klant: <strong className="text-neutral-950">{study.client}</strong>
                 </span>

@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderIconAbout } from './RadderNavIcons';
+import { CornerReticles, CalibrationScale } from './RadderStudioDetails';
 
 interface FounderSectionProps {
   onNavigateToSparren?: () => void;
@@ -43,6 +44,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
           {/* Left Column: Portrait photo in Swiss Editorial styling (Sticky on Desktop) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-start lg:sticky lg:top-36">
             <div className="relative group max-w-sm w-full cursor-pointer select-none">
+              <CornerReticles color="rgba(0,0,0,0.22)" />
               {/* Subtle architectural frame */}
               <div className="relative rounded-2xl overflow-hidden border border-neutral-300 shadow-md bg-white">
                 {/* Image Stage Container with Cross-Fade */}
@@ -71,8 +73,9 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
                 {/* Monograph caption bar */}
                 <div className="p-4 bg-white/95 backdrop-blur-sm border-t border-neutral-200 flex items-center justify-between text-left">
                   <div>
-                    <div className="text-sm font-bold text-neutral-950 font-mono tracking-tight">
-                      Matthias Radder
+                    <div className="text-sm font-bold text-neutral-950 font-mono tracking-tight flex items-center gap-2">
+                      <span>Matthias Radder</span>
+                      <CalibrationScale label="01" ticks={4} className="opacity-70" />
                     </div>
                     <div className="text-[11px] font-mono text-neutral-500 uppercase tracking-wider">
                       Oprichter, Systeemarchitect & Maker
@@ -117,7 +120,8 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
 
             {/* Three Direct Guarantees Summary */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between">
+              <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between relative group">
+                <CornerReticles color="rgba(0,0,0,0.15)" />
                 <div className="flex items-center gap-2 text-xs font-mono font-bold text-neutral-950">
                   <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0" />
                   <span>100% Eigenaarschap</span>
@@ -127,7 +131,8 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between">
+              <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between relative group">
+                <CornerReticles color="rgba(0,0,0,0.15)" />
                 <div className="flex items-center gap-2 text-xs font-mono font-bold text-neutral-950">
                   <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0" />
                   <span>Directe Feedbackloop</span>
@@ -137,7 +142,8 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between">
+              <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between relative group">
+                <CornerReticles color="rgba(0,0,0,0.15)" />
                 <div className="flex items-center gap-2 text-xs font-mono font-bold text-neutral-950">
                   <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0" />
                   <span>Agentic IDE Kracht</span>

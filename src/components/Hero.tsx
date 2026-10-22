@@ -6,6 +6,11 @@ import {
   RadderIconArchitect,
   RadderIconMaker,
 } from './RadderNavIcons';
+import {
+  CornerReticles,
+  CalibrationScale,
+  WordmarkEmboss,
+} from './RadderStudioDetails';
 
 interface HeroProps {
   onOpenContact: () => void;
@@ -14,9 +19,14 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => {
   return (
-    <section className="relative pt-40 sm:pt-48 lg:pt-56 pb-20 md:pb-24 overflow-hidden">
+    <section className="relative pt-40 sm:pt-48 lg:pt-56 pb-20 md:pb-24 overflow-hidden bg-grid-pattern">
       {/* Subtle Warm Paper Glow & Monograph Vignette */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-gradient-to-b from-black/[0.03] to-transparent blur-[140px] -z-20 pointer-events-none" />
+
+      {/* Oversized RaddeR Wordmark Embossing in background */}
+      <div className="absolute -right-20 top-20 pointer-events-none select-none z-0 hidden lg:block opacity-[0.035] text-neutral-950">
+        <WordmarkEmboss width={820} opacity={1} />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Unified Page Header Zone */}
@@ -80,7 +90,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
 
         {/* 3 Core Competence Cards - Gallery Style: Strateeg -> Architect -> Maker */}
         <div className="mt-16 pt-10 border-t border-neutral-300 grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
-          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
+          <div className="relative group p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
+            <CornerReticles />
             <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-3 h-5">
               <RadderIconStrateeg size={16} strokeWidth={2} color="#ff451a" />
               <span>01. DE STRATEEG</span>
@@ -90,7 +101,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
+          <div className="relative group p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
+            <CornerReticles />
             <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-3 h-5">
               <RadderIconArchitect size={16} strokeWidth={2} color="#ff451a" />
               <span>02. DE ARCHITECT</span>
@@ -100,7 +112,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
+          <div className="relative group p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
+            <CornerReticles />
             <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-3 h-5">
               <RadderIconMaker size={16} strokeWidth={2} color="#ff451a" />
               <span>03. DE MAKER</span>
@@ -111,11 +124,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
           </div>
         </div>
 
-        {/* Telemetry Strip */}
+        {/* Telemetry Strip with tactile calibration */}
         <div className="mt-6 p-4 rounded-xl bg-white/70 border border-neutral-200/90 shadow-sm flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-neutral-600">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#ff451a] animate-pulse"></span>
             <span className="text-neutral-950 font-semibold">RaddeR STUDIO</span>
+            <span className="text-neutral-300">|</span>
+            <CalibrationScale label="CORE SYNC" ticks={8} />
           </div>
           <div className="flex flex-wrap gap-4 text-[11px] text-neutral-500 font-mono">
             <span>• VAN PROMPT NAAR PRODUCTIE</span>

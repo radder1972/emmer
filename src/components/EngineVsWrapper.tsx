@@ -3,6 +3,7 @@ import { ENGINE_COMPARISONS } from '../data/projects';
 import { XCircle, CheckCircle2, Eye, ShieldCheck } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderIconZap } from './RadderNavIcons';
+import { CornerReticles, CalibrationScale } from './RadderStudioDetails';
 
 export const EngineVsWrapper: React.FC = () => {
   const [selectedIdx, setSelectedIdx] = useState(0);
@@ -13,9 +14,12 @@ export const EngineVsWrapper: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-left max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono mb-4 shadow-sm">
-            <RadderIconZap size={14} strokeWidth={2} color="#ff451a" />
-            <span>VERGELIJKING // HET FUNDAMENT</span>
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm">
+              <RadderIconZap size={14} strokeWidth={2} color="#ff451a" />
+              <span>VERGELIJKING // HET FUNDAMENT</span>
+            </div>
+            <CalibrationScale label="ENGINE // ZERO-LATENCY" ticks={10} className="hidden sm:inline-flex" />
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
             De Motor versus Het Sausje: <br />
@@ -46,7 +50,8 @@ export const EngineVsWrapper: React.FC = () => {
         {/* Comparison Grid: Side by Side */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {/* Left Column: Standaard Marketing Bureau */}
-          <div className="rounded-2xl bg-white border border-neutral-300 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden shadow-sm">
+          <div className="rounded-2xl bg-white border border-neutral-300 p-6 sm:p-8 flex flex-col justify-between relative shadow-sm">
+            <CornerReticles color="rgba(0,0,0,0.18)" />
             <div className="absolute top-0 right-0 px-4 py-1.5 bg-neutral-100 border-b border-l border-neutral-300 text-neutral-600 font-mono text-[11px] rounded-bl-lg font-semibold">
               STANDAARD AANPAK // HET SAUSJE
             </div>
@@ -78,7 +83,8 @@ export const EngineVsWrapper: React.FC = () => {
           </div>
 
           {/* Right Column: RaddeR (De Motor) */}
-          <div className="rounded-2xl bg-neutral-950 text-white border-2 border-neutral-900 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden shadow-xl">
+          <div className="rounded-2xl bg-neutral-950 text-white border-2 border-neutral-900 p-6 sm:p-8 flex flex-col justify-between relative shadow-xl">
+            <CornerReticles color="rgba(255,255,255,0.22)" />
             <div className="absolute top-0 right-0 px-4 py-1.5 bg-white/10 border-b border-l border-white/20 text-white font-mono text-[11px] rounded-bl-lg font-bold">
               RaddeR ARCHITECTUUR // DE MOTOR
             </div>
@@ -117,12 +123,15 @@ export const EngineVsWrapper: React.FC = () => {
         </div>
 
         {/* Quote banner from the brief */}
-        <div className="mt-12 p-8 rounded-2xl bg-white border border-neutral-200/90 shadow-sm text-center relative overflow-hidden">
+        <div className="mt-12 p-8 rounded-2xl bg-white border border-neutral-200/90 shadow-sm text-center relative">
+          <CornerReticles color="rgba(0,0,0,0.15)" />
           <div className="text-base sm:text-lg italic text-neutral-900 font-medium max-w-4xl mx-auto">
             "Echte vooruitgang ontstaat niet in eindeloze stuurgroepen of gelikte marketingdecks, maar door direct te bouwen aan de motor. Werkende software is het enige eerlijke bewijs van succes."
           </div>
-          <div className="mt-3 text-xs font-mono text-neutral-500 uppercase tracking-wider">
-            — RADDER FILOSOFIE // DE MOTOR ACHTER DE CODE
+          <div className="mt-4 flex items-center justify-center gap-3 text-xs font-mono text-neutral-500 uppercase tracking-wider">
+            <span>— RADDER FILOSOFIE // DE MOTOR ACHTER DE CODE</span>
+            <span className="text-neutral-300">•</span>
+            <CalibrationScale label="AXIS" ticks={6} />
           </div>
         </div>
       </div>

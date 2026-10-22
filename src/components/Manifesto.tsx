@@ -8,6 +8,11 @@ import {
   RadderIconShield,
   RadderIconCheck,
 } from './RadderIconLibrary';
+import {
+  CornerReticles,
+  CalibrationScale,
+  TubularConduit,
+} from './RadderStudioDetails';
 
 export const Manifesto: React.FC = () => {
   const articles = [
@@ -77,9 +82,12 @@ export const Manifesto: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Document Header Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-neutral-300 mb-10 text-xs font-mono text-neutral-600">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-950 font-bold shadow-sm">
-            <RadderIconManifest size={14} strokeWidth={2} color="#ff451a" />
-            <span>HET RADDER MANIFEST // EDITIE 2026</span>
+          <div className="flex items-center gap-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-950 font-bold shadow-sm">
+              <RadderIconManifest size={14} strokeWidth={2} color="#ff451a" />
+              <span>HET RADDER MANIFEST // EDITIE 2026</span>
+            </div>
+            <CalibrationScale label="STD // RDR-2026" ticks={12} className="hidden sm:inline-flex" />
           </div>
 
           <div className="flex items-center gap-4 text-[11px] text-neutral-500">
@@ -102,7 +110,7 @@ export const Manifesto: React.FC = () => {
         </div>
 
         {/* Prologue: The Shift */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-20 text-neutral-800 text-base sm:text-lg leading-relaxed font-normal">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10 text-neutral-800 text-base sm:text-lg leading-relaxed font-normal">
           <div className="md:col-span-6 space-y-4">
             <h3 className="text-xs font-mono uppercase tracking-widest text-[#ff451a] font-bold">
               // HET PROBLEEM: DE STILLE VERDAMPING
@@ -128,6 +136,12 @@ export const Manifesto: React.FC = () => {
           </div>
         </div>
 
+        {/* Architectural Conduit Bridge */}
+        <div className="relative -mb-4 flex items-center justify-between pointer-events-none select-none hidden md:flex">
+          <TubularConduit direction="horizontal-loop" className="opacity-80" />
+          <CalibrationScale label="TOLERANCE: ±0.01mm" ticks={10} className="opacity-60" />
+        </div>
+
         {/* Section Divider: The 6 Articles */}
         <div className="mb-12 flex items-center justify-between pb-4 border-b border-neutral-300">
           <div className="space-y-1">
@@ -138,8 +152,10 @@ export const Manifesto: React.FC = () => {
               Onze Dogma’s van Executie
             </h3>
           </div>
-          <div className="text-xs font-mono text-neutral-500 hidden sm:block">
-            // ARTIKEL I T/M VI
+          <div className="flex items-center gap-3 hidden sm:flex">
+            <CalibrationScale label="AXIS // 01-06" ticks={8} />
+            <span className="text-neutral-300">|</span>
+            <span className="text-xs font-mono text-neutral-500">// ARTIKEL I T/M VI</span>
           </div>
         </div>
 
@@ -152,6 +168,7 @@ export const Manifesto: React.FC = () => {
                 key={art.number}
                 className="bg-white rounded-2xl border border-neutral-200/90 shadow-sm p-8 flex flex-col justify-between hover:border-neutral-400 hover:shadow-md transition-all duration-300 group relative"
               >
+                <CornerReticles color="rgba(0,0,0,0.18)" />
                 <div>
                   {/* Article Index & Icon */}
                   <div className="flex items-center justify-between mb-6 pb-4 border-b border-neutral-100">
@@ -195,6 +212,7 @@ export const Manifesto: React.FC = () => {
 
         {/* The Epilogue & Architectural Seal */}
         <div className="rounded-2xl bg-neutral-950 text-white border-2 border-neutral-900 p-8 sm:p-12 relative overflow-hidden shadow-xl">
+          <CornerReticles color="rgba(255,255,255,0.22)" />
           {/* Subtle background circuit watermark */}
           <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-10 pointer-events-none text-white">
             <RadderLogo size={280} color="#ffffff" glow={false} />

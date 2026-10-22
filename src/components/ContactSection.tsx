@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Mail, ArrowRight, Check, Copy, MapPin, ShieldCheck } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderIconSparren } from './RadderNavIcons';
+import { CornerReticles, CalibrationScale } from './RadderStudioDetails';
 
 interface ContactSectionProps {
   initialBrief?: string;
@@ -69,7 +70,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
           {/* Left Column: Direct Info */}
           <div className="lg:col-span-5 space-y-8">
             {/* Direct Contact Card */}
-            <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm space-y-4">
+            <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm space-y-4 relative group">
+              <CornerReticles color="rgba(0,0,0,0.18)" />
               <div className="flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 font-bold">
                   DIRECT CONTACT
@@ -131,7 +133,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
 
           {/* Right Column: Sparring Form */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-2xl bg-white border border-neutral-200/90 shadow-lg">
+            <div className="p-8 sm:p-10 rounded-2xl bg-white border border-neutral-200/90 shadow-lg relative group">
+              <CornerReticles color="rgba(0,0,0,0.18)" />
               {formSubmitted ? (
                 <div className="py-12 text-center space-y-4">
                   <div className="w-16 h-16 rounded-full bg-neutral-100 border border-neutral-300 text-neutral-950 flex items-center justify-center mx-auto">
@@ -150,11 +153,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="border-b border-neutral-200 pb-4">
-                    <h3 className="text-xl font-bold text-neutral-950">Plan een sparsessie met Matthias</h3>
-                    <p className="text-xs text-neutral-600 mt-1">
-                      Vertel kort over je casus, proces of knelpunt. Je spreekt direct met degene die de code en architectuur ontwerpt.
-                    </p>
+                  <div className="border-b border-neutral-200 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                      <h3 className="text-xl font-bold text-neutral-950">Plan een sparsessie met Matthias</h3>
+                      <p className="text-xs text-neutral-600 mt-1">
+                        Vertel kort over je casus, proces of knelpunt. Je spreekt direct met degene die de code en architectuur ontwerpt.
+                      </p>
+                    </div>
+                    <CalibrationScale label="INPUT // FORM" ticks={6} className="hidden sm:inline-flex shrink-0" />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
