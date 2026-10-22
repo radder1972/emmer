@@ -195,6 +195,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                       <option value="HealthTech, Zorgapplicatie of AI-Diagnostiek">HealthTech, Zorgapplicatie of AI-Diagnostiek (zoals Schematherapie Suite)</option>
                       <option value="Lokale Dominantie & High-Performance Platform">Lokale Dominantie & High-Performance Platform (zoals Staopstoelen.nl)</option>
                       <option value="Boekingsengine, Hardware Rental of E-Commerce">Boekingsengine, Hardware Rental of E-Commerce (zoals True Time Thai / Schipper)</option>
+                      <option value="SportTech, Vitaliteit & Web Audio Engine">SportTech, Vitaliteit & Web Audio Engine (zoals TT Clinics)</option>
                       <option value="Architectuur-audit of Herbouw van Vastgelopen Project">Architectuur-audit of Herbouw van Vastgelopen Project</option>
                     </select>
                   </div>

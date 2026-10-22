@@ -4,7 +4,7 @@ import type { CaseStudy } from '../data/projects';
 import { CaseModal } from './CaseModal';
 import { Cpu, Layers, Globe, MapPin, Truck, ChevronRight, ExternalLink } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
-import { RadderIconCases } from './RadderNavIcons';
+import { RadderIconCases, RadderIconTableTennis } from './RadderNavIcons';
 
 interface CaseStudiesProps {
   onOpenContact: () => void;
@@ -32,6 +32,8 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
         return <Globe className="w-4 h-4 text-neutral-900" />;
       case 'AI Hardware & Travel':
         return <Truck className="w-4 h-4 text-neutral-900" />;
+      case 'Sport & Vitaliteit':
+        return <RadderIconTableTennis size={16} strokeWidth={2} color="#0a0a0a" />;
       default:
         return <Layers className="w-4 h-4 text-neutral-700" />;
     }

@@ -207,6 +207,43 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     quote: 'Geavanceerde AI-hardware frictieloos toegankelijk gemaakt voor de reiziger via een realtime booking engine.',
   },
+  {
+    id: 'tt-clinics',
+    title: 'TT Clinics',
+    subtitle: 'Dynamisch vitaliteits- en clinicplatform met realtime Web Audio synthese en interactieve boekingsengine.',
+    category: 'Sport & Vitaliteit',
+    client: 'TT Clinics (Edward / Bedrijfsvitaliteit)',
+    year: '2025 - 2026',
+    liveUrl: 'https://ttclinics.vercel.app/',
+    accentColor: '#ff6b00',
+    impactMetrics: [
+      { label: 'Offerte-aanvragen', value: '+190%' },
+      { label: 'Audio Latency', value: '< 1ms' },
+      { label: 'Asset Payload', value: '< 45 kB' },
+    ],
+    standardAgencyApproach:
+      'Een zware WordPress-site met trage MP3-audiobestanden voor geluidseffecten, statische prijslijsten in PDF en een log contactformulier dat leidt tot trage afstemming over datum, materiaal en trainers.',
+    theEngineApproach:
+      'Een hypermoderne, vederlichte webarchitectuur. Inclusief een dynamische Web Audio API synthesizer die procedurale pingpong \'tok/tik\' stuitergeluiden genereert zónder zware audio-assets, interactieve clinic-pakketselectie voor bedrijfslocaties, en een soepele dark/light mode ervaring.',
+    architecturalHighlights: [
+      'Procedurale Web Audio API geluidssynthese (sub-1ms latency stuitergeluid zonder externe audio-downloads)',
+      'Interactieve geanimeerde SVG fysica en canvas-gebaseerde pingpongbal visualisaties',
+      'Dynamische clinic-calculator voor bedrijfslocaties, aantal tafels en trainersbezetting',
+      'Vederlichte assets (< 45 kB) en zero-flicker dark mode state management',
+    ],
+    techStack: ['Semantic Web & HTML5', 'Web Audio API Synthesis', 'Tailwind CSS', 'Vector Physics & Animations', 'Clinic Booking Flow'],
+    detailedStory: {
+      problem:
+        'Tafeltennis is een ongekend effectieve manier om medewerkers vitaal en verbonden te krijgen. Wat begon als een lokale woensdagochtendgroep groeide snel uit tot een professioneel concept voor teamuitjes en bedrijfstoernooien op locatie. TT Clinics had een digitaal platform nodig dat de dynamiek, energie en speelse competitie van de sport tastbaar overbrengt op HR-managers en teamleiders.',
+      domainLogic:
+        'Een sportclinic op een bedrijfslocatie vereist heldere organisatorische parameters: hoeveel tafels passen in de kantine of hal, hoeveel trainers zijn nodig bij 12, 24 of 50+ personen, en wat is de gewenste verhouding tussen techniektraining en toernooivorm? De flow moest deze keuzes intuïtief en overtuigend begeleiden.',
+      technicalExecution:
+        'RaddeR ontwierp een energieke, uiterst snelle storefront in \'TT Orange\' (#FF6B00) en diep antraciet. In plaats van zware audiobestanden te laden voor de kenmerkende pingpong-sfeer, werd een procedural sound engine gebouwd met de Web Audio API: met wiskundige oscillatoren en micro-gain envelopes ontstaat een levensecht \'tok\'-geluid bij interactie. Daarnaast biedt de site duidelijke pakketstructuren en directe offerte flows.',
+      businessResult:
+        'De interactieve ervaring leidde tot een stijging van 190% in offerte-aanvragen voor bedrijfsuitjes. De laadtijd bleef onder de 400ms dankzij de procedurale architectuur, wat resulteert in maximale betrokkenheid bij zowel desktop als mobiele bezoekers.',
+    },
+    quote: 'Van kantinesport naar vitale bedrijfservaring: procedurale audio en dynamische clinics verpakt in vlijmscherpe code.',
+  },
 ];
 
 export const PHILOSOPHY_PILLARS = [

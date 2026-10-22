@@ -356,6 +356,46 @@ export const RadderIconZap: React.FC<RadderIconProps> = ({
 );
 
 /**
+ * 07. TABLE TENNIS ICON
+ * Precision table tennis paddle & bouncing pingpong ball.
+ * Architectural linework matching the RaddeR vector hallmark family.
+ */
+export const RadderIconTableTennis: React.FC<RadderIconProps> = ({
+  className = '',
+  size = 16,
+  color = 'currentColor',
+  strokeWidth = 2,
+}) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={color}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`inline-block shrink-0 align-middle ${className}`}
+    aria-label="Tafeltennis Icon"
+  >
+    {/* Paddle blade */}
+    <circle cx="10" cy="10" r="6.5" />
+    
+    {/* Rubber sweet-spot arc */}
+    <path d="M 6 13 C 8 15 12 15 14 13" />
+    
+    {/* Paddle ergonomic handle */}
+    <path d="M 14.5 14.5 L 18.5 18.5 C 19.3 19.3 19.3 20.5 18.5 21.3 C 17.7 22.1 16.5 22.1 15.7 21.3 L 11.7 17.3" />
+    
+    {/* Dynamic pingpong ball */}
+    <circle cx="18.5" cy="5.5" r="2" fill={color} />
+    
+    {/* Trajectory / speed arc */}
+    <path d="M 3.5 9 C 3.5 5.5 7 3.5 10.5 3.5" />
+  </svg>
+);
+
+/**
  * Dispatcher component to render icon by PageId
  */
 export const RadderNavIcon: React.FC<{
