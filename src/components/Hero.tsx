@@ -60,13 +60,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
 
-            <a
-              href="#vergelijker"
+            <button
+              onClick={() => {
+                const el = document.getElementById('motor-vs-sausje');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="px-5 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-neutral-900 border border-neutral-300 font-mono text-sm tracking-wide transition-all flex items-center gap-2 shadow-sm cursor-pointer"
             >
               <Layers className="w-4 h-4 text-neutral-900" />
               <span>Motor vs. Sausje</span>
-            </a>
+            </button>
 
             <button
               onClick={onOpenContact}

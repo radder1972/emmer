@@ -4,7 +4,11 @@ import { TechRadar } from '../components/TechRadar';
 import { ProjectCalculator } from '../components/ProjectCalculator';
 import { ContactSection } from '../components/ContactSection';
 
-export const AboutPage: React.FC = () => {
+interface AboutPageProps {
+  onNavigateToCases?: () => void;
+}
+
+export const AboutPage: React.FC<AboutPageProps> = ({ onNavigateToCases }) => {
   const [prefilledBrief, setPrefilledBrief] = useState<string>('');
 
   const handlePlanWithBrief = (brief: string) => {
@@ -16,9 +20,9 @@ export const AboutPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-20 pb-0 animate-fade-in">
+    <div className="pt-8 pb-0">
       {/* 1. De Driehoek: Architect, Strateeg, Maker */}
-      <Pillars />
+      <Pillars onNavigateToCases={onNavigateToCases} />
 
       {/* 2. De Stack: Tech Toolkit Radar */}
       <TechRadar />

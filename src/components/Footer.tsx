@@ -29,20 +29,28 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => 
           {/* Identity & Emblem */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-4">
-              <button
-                onClick={() => handleNav('manifest')}
+              <a
+                href="/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNav('manifest');
+                }}
                 className="w-16 h-14 flex items-center justify-center text-neutral-950 cursor-pointer"
                 title="RaddeR — Naar Manifest"
               >
                 <RadderLogo size={60} color="#0a0a0a" glow={false} />
-              </button>
+              </a>
               <div>
-                <button
-                  onClick={() => handleNav('manifest')}
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('manifest');
+                  }}
                   className="text-left cursor-pointer"
                 >
                   <RadderWordmark height={32} color="#0a0a0a" glow={false} />
-                </button>
+                </a>
                 <div className="text-[10px] text-neutral-600 uppercase tracking-wider mt-1 font-semibold">
                   SYSTEMS & PRODUCT ARCHITECTURE
                 </div>
@@ -66,44 +74,64 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => 
             </div>
             <ul className="space-y-2 text-neutral-600">
               <li>
-                <button
-                  onClick={() => handleNav('cases')}
-                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left"
+                <a
+                  href="/cases"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('cases');
+                  }}
+                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
                 >
                   • Schematherapie Suite (Local-First GGZ)
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handleNav('cases')}
-                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left"
+                <a
+                  href="/cases"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('cases');
+                  }}
+                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
                 >
                   • Nieuwbouw Perceelkiezer (PDOK / Kadaster)
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handleNav('cases')}
-                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left"
+                <a
+                  href="/cases"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('cases');
+                  }}
+                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
                 >
                   • Enterprise OpenShift & eBPF Telemetry
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handleNav('cases')}
-                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left"
+                <a
+                  href="/cases"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('cases');
+                  }}
+                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
                 >
                   • True Time Thai (Pattaya App & Storefront)
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => handleNav('cases')}
-                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left"
+                <a
+                  href="/cases"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('cases');
+                  }}
+                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
                 >
                   • Palrom Products ("From Tree to Trade" Fleet)
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -115,24 +143,36 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => 
                 MENU
               </div>
               <div className="flex flex-col space-y-2 font-mono text-xs">
-                <button
-                  onClick={() => handleNav('manifest')}
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('manifest');
+                  }}
                   className="hover:text-neutral-950 transition-colors text-left cursor-pointer"
                 >
                   → Manifest
-                </button>
-                <button
-                  onClick={() => handleNav('cases')}
+                </a>
+                <a
+                  href="/cases"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('cases');
+                  }}
                   className="hover:text-neutral-950 transition-colors text-left cursor-pointer"
                 >
                   → Cases
-                </button>
-                <button
-                  onClick={() => handleNav('over-ons')}
+                </a>
+                <a
+                  href="/over-ons"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('over-ons');
+                  }}
                   className="hover:text-neutral-950 transition-colors text-left cursor-pointer"
                 >
                   → Over Ons
-                </button>
+                </a>
                 <button
                   onClick={onOpenContact}
                   className="text-neutral-950 font-bold hover:underline transition-all text-left cursor-pointer pt-1"

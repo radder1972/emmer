@@ -30,8 +30,12 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex items-center justify-between">
           {/* Left Side: Clean Studio Typographic Identity & Navigation Links */}
           <div className="flex items-center gap-8 lg:gap-12">
-            <button
-              onClick={() => onNavigate('manifest')}
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('manifest');
+              }}
               className="flex flex-col text-left group cursor-pointer"
               title="RaddeR — Naar Manifest"
             >
@@ -44,16 +48,21 @@ export const Navbar: React.FC<NavbarProps> = ({
               <span className="text-[10px] sm:text-[11px] font-mono text-neutral-600 tracking-wider uppercase mt-1 font-semibold group-hover:text-neutral-900 transition-colors">
                 Systems & Product Architecture
               </span>
-            </button>
+            </a>
 
             {/* Desktop Navigation Links: Manifest | Cases | Over Ons */}
             <nav className="hidden lg:flex items-center gap-2">
               {navLinks.map((link) => {
                 const isActive = currentPage === link.id;
+                const path = link.id === 'manifest' ? '/' : `/${link.id}`;
                 return (
-                  <button
+                  <a
                     key={link.id}
-                    onClick={() => onNavigate(link.id)}
+                    href={path}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavigate(link.id);
+                    }}
                     className={`text-xs uppercase tracking-wider font-mono transition-all px-4 py-2 rounded-xl cursor-pointer ${
                       isActive
                         ? 'text-neutral-950 bg-black/5 font-bold border border-neutral-300/90 shadow-sm'
@@ -61,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     }`}
                   >
                     {link.name}
-                  </button>
+                  </a>
                 );
               })}
             </nav>
@@ -78,8 +87,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
 
             {/* Pure Mathematical Vector Logo on the Right */}
-            <button
-              onClick={() => onNavigate('manifest')}
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('manifest');
+              }}
               title="RaddeR — Naar Manifest"
               className="relative flex items-center justify-center p-1.5 rounded-2xl hover:bg-black/[0.04] transition-all group cursor-pointer"
             >
@@ -92,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   className="text-neutral-950"
                 />
               </div>
-            </button>
+            </a>
 
             {/* Mobile hamburger */}
             <div className="flex items-center lg:hidden">
@@ -114,10 +127,13 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex flex-col space-y-2 font-mono text-sm text-left">
             {navLinks.map((link) => {
               const isActive = currentPage === link.id;
+              const path = link.id === 'manifest' ? '/' : `/${link.id}`;
               return (
-                <button
+                <a
                   key={link.id}
-                  onClick={() => {
+                  href={path}
+                  onClick={(e) => {
+                    e.preventDefault();
                     setMobileMenuOpen(false);
                     onNavigate(link.id);
                   }}
@@ -128,7 +144,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }`}
                 >
                   {link.name}
-                </button>
+                </a>
               );
             })}
           </div>

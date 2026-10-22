@@ -2,7 +2,11 @@ import React from 'react';
 import { PHILOSOPHY_PILLARS } from '../data/projects';
 import { Cpu, Layers, Compass, CheckCircle2, ArrowRight } from 'lucide-react';
 
-export const Pillars: React.FC = () => {
+interface PillarsProps {
+  onNavigateToCases?: () => void;
+}
+
+export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'Cpu':
@@ -17,7 +21,7 @@ export const Pillars: React.FC = () => {
   };
 
   return (
-    <section id="driehoek" className="py-24 bg-[#f8f7f4] relative">
+    <section className="pt-24 pb-20 bg-[#f8f7f4] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-left max-w-3xl mb-16">
@@ -84,8 +88,12 @@ export const Pillars: React.FC = () => {
             </p>
           </div>
           <a
-            href="#cases"
-            className="px-6 py-3 rounded-xl bg-white hover:bg-neutral-200 text-neutral-950 font-mono text-xs uppercase tracking-wider flex items-center gap-2 border border-white/20 shrink-0 transition-all font-bold shadow-sm"
+            href="/cases"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigateToCases?.();
+            }}
+            className="px-6 py-3 rounded-xl bg-white hover:bg-neutral-200 text-neutral-950 font-mono text-xs uppercase tracking-wider flex items-center gap-2 border border-white/20 shrink-0 transition-all font-bold shadow-sm cursor-pointer"
           >
             <span>Bekijk de bewijsvoering in Cases</span>
             <ArrowRight className="w-4 h-4" />

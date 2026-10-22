@@ -4,7 +4,7 @@ import { RadderLogo } from './RadderLogo';
 
 export const Manifesto: React.FC = () => {
   return (
-    <section id="manifest" className="py-24 bg-[#f4f3ef] border-t border-neutral-300 relative overflow-hidden">
+    <section className="py-24 bg-[#f4f3ef] border-t border-neutral-300 relative overflow-hidden">
       {/* Subtle watermark in deep black ink with fine paper opacity */}
       <div className="absolute -right-16 top-1/2 -translate-y-1/2 w-80 h-80 opacity-[0.03] pointer-events-none select-none text-neutral-950">
         <RadderLogo size={320} glow={false} color="#0a0a0a" />

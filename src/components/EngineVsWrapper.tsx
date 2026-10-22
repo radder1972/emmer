@@ -8,7 +8,7 @@ export const EngineVsWrapper: React.FC = () => {
   const activeComparison = ENGINE_COMPARISONS[selectedIdx];
 
   return (
-    <section id="vergelijker" className="py-24 bg-[#f8f7f4] border-t border-neutral-300 relative">
+    <section id="motor-vs-sausje" className="py-24 bg-[#f8f7f4] border-t border-neutral-300 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-left max-w-3xl mb-12">
