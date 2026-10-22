@@ -1,11 +1,11 @@
-# Matthias Radder (MR Studio) — Systems & Product Architecture
+# EMMER — Systems & Product Architecture
 
 <p align="center">
-  <img src="public/logo-mr.png" alt="MR Emblem" width="160" />
+  <img src="public/logo-emmer.png" alt="EMMER Emblem" width="220" />
 </p>
 
 <p align="center">
-  <strong>"Waar een standaard bureau stopt bij de buitenkant, bouw jij de motor."</strong>
+  <strong>"Waar een standaard bureau stopt bij de buitenkant, bouwt EMMER de motor."</strong>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 
 In de wereld van digitale bureaus is er een kloof: designbureaus stoppen bij oppervlakkige templates en brochures; traditionele IT-consultancies verdrinken in logge rapporten. 
 
-**MR Studio** combineert de creatieve executiesnelheid van een modern designbureau met de diepe systeemkennis van een softwareontwikkelaar en de commerciële scherpte van een business strateeg.
+**EMMER** combineert de creatieve executiesnelheid van een modern designbureau met de diepe systeemkennis van een softwareontwikkelaar en de commerciële scherpte van een business strateeg.
 
 ---
 
@@ -26,7 +26,7 @@ In de wereld van digitale bureaus is er een kloof: designbureaus stoppen bij opp
 
 - 🩺 **Schematherapie Suite (Zorg & Healthtech)**:
   - Local-first webapplicatie met geïntegreerde diagnostiek (YSQL/SMI), interactieve theoriekaarten en AI-gestuurde hypothesegeneratie.
-  - Zero-knowledge encryptie en privacy-by-design (AVG-waterdicht).
+  - Zero-knowledge encryptie en privacy-by-design (100% AVG-waterdicht).
 
 - 🗺️ **Nieuwbouw Perceelkiezer (Proptech & Geodata)**:
   - Live koppeling met openbare ruimtelijke data van PDOK en het Kadaster (WFS/WMS).
@@ -77,7 +77,7 @@ npm run build
 
 ## 📬 Contact & Sparren
 
-- **Studio**: Matthias Radder (MR Studio)
-- **E-mail**: `matthias@radder.studio`
+- **Studio**: EMMER — Systems & Product Architecture
+- **E-mail**: `contact@emmer.studio`
 - **Locatie**: Nederland (beschikbaar op locatie & remote wereldwijd)
 - **Status**: Beschikbaar voor selectieve Q4/Q1 producttrajecten & enterprise architectuur-sparring.

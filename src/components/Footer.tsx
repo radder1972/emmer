@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, Cpu } from 'lucide-react';
-import { MrLogo } from './MrLogo';
+import { EmmerLogo } from './EmmerLogo';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -14,12 +14,12 @@ export const Footer: React.FC = () => {
           {/* Identity & Emblem */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3.5">
-              <div className="w-11 h-11 rounded-lg overflow-hidden border border-white/20 bg-[#12141c] flex items-center justify-center p-1">
-                <MrLogo size={36} />
+              <div className="w-11 h-11 flex items-center justify-center p-0.5">
+                <EmmerLogo size={40} />
               </div>
               <div>
-                <div className="text-white font-bold text-sm tracking-tight">MATTHIAS RADDER</div>
-                <div className="text-[11px] text-zinc-500">MR SYSTEMS & PRODUCT ARCHITECTURE</div>
+                <div className="text-white font-extrabold text-base tracking-widest font-mono">EMMER</div>
+                <div className="text-[10px] text-zinc-400 uppercase tracking-wider">SYSTEMS & PRODUCT ARCHITECTURE</div>
               </div>
             </div>
 
@@ -28,8 +28,8 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="text-[11px] text-zinc-500 space-y-1">
-              <div>// LAT: 52.3676° N, LON: 4.9041° E</div>
-              <div>// BUILT WITH: ANTIGRAVITY IDE + REACT + TAILWIND</div>
+              <div>// STUDIO: EMMER // FOUNDED: NETHERLANDS</div>
+              <div>// BUILT WITH: ANTIGRAVITY AGENTIC IDE + REACT + TAILWIND</div>
             </div>
           </div>
 
@@ -98,14 +98,15 @@ export const Footer: React.FC = () => {
         {/* Bottom line */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-500">
           <div>
-            © {new Date().getFullYear()} Matthias Radder (MR Studio). Alle rechten voorbehouden.
+            © {new Date().getFullYear()} EMMER STUDIO. Alle rechten voorbehouden.
           </div>
           <div className="flex items-center gap-2 text-zinc-400">
             <Cpu className="w-3.5 h-3.5 text-white" />
-            <span>WAAR EEN STANDAARD BUREAU STOPT, BOUWEN WIJ DE MOTOR.</span>
+            <span>WAAR EEN STANDAARD BUREAU STOPT, BOUWT EMMER DE MOTOR.</span>
           </div>
         </div>
       </div>
     </footer>
   );
 };
+

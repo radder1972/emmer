@@ -11,13 +11,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-grid-pattern">
       {/* Background ambient lighting - Stark monochrome / titanium silver glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-white/10 via-zinc-500/5 to-transparent blur-[140px] -z-10 pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-white/10 via-zinc-500/5 to-transparent blur-[150px] -z-10 pointer-events-none" />
       
-      {/* Massive subtle watermark of the Hexagonal MR Logo in the background */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-[0.03] -z-10 pointer-events-none select-none">
+      {/* Massive subtle watermark of the Hexagonal EMMER Logo in the background */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[850px] h-[850px] opacity-[0.035] -z-10 pointer-events-none select-none">
         <img
-          src="/logo-mr-transparent.png"
-          alt="Watermark"
+          src="/logo-emmer.png"
+          alt="EMMER Watermark"
           className="w-full h-full object-contain filter contrast-200"
         />
       </div>
@@ -27,18 +27,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
         <div className="flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-zinc-500 border-b border-white/10 pb-4 mb-10">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-white animate-pulse"></span>
-            <span className="text-zinc-300 font-semibold">MR_ENGINE_CORE // V4.2</span>
+            <span className="text-zinc-200 font-bold tracking-wider">EMMER // SYSTEMS & PRODUCT ARCHITECTURE</span>
             <span className="text-zinc-700">|</span>
-            <span>SYSTEMS & INTERDISCIPLINARY ARCHITECTURE</span>
+            <span>DOMAINS: GGZ // GEO-SPATIAL // ENTERPRISE // OMNICHANNEL</span>
           </div>
           <div className="hidden sm:flex items-center gap-4 text-zinc-400">
-            <span>LOC: NETHERLANDS & GLOBAL</span>
-            <span className="text-zinc-700">|</span>
-            <span>SPEC: LOCAL-FIRST // EBPF // SPATIAL DATA // TOTAL EXECUTION</span>
+            <span>SPEC: LOCAL-FIRST // EBPF // CADASTRE MATCHING // PHYSICAL-TO-DIGITAL</span>
           </div>
         </div>
 
-        {/* Main Grid: Headline & Interactive Emblem */}
+        {/* Main Grid: Headline & Interactive Massive Centerpiece */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Core Positioning Statement */}
           <div className="lg:col-span-7 text-left space-y-6">
@@ -49,15 +47,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08]">
               Waar een standaard bureau stopt bij de buitenkant,{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-300 to-zinc-500">
-                bouw jij de motor.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">
+                bouwt EMMER de motor.
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed">
               Jouw allergrootste onderscheidend vermogen zit in het vermogen om{' '}
               <span className="text-white font-semibold">complexe, domeinspecifieke logica direct te vertalen naar werkende, schaalbare bedrijfsmodellen</span>. 
-              Van local-first diagnostiek voor de GGZ en openbare kadaster-matching, tot enterprise cloudvoorstellen en fysieke storefronts.
+              Van local-first diagnostiek voor psychologen en ruimtelijke kadaster-matching, tot enterprise cloudvoorstellen en fysieke storefronts.
             </p>
 
             {/* Quick Action CTAs */}
@@ -120,7 +118,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
             </div>
           </div>
 
-          {/* Right Column: Interactive 3D Hero Logo Centerpiece */}
+          {/* Right Column: Interactive Massive EMMER Centerpiece */}
           <div className="lg:col-span-5">
             <HeroLogoCenterpiece />
           </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import type { CaseStudy } from '../data/projects';
 import { X, CheckCircle2, ArrowRight, Quote } from 'lucide-react';
-import { MrLogo } from './MrLogo';
+import { EmmerLogo } from './EmmerLogo';
 
 interface CaseModalProps {
   caseStudy: CaseStudy | null;
@@ -20,7 +20,7 @@ export const CaseModal: React.FC<CaseModalProps> = ({ caseStudy, onClose, onSpar
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#141720]">
           <div className="flex items-center gap-3">
             <div className="w-6 h-6 flex items-center justify-center">
-              <MrLogo size={22} />
+              <EmmerLogo size={22} />
             </div>
             <span className="text-xs font-mono uppercase tracking-wider text-zinc-400">
               {caseStudy.category} // {caseStudy.year}
@@ -83,7 +83,7 @@ export const CaseModal: React.FC<CaseModalProps> = ({ caseStudy, onClose, onSpar
 
             <div className="p-5 rounded-xl bg-white/5 border border-white/20">
               <div className="text-xs font-mono uppercase text-white font-bold mb-2">
-                WAT MATTHIAS (MR STUDIO) BOUWDE
+                WAT EMMER BOUWDE
               </div>
               <p className="text-sm text-zinc-200 leading-relaxed">
                 {caseStudy.theEngineApproach}

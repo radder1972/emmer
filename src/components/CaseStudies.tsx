@@ -3,7 +3,7 @@ import { CASE_STUDIES } from '../data/projects';
 import type { CaseStudy } from '../data/projects';
 import { CaseModal } from './CaseModal';
 import { Cpu, Layers, Shield, Globe, MapPin, Truck, ChevronRight } from 'lucide-react';
-import { MrLogo } from './MrLogo';
+import { EmmerLogo } from './EmmerLogo';
 
 interface CaseStudiesProps {
   onOpenContact: () => void;
@@ -81,7 +81,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
             >
               {/* Subtle top right watermark */}
               <div className="absolute top-4 right-4 w-12 h-12 opacity-10 pointer-events-none group-hover:opacity-25 transition-opacity">
-                <MrLogo size={48} />
+                <EmmerLogo size={48} />
               </div>
 
               {/* Card Header */}

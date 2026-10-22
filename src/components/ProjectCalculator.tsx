@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Sliders, ArrowRight, CheckCircle2, Zap } from 'lucide-react';
-import { MrLogo } from './MrLogo';
+import { EmmerLogo } from './EmmerLogo';
 
 interface ProjectCalculatorProps {
   onPlanSparringWithBrief: (brief: string) => void;
@@ -175,7 +175,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div className="flex items-center gap-2.5">
                   <div className="w-6 h-6 flex items-center justify-center">
-                    <MrLogo size={22} />
+                    <EmmerLogo size={22} />
                   </div>
                   <span className="text-xs font-mono uppercase tracking-wider text-white font-bold">
                     ARCHITECTUUR BLAUWDRUK

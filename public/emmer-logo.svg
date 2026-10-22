@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 400" fill="none" class="w-full h-full">
+  <!-- Outer Hexagon Chassis (Solid Dark Graphite / Black) -->
+  <polygon points="170,10 332,103 332,295 170,388 8,295 8,103" fill="#111216" stroke="#1f2129" stroke-width="2" />
+  
+  <!-- Top Left Cube Corner: Dark Grey Facet -->
+  <polygon points="170,52 82,103 82,230 170,230" fill="#3d4149" />
+  
+  <!-- Left Side Cube Corner: Medium Grey Facet -->
+  <polygon points="82,103 170,52 170,140 125,166 125,230 82,230" fill="#585d68" />
+  
+  <!-- Letter M: Left Vertical Leg (Pure White) -->
+  <polygon points="45,124 82,103 82,295 45,274" fill="#ffffff" />
+  
+  <!-- Letter M: Center V Isometric Diagonal Cut (Dark Shadow Cavity) -->
+  <polygon points="82,165 130,225 130,285 82,230" fill="#111216" />
+  
+  <!-- Letter M: Center Right Slope (White) -->
+  <polygon points="82,165 110,148 155,208 130,225" fill="#ffffff" />
+
+  <!-- Letter R: Upper Ribbon Top Face (Pure White) -->
+  <polygon points="170,52 260,103 235,118 170,80" fill="#ffffff" />
+  
+  <!-- Letter R: Upper Outer Right Flange (Pure White) -->
+  <polygon points="260,103 295,123 295,215 260,195" fill="#ffffff" />
+  
+  <!-- Letter R: Center Stem (Pure White) -->
+  <polygon points="170,140 205,160 205,335 170,315" fill="#ffffff" />
+  
+  <!-- Letter R: Inner Loop Hole (Dark Cavity) -->
+  <polygon points="205,160 260,192 260,215 205,183" fill="#111216" />
+  
+  <!-- Letter R: Horizontal Crossbar (White) -->
+  <polygon points="170,195 240,235 215,250 170,224" fill="#ffffff" />
+  
+  <!-- Letter R: Diagonal Leg (Pure White) -->
+  <polygon points="205,245 285,290 260,305 180,260" fill="#ffffff" />
+  
+  <!-- Letter R: Diagonal Leg Side/Shadow Facet -->
+  <polygon points="205,245 235,228 285,257 285,290" fill="#3d4149" />
+</svg>
