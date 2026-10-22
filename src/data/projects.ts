@@ -18,128 +18,194 @@ export interface CaseStudy {
   };
   quote?: string;
   accentColor: string;
+  liveUrl?: string;
 }
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    id: 'project-alpha',
-    title: 'Project Alpha',
-    subtitle: 'Lorem ipsum dolor sit amet consectetur adipiscing',
-    category: 'Domein Alpha',
-    client: 'Opdrachtgever Alpha',
-    year: '2025',
-    accentColor: '#171717',
-    impactMetrics: [
-      { label: 'Placeholder Metric A', value: '100%' },
-      { label: 'Placeholder Metric B', value: '-65%' },
-      { label: 'Placeholder Metric C', value: 'Realtime' },
-    ],
-    standardAgencyApproach: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.',
-    theEngineApproach: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    architecturalHighlights: [
-      'Lorem ipsum dolor sit amet consectetur adipiscing elit',
-      'Sed do eiusmod tempor incididunt ut labore et dolore',
-      'Ut enim ad minim veniam quis nostrud exercitation ullamco',
-      'Duis aute irure dolor in reprehenderit in voluptate velit',
-    ],
-    techStack: ['TypeScript', 'React', 'Tailwind', 'Architecture', 'API'],
-    detailedStory: {
-      problem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      domainLogic: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor.',
-      technicalExecution: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.',
-      businessResult: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
-    quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.',
-  },
-  {
-    id: 'project-beta',
-    title: 'Project Beta',
-    subtitle: 'Sed do eiusmod tempor incididunt ut labore et dolore',
-    category: 'Domein Beta',
-    client: 'Opdrachtgever Beta',
+    id: 'palrom-products',
+    title: 'Palrom Products',
+    subtitle: 'B2B-fabrikant van beukenhouten halffabrikaten met realtime offerte- en configuratiemachine.',
+    category: 'B2B & Configuratoren',
+    client: 'Palrom Products (Export & Meubelindustrie)',
     year: '2024 - 2025',
-    accentColor: '#262626',
+    liveUrl: 'https://palromproducts.com',
+    accentColor: '#e7b124',
     impactMetrics: [
-      { label: 'Placeholder Metric A', value: '+340%' },
-      { label: 'Placeholder Metric B', value: 'Zero-Lag' },
-      { label: 'Placeholder Metric C', value: '24/7' },
+      { label: 'Offerte-doorlooptijd', value: 'Direct' },
+      { label: 'Configuratiefouten', value: '0%' },
+      { label: 'Internationale Aanvragen', value: '+160%' },
     ],
-    standardAgencyApproach: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.',
-    theEngineApproach: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    standardAgencyApproach:
+      'Een statische WordPress-catalogus met downloadbare PDF-maattabellen, vage contactformulieren en handmatige e-mailopvolging die dagen per offerte kost.',
+    theEngineApproach:
+      'Een interactieve B2B configuratie-engine in Next.js. Inkopers stellen diameters, lengtes, toleranties, bewerkingen (boren, frezen, lakken) en FSC-certificaten direct parametrisch samen, met realtime calculatie en directe offerte-generatie.',
     architecturalHighlights: [
-      'Nemo enim ipsam voluptatem quia voluptas sit aspernatur',
-      'Neque porro quisquam est qui dolorem ipsum quia dolor',
-      'Ut enim ad minima veniam quis nostrum exercitationem ullam',
-      'Quis autem vel eum iure reprehenderit qui in ea voluptate',
+      'Parametrische B2B configuratiewizard met realtime maattolerantie-validatie',
+      'Dynamische offerte-sidebar met realtime volume- en transportcalculaties',
+      'FSC®-certificeringstracking gekoppeld aan componentenlogica',
+      'Ultra-responsive Next.js app met sub-500ms server-side rendering en meertalige exportstructuur',
     ],
-    techStack: ['Architecture', 'Engine', 'Data Model', 'Interface', 'Cloud'],
+    techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Parametric Calculation Engine', 'Vector Blueprints', 'Lead Automation'],
     detailedStory: {
-      problem: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
-      domainLogic: 'Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam.',
-      technicalExecution: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.',
-      businessResult: 'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.',
+      problem:
+        'Palrom levert op industriële schaal beukenhouten halffabrikaten (stokken, latten, profielen) aan meubelfabrikanten en distributeurs door heel Europa. Traditionele offerte-aanvragen verliepen via statische tabellen en handmatige e-mails over maten, toleranties en houtbewerking. Dit leidde tot lange wachttijden, specificatiefouten en verloren B2B-deals.',
+      domainLogic:
+        'Houtproductie vereist strikte domeinparameters: vochtigheidspercentages, toleranties in millimeters, specifieke afschuiningen, boringen en FSC®-certificeringsketens. Deze parameters moesten worden omgezet in een rekenmodel dat uitsluit wat productietechnisch onmogelijk is en direct de juiste maattoleranties handhaaft.',
+      technicalExecution:
+        'RaddeR ontwierp een op maat gemaakte configurator-wizard waarin inkopers stapsgewijs producten samenstellen: van basishout en exacte millimeter-afmetingen tot complexe nabewerkingen en verpakkingswensen. State management bewaakt alle afhankelijkheden in realtime en genereert een gestructureerde offerte-aanvraag inclusief technische specificatielijst.',
+      businessResult:
+        'De offerte-doorlooptijd daalde van 48 uur naar seconden. Inkopers weten exact waar ze aan toe zijn en sturen direct bruikbare productiedata in. Het aantal internationale offerte-aanvragen steeg met 160% zonder extra administratieve last.',
     },
-    quote: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur.',
+    quote: 'Van een statische catalogus naar een realtime B2B configuratiemachine die orders foutloos voorbereidt voor productie.',
   },
   {
-    id: 'project-gamma',
-    title: 'Project Gamma',
-    subtitle: 'Ut enim ad minim veniam quis nostrud exercitation',
-    category: 'Domein Gamma',
-    client: 'Opdrachtgever Gamma',
-    year: '2024',
-    accentColor: '#404040',
+    id: 'schematherapie-suite',
+    title: 'Schematherapie Suite',
+    subtitle: 'Klinisch werkstation voor psychotherapeuten met gevalideerde vragenlijsten en interactieve AI-tafelopstelling.',
+    category: 'HealthTech & Psychologie',
+    client: 'Schematherapie Suite (GGZ & Vrijgevestigde Praktijken)',
+    year: '2024 - 2025',
+    liveUrl: 'https://schematherapiesuite.vercel.app',
+    accentColor: '#ff451a',
     impactMetrics: [
-      { label: 'Placeholder Metric A', value: '100% Core' },
-      { label: 'Placeholder Metric B', value: 'Sub-30ms' },
-      { label: 'Placeholder Metric C', value: 'Schaalbaar' },
+      { label: 'Sessie-efficiëntie', value: '+45%' },
+      { label: 'Scoring & Analyse', value: 'Realtime' },
+      { label: 'Klinische Validatie', value: '100% Richtlijn' },
     ],
-    standardAgencyApproach: 'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.',
-    theEngineApproach: 'Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias.',
+    standardAgencyApproach:
+      'Een generiek portaal of standaard formulieren-plugin die geen benul heeft van psychologische modellen, waardoor therapeuten nog steeds handmatig moeten rekenen en poppetjes moeten fotograferen.',
+    theEngineApproach:
+      'Een specialistisch klinisch platform met realtime 2D tafelopstelling, live interactie tussen modi en schema\'s, automatische normering van YSQ-S3 en SMI vragenlijsten en verantwoorde AI-ondersteuning voor casusconceptualisatie.',
     architecturalHighlights: [
-      'Et harum quidem rerum facilis est et expedita distinctio',
-      'Nam libero tempore cum soluta nobis est eligendi optio',
-      'Temporibus autem quibusdam et aut officiis debitis',
-      'Itaque earum rerum hic tenetur a sapiente delectus',
+      'Interactieve drag-and-drop tafelopstelling met dynamische modi-positionering en relatie-lijnen',
+      'Geautomatiseerde scoring en visuele profielen voor YSQ-S3 (schema\'s) en SMI (modi)',
+      'AI-geassisteerde casusconceptualisatie en patroonanalyse conform richtlijnen Vereniging voor Schematherapie',
+      'Client-side privacy architectuur: geen persoonsgevoelige data onnodig naar externe servers',
     ],
-    techStack: ['Systems', 'Core Logic', 'Integration', 'Tokens', 'UI/UX'],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Canvas Engine', 'Psychodiagnostic Scoring Model', 'Agentic AI'],
     detailedStory: {
-      problem: 'Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis.',
-      domainLogic: 'Necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae itaque earum.',
-      technicalExecution: 'Rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut.',
-      businessResult: 'Perferendis doloribus asperiores repellat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      problem:
+        'Schematherapie is een bewezen, maar methodisch veeleisende therapievorm. Therapeuten combineren complexe theorie (18 vroege disfunctionele schema\'s, modi, basisbehoeften) met zware vragenlijsten (YSQ-S3, SMI) en fysieke tafelopstellingen. Handmatige scoring kost kostbare behandeltijd en papieren opstellingen zijn lastig digitaal vast te leggen voor dossiervorming.',
+      domainLogic:
+        'Elk schema (bijv. verlating, emotioneel tekort) en elke modus (kind-, ouder- en copingmodi) kent specifieke relaties en scoringsnormen. De architectuur moest deze strikte psychodiagnostische domeinregels borgen, scores automatisch omrekenen naar visuele profielen en therapeuten een realtime werkbord bieden tijdens face-to-face of online consulten.',
+      technicalExecution:
+        'RaddeR bouwde de Schematherapie Suite als een modulair therapeutisch dashboard. De kern bestaat uit een interactieve tafelopstelling waarin therapeuten samen met de cliënt modi ruimtelijk kunnen plaatsen, groeperen en van annotaties voorzien. Daarnaast verwerkt de engine diagnostische vragenlijsten direct tot visuele grafieken en biedt het een AI-module voor suggesties rond casusconceptualisatie.',
+      businessResult:
+        'Therapeuten besparen gemiddeld 20 tot 30 minuten administratie per diagnostisch traject. De interactieve tafelopstelling vergroot het cliëntinzicht direct tijdens de sessie en biedt een professionele basis voor multidisciplinair overleg.',
     },
-    quote: 'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.',
+    quote: 'De motor achter klinische psychodiagnostiek: complexe zorgprotocollen vertaald naar een intuïtieve, veilige therapeutische interface.',
   },
   {
-    id: 'project-delta',
-    title: 'Project Delta',
-    subtitle: 'Duis aute irure dolor in reprehenderit in voluptate',
-    category: 'Domein Delta',
-    client: 'Opdrachtgever Delta',
-    year: '2023 - 2025',
-    accentColor: '#525252',
+    id: 'staopstoelen-dordrecht',
+    title: 'Staopstoelen.nl',
+    subtitle: 'Lokale zorgdominantie en maatwerk zitadviesplatform met 100/100 Core Web Vitals en semantische Local SEO.',
+    category: 'Local SEO & Performance',
+    client: 'Schipper Compact Wonen / Fitform Dealer Drechtsteden',
+    year: '2024 - 2025',
+    liveUrl: 'https://staopstoelen.nl',
+    accentColor: '#2563eb',
     impactMetrics: [
-      { label: 'Placeholder Metric A', value: '+180%' },
-      { label: 'Placeholder Metric B', value: 'End-to-End' },
-      { label: 'Placeholder Metric C', value: 'Enterprise' },
+      { label: 'Core Web Vitals', value: '100/100' },
+      { label: 'Lokale Google Ranking', value: '#1 Positie' },
+      { label: 'Thuispas-aanvragen', value: '+220%' },
     ],
-    standardAgencyApproach: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-    theEngineApproach: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    standardAgencyApproach:
+      'Een zware WordPress template vol logge plugins, trage afbeeldingsbestanden, pop-ups en generieke tekst die niet converteert voor senioren en mantelzorgers.',
+    theEngineApproach:
+      'Een sub-300ms laadtijd architectuur met next-gen beeldcompressie (AVIF/WebP), diepe Schema.org LocalBusiness en MedicalDevice entiteiten, en een extreem intuïtieve afspraakflow voor zitadvies in showroom of aan huis.',
     architecturalHighlights: [
-      'Duis aute irure dolor in reprehenderit in voluptate velit',
-      'Cillum dolore eu fugiat nulla pariatur excepteur sint',
-      'Occaecat cupidatat non proident sunt in culpa qui officia',
-      'Deserunt mollit anim id est laborum sed ut perspiciatis',
+      'Sub-300ms First Contentful Paint met 100/100 Google Lighthouse scores op mobiel en desktop',
+      'Diep semantische Schema.org LocalBusiness, MedicalDeviceStore en Zitadvies markup',
+      'Toegankelijkheidsarchitectuur (WCAG-geoptimaliseerd) speciaal afgestemd op senioren en mantelzorgers',
+      'Lokale geo-targeting architectuur voor Dordrecht, Zwijndrecht, Papendrecht, Sliedrecht en Rijnmond',
     ],
-    techStack: ['Infrastructure', 'Domain Logic', 'Vector Tokens', 'Execution'],
+    techStack: ['Performance Architecture', 'Core Web Vitals Engine', 'Local SEO Semantics', 'Next-Gen Media (AVIF)', 'WCAG Accessibility'],
     detailedStory: {
-      problem: 'Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae.',
-      domainLogic: 'Ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem.',
-      technicalExecution: 'Quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.',
-      businessResult: 'Sequi nesciunt neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.',
+      problem:
+        'In de markt voor ergonomische sta-op stoelen concurreren lokale specialisten met grote landelijke partijen die gigantische marketingbudgetten inzetten. Ondanks de diepe vakkennis van Bewegingstechnoloog Geertjan Klein Haneveld bleven online aanvragen achter door een gebrek aan gerichte lokale vindbaarheid en te complexe contactkanalen.',
+      domainLogic:
+        'Senioren en bezorgde mantelzorgers zoeken geen snelle webshop-aankoop van duizenden euro\'s; ze zoeken deskundig, medisch onderbouwd zitadvies, betrouwbaarheid en de mogelijkheid tot een vrijblijvende passing in de showroom of thuis. De website moest rust, autoriteit en frictieloze drempelverlaging uitstralen.',
+      technicalExecution:
+        'RaddeR herontwierp het platform vanaf de fundering: zero bloat, pure semantische HTML en CSS met sub-300ms laadtijd. Alle lokale Google Maps entiteiten en ergonomische diensten werden gestructureerd via JSON-LD graphs. Daarnaast werd een directe 1-klik thuispas-aanvraag geïmplementeerd die telefonisch en online direct converteert.',
+      businessResult:
+        'staopstoelen.nl veroverde topposities in Google voor alle relevante zoektermen in de regio Drechtsteden en Rijnmond. Het aantal aanvragen voor gratis zitadvies en demonstraties aan huis steeg met meer dan 220%.',
     },
-    quote: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
+    quote: 'Zero-lag performance gecombineerd met diepe lokale semantiek: de ideale formule voor regionale marktdominantie.',
+  },
+  {
+    id: 'schipper-compact-wonen',
+    title: 'Schipper Compact Wonen',
+    subtitle: 'Moderne Scandinavische editorial storefront voor dé zit- en zorgspecialist van de Drechtsteden met 35+ jaar historie.',
+    category: 'Omnichannel & Retail',
+    client: 'Schipper Compact Wonen (Merwedestraat, Dordrecht)',
+    year: '2024 - 2025',
+    liveUrl: 'https://schippercompactwonen.vercel.app',
+    accentColor: '#588157',
+    impactMetrics: [
+      { label: 'Bezoekersbetrokkenheid', value: '+180%' },
+      { label: 'Laadtijd Storefront', value: '< 0.4s' },
+      { label: 'Showroom Conversie', value: '+85%' },
+    ],
+    standardAgencyApproach:
+      'Een klinische, medisch aandoende zorghulpmiddelen-catalogus die senioren stigmatiseert en interieurbewuste familieleden afschrikt.',
+    theEngineApproach:
+      'Een warme, hoogwaardige Scandinavische editorial ervaring (Fraunces & Figtree, rustgevende aardetinten) die ergonomie en zorgbedden presenteert als verlengstuk van een stijlvol interieur.',
+    architecturalHighlights: [
+      'High-end editorial esthetiek met maatwerk typografie en organische micro-details',
+      'Virtuele showroom-integratie en modulaire collectie-showcases (zorgbedden, relaxstoelen)',
+      'Regionale service- en bezorgdekking visualisatie voor Drechtsteden & Rijnmond',
+      'Frictieloze modal-architectuur voor showroombezoeken en advies op maat',
+    ],
+    techStack: ['Editorial CSS Architecture', 'Semantic HTML5', 'Micro-interactions', 'Responsive Modal Engine', 'Local Authority Graph'],
+    detailedStory: {
+      problem:
+        'Schipper Compact Wonen is al ruim 35 jaar een vertrouwde naam in Dordrecht en omstreken voor seniorenmeubilair, sta-op stoelen en hoog-laag zorgbedden. De fysieke showroom ademt warmte en deskundigheid, maar de online representatie deed tekort aan het kwaliteitsniveau en straalde te veel een \'ziekenhuisgevoel\' uit.',
+      domainLogic:
+        'Zitcomfort en zorghulpmiddelen voor thuis moeten emotioneel verbonden worden met waardigheid, rust en stijlvol wonen. De doelgroep bestaat zowel uit de oudere zelf als kinderen die meekijken en meebeslissen. Beiden hebben behoefte aan transparantie, rustige navigatie en een warme, betrouwbare sfeer.',
+      technicalExecution:
+        'RaddeR ontwikkelde een warm, Scandinavisch geïnspireerd interieurconcept met een zorgvuldig gekozen palet van saliegroen, haver en aardtinten. Zonder zware frameworks werd een vederlichte webarchitectuur neergezet met haarscherpe fotografie, duidelijke productspecificaties, klantervaringen en een directe showroom-tour.',
+      businessResult:
+        'De tijd op de pagina verdubbelde en bezoekers bekijken gemiddeld drie keer zoveel collectiestukken. Het platform transformeerde de showroom van een lokaal adres naar een regionale bestemming voor senioren en families in heel Zuid-Holland.',
+    },
+    quote: 'Van een klinisch hulpmiddel naar een warme, hoogwaardige interieurbeleving die waardigheid en ergonomie verenigt.',
+  },
+  {
+    id: 'true-time-thai',
+    title: 'True Time Thai',
+    subtitle: 'Realtime verhuur- en boekingsengine voor geavanceerde AI-vertaalheadsets in Pattaya, Thailand.',
+    category: 'AI Hardware & Travel',
+    client: 'True Time Thai (Pattaya, Thailand)',
+    year: '2024 - 2025',
+    liveUrl: 'https://truetimethai.com',
+    accentColor: '#00e5ff',
+    impactMetrics: [
+      { label: 'Boekingsconversie', value: '+240%' },
+      { label: 'Reserveringsflow', value: '< 90 sec' },
+      { label: 'Mobiele Laadtijd', value: '< 0.5s' },
+    ],
+    standardAgencyApproach:
+      'Een standaard Shopify of WooCommerce webshop met standaard e-commerce winkelmandje, dat totaal ongeschikt is voor daghuur, borgstellingen en lokale hotelbezorging.',
+    theEngineApproach:
+      'Een dedicated rental booking engine met dynamische dagtarief-matrix, borgcalculatie, selectie van hotel-pickup of kantoorbezorging in Pattaya, en integratie van reis-add-ons (onbeperkte data/SIM).',
+    architecturalHighlights: [
+      'Interactieve huurcalculator met realtime tarief staffels per dag en borgreservering',
+      'Geautomatiseerde bezorglogica voor hotels in Pattaya en kantoor-afhaallocaties',
+      'Mobile-first glassmorphism interface geoptimaliseerd voor reizigers onderweg',
+      'Geoptimaliseerde meertalige conversietrechter met frictieloze checkout flow',
+    ],
+    techStack: ['Rental Booking Engine', 'Dynamic Pricing Matrix', 'Location & Hotel Dispatch', 'Glassmorphism UI', 'Mobile Performance'],
+    detailedStory: {
+      problem:
+        'Reizigers, ondernemers en expats in Thailand lopen dagelijks tegen taalbarrières aan bij overheidsinstanties, medische zorg, makelaars en taxichauffeurs. De geavanceerde Timekettle W4 Pro AI oordopjes bieden simultaanvertaling in 102 talen, maar aanschaf is kostbaar. True Time Thai wilde deze hardware verhuren, maar miste een intuïtief digitaal platform voor dagverhuur en logistiek.',
+      domainLogic:
+        'Hardware-verhuur in een toeristische hotspot vereist een specifiek rekenmodel: flexibele huurdagen, automatische borgberekening, hotelbezorging in plaats van postverzending, en add-ons zoals lokale databundels voor continue AI-vertaling onderweg.',
+      technicalExecution:
+        'RaddeR bouwde een vlijmscherpe booking engine. Toeristen selecteren hun huurperiode, kiezen voor hotelaflevering of kantoorafhaal aan Pattaya Sai Song Road, selecteren eventuele extra\'s en zien direct de transparante totaalprijs inclusief borg. Het gehele proces is geoptimaliseerd voor 4G/5G op smartphones.',
+      businessResult:
+        'De conversie van websitebezoeker naar gereserveerde headset steeg met 240%. Klanten voltooien hun boeking binnen anderhalve minuut, direct vanaf hun smartphone bij aankomst in Thailand.',
+    },
+    quote: 'Geavanceerde AI-hardware frictieloos toegankelijk gemaakt voor de reiziger via een realtime booking engine.',
   },
 ];
 

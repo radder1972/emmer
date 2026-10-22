@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CASE_STUDIES } from '../data/projects';
 import type { CaseStudy } from '../data/projects';
 import { CaseModal } from './CaseModal';
-import { Cpu, Layers, Globe, MapPin, Truck, ChevronRight } from 'lucide-react';
+import { Cpu, Layers, Globe, MapPin, Truck, ChevronRight, ExternalLink } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderIconCases } from './RadderNavIcons';
 
@@ -14,7 +14,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Alle');
   const [activeModalCase, setActiveModalCase] = useState<CaseStudy | null>(null);
 
-  const categories = ['Alle', 'Domein Alpha', 'Domein Beta', 'Domein Gamma', 'Domein Delta'];
+  const categories = ['Alle', ...Array.from(new Set(CASE_STUDIES.map((c) => c.category)))];
 
   const filteredCases = selectedCategory === 'Alle'
     ? CASE_STUDIES
@@ -22,14 +22,16 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Domein Alpha':
+      case 'B2B & Configuratoren':
         return <Cpu className="w-4 h-4 text-neutral-900" />;
-      case 'Domein Beta':
-        return <MapPin className="w-4 h-4 text-neutral-800" />;
-      case 'Domein Gamma':
-        return <Globe className="w-4 h-4 text-neutral-800" />;
-      case 'Domein Delta':
-        return <Truck className="w-4 h-4 text-neutral-800" />;
+      case 'HealthTech & Psychologie':
+        return <Layers className="w-4 h-4 text-neutral-900" />;
+      case 'Local SEO & Performance':
+        return <MapPin className="w-4 h-4 text-neutral-900" />;
+      case 'Omnichannel & Retail':
+        return <Globe className="w-4 h-4 text-neutral-900" />;
+      case 'AI Hardware & Travel':
+        return <Truck className="w-4 h-4 text-neutral-900" />;
       default:
         return <Layers className="w-4 h-4 text-neutral-700" />;
     }
@@ -52,7 +54,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
           <div className="relative z-10 max-w-4xl text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm mb-4">
               <RadderIconCases size={14} strokeWidth={2} color="#ff451a" />
-              <span>PORTFOLIO // PLACEHOLDER</span>
+              <span>PORTFOLIO // PRODUCTIE CASES</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 leading-[1.08]">
@@ -61,7 +63,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Geen oppervlakkige bureau-demo's, maar live productieplatforms gebouwd op robuuste domeinlogica, zero-lag architectuur en directe executie.
             </p>
           </div>
         </div>
@@ -154,18 +156,33 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
               </div>
 
               {/* Card Footer / Action */}
-              <div className="px-6 sm:px-8 py-4 bg-neutral-50/80 border-t border-neutral-200/80 flex items-center justify-between">
-                <span className="text-xs font-mono text-neutral-600">
+              <div className="px-6 sm:px-8 py-4 bg-neutral-50/80 border-t border-neutral-200/80 flex flex-wrap items-center justify-between gap-3">
+                <span className="text-xs font-mono text-neutral-600 truncate max-w-full sm:max-w-[260px]">
                   Klant: <strong className="text-neutral-950">{study.client}</strong>
                 </span>
 
-                <button
-                  onClick={() => setActiveModalCase(study)}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-neutral-950 hover:text-black transition-colors cursor-pointer group-hover:translate-x-0.5"
-                >
-                  <span>Diepte-analyse bekijken</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
+                <div className="flex items-center gap-3">
+                  {study.liveUrl && (
+                    <a
+                      href={study.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-mono text-neutral-600 hover:text-[#ff451a] transition-colors"
+                      title={`Bezoek ${study.title}`}
+                    >
+                      <span>Live site</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  )}
+
+                  <button
+                    onClick={() => setActiveModalCase(study)}
+                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-neutral-950 hover:text-[#ff451a] transition-colors cursor-pointer group-hover:translate-x-0.5"
+                  >
+                    <span>Diepte-analyse</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
           ))}

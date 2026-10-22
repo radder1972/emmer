@@ -1,6 +1,6 @@
 import React from 'react';
 import type { CaseStudy } from '../data/projects';
-import { X, CheckCircle2, ArrowRight, Quote } from 'lucide-react';
+import { X, CheckCircle2, ArrowRight, Quote, ExternalLink } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 
 interface CaseModalProps {
@@ -38,16 +38,30 @@ export const CaseModal: React.FC<CaseModalProps> = ({ caseStudy, onClose, onSpar
         {/* Content Body */}
         <div className="p-6 sm:p-8 space-y-8 max-h-[80vh] overflow-y-auto">
           {/* Title Area */}
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-950">
-              {caseStudy.title}
-            </h2>
-            <p className="mt-2 text-base text-neutral-700">
-              {caseStudy.subtitle}
-            </p>
-            <div className="mt-3 text-xs font-mono text-neutral-500">
-              Klant / Context: <strong className="text-neutral-950">{caseStudy.client}</strong>
+          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-950">
+                {caseStudy.title}
+              </h2>
+              <p className="mt-2 text-base text-neutral-700">
+                {caseStudy.subtitle}
+              </p>
+              <div className="mt-3 text-xs font-mono text-neutral-500">
+                Klant / Context: <strong className="text-neutral-950">{caseStudy.client}</strong>
+              </div>
             </div>
+
+            {caseStudy.liveUrl && (
+              <a
+                href={caseStudy.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-neutral-950 hover:text-white border border-neutral-300 text-neutral-900 text-xs font-mono font-bold transition-all shadow-sm shrink-0 self-start"
+              >
+                <span>Bezoek Live Platform</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
           </div>
 
           {/* Impact Metrics Badges */}
@@ -165,19 +179,32 @@ export const CaseModal: React.FC<CaseModalProps> = ({ caseStudy, onClose, onSpar
 
         {/* Modal Footer */}
         <div className="px-6 py-4 bg-[#f4f3ef] border-t border-neutral-200 flex flex-wrap items-center justify-between gap-4">
-          <button
-            onClick={onClose}
-            className="px-4 py-2 rounded-lg text-xs font-mono text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer"
-          >
-            Sluiten
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={onClose}
+              className="px-4 py-2 rounded-lg text-xs font-mono text-neutral-600 hover:text-neutral-950 transition-colors cursor-pointer"
+            >
+              Sluiten
+            </button>
+            {caseStudy.liveUrl && (
+              <a
+                href={caseStudy.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-mono text-neutral-700 hover:text-[#ff451a] transition-colors"
+              >
+                <span>{caseStudy.liveUrl.replace(/^https?:\/\//, '')}</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+          </div>
 
           <button
             onClick={() => {
               onClose();
               onSparring();
             }}
-            className="px-5 py-2.5 rounded-lg bg-neutral-950 hover:bg-neutral-800 text-white font-bold font-mono text-xs uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-sm"
+            className="px-5 py-2.5 rounded-lg bg-neutral-950 hover:bg-[#ff451a] text-white font-bold font-mono text-xs uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-sm transition-colors"
           >
             <span>Sparren over vergelijkbare architectuur</span>
             <ArrowRight className="w-4 h-4" />
