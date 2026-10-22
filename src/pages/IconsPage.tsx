@@ -31,12 +31,12 @@ export const IconsPage: React.FC<IconsPageProps> = ({
   // ==========================================
   // TYPEFACE STATE
   // ==========================================
-  const [customText, setCustomText] = useState<string>('RADDER 2026 // PRODUCT ARCHITECTURE');
+  const [customText, setCustomText] = useState<string>('RaddeR 2026 // van prompt naar productie');
   const [fontMode, setFontMode] = useState<'stroke' | 'wireframe'>('stroke');
   const [fontSize, setFontSize] = useState<number>(44);
   const [fontStroke, setFontStroke] = useState<number>(8);
   const [fontSpacing, setFontSpacing] = useState<number>(4);
-  const [glyphCategory, setGlyphCategory] = useState<'all' | 'letter' | 'number' | 'symbol'>('all');
+  const [glyphCategory, setGlyphCategory] = useState<'all' | 'letter' | 'lowercase' | 'number' | 'symbol'>('all');
   const [inspectGlyph, setInspectGlyph] = useState<GlyphDefinition | null>(null);
 
   // ==========================================
@@ -128,7 +128,17 @@ export const IconsPage: React.FC<IconsPageProps> = ({
         ? 'hash'
         : glyph.char === '?'
         ? 'question'
-        : glyph.char.toLowerCase();
+        : glyph.char === '%'
+        ? 'percent'
+        : glyph.char === ':'
+        ? 'colon'
+        : glyph.char === '.'
+        ? 'dot'
+        : glyph.char === '@'
+        ? 'at'
+        : glyph.category === 'lowercase'
+        ? `lower-${glyph.char}`
+        : `upper-${glyph.char.toLowerCase()}`;
     link.download = `radder-glyph-${safeChar}.svg`;
     document.body.appendChild(link);
     link.click();
@@ -183,7 +193,7 @@ export const IconsPage: React.FC<IconsPageProps> = ({
 
             <p className="mt-4 text-base sm:text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed">
               {activeTab === 'typeface'
-                ? 'Een compleet modulair vector-font van 48 glyphs (A-Z, 0-9 en symbolen). Gekenmerkt door de karakteristieke boogstralen, tubulaire fillets en vloeiende pootconstructies uit het RaddeR woordmerk.'
+                ? `Een compleet modulair vector-font van ${RADDER_GLYPHS.length} glyphs (A-Z hoofdletters, a-z kleine letters, 0-9 en symbolen). Gekenmerkt door de karakteristieke boogstralen, tubulaire fillets en vloeiende pootconstructies uit het RaddeR woordmerk.`
                 : `Een set van ${RADDER_ICONS_COLLECTION.length} op maat ontworpen vector-iconen in de architecturale stijl van RaddeR. Gekarakteriseerd door wiskundige symmetrie, dubbele bogen en modulaire 24x24 rasters.`}
             </p>
           </div>
@@ -247,8 +257,8 @@ export const IconsPage: React.FC<IconsPageProps> = ({
                     type="text"
                     value={customText}
                     onChange={(e) => setCustomText(e.target.value)}
-                    placeholder="Typ hier (bijv. RADDER 2026)..."
-                    className="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-300 text-neutral-950 font-mono text-sm uppercase tracking-wider focus:outline-none focus:border-neutral-950 transition-colors"
+                    placeholder="Typ hier (bijv. RaddeR, software, motor)..."
+                    className="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-300 text-neutral-950 font-mono text-sm tracking-wider focus:outline-none focus:border-neutral-950 transition-colors"
                   />
                   {customText && (
                     <button
@@ -265,12 +275,14 @@ export const IconsPage: React.FC<IconsPageProps> = ({
               <div className="flex flex-wrap items-center gap-2 pt-1">
                 <span className="text-[11px] font-mono text-neutral-500 uppercase">Presets:</span>
                 {[
-                  'RADDER 2026',
-                  'VAN PROMPT NAAR PRODUCTIE',
-                  'ZERO-LAG ARCHITECTUUR',
-                  'BOUW AAN DE MOTOR',
-                  '0123456789',
+                  'RaddeR 2026',
+                  'radder',
+                  'Van Prompt naar Productie',
+                  'Zero-Lag Architectuur',
+                  'Bouw aan de Motor',
+                  'a b c d e f g h i j k l m n o p q r s t u v w x y z',
                   'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z',
+                  '0123456789',
                 ].map((sample) => (
                   <button
                     key={sample}
@@ -429,8 +441,13 @@ export const IconsPage: React.FC<IconsPageProps> = ({
                   { id: 'all', label: 'Alle Glyphs', count: RADDER_GLYPHS.length },
                   {
                     id: 'letter',
-                    label: 'Letters (A-Z)',
+                    label: 'Hoofdletters (A-Z)',
                     count: RADDER_GLYPHS.filter((g) => g.category === 'letter').length,
+                  },
+                  {
+                    id: 'lowercase',
+                    label: 'Kleine Letters (a-z)',
+                    count: RADDER_GLYPHS.filter((g) => g.category === 'lowercase').length,
                   },
                   {
                     id: 'number',
@@ -481,7 +498,13 @@ export const IconsPage: React.FC<IconsPageProps> = ({
                       {/* Glyph Header */}
                       <div className="flex items-center justify-between mb-3 text-[10px] font-mono text-neutral-500">
                         <span className="uppercase font-semibold tracking-wider">
-                          {glyph.category}
+                          {glyph.category === 'letter'
+                            ? 'Hoofdletter'
+                            : glyph.category === 'lowercase'
+                            ? 'Kleine Letter'
+                            : glyph.category === 'number'
+                            ? 'Cijfer'
+                            : 'Symbool'}
                         </span>
                         <span className="text-neutral-400 font-mono">
                           U+{glyph.char.charCodeAt(0).toString(16).toUpperCase().padStart(4, '0')}
@@ -594,7 +617,7 @@ export const IconsPage: React.FC<IconsPageProps> = ({
                   <div className="flex items-center justify-between pb-4 border-b border-neutral-200">
                     <div>
                       <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500 bg-neutral-100 px-2 py-0.5 rounded">
-                        GLYPH SPECIMEN // {inspectGlyph.category.toUpperCase()}
+                        GLYPH SPECIMEN // {inspectGlyph.category === 'lowercase' ? 'KLEINE LETTER' : inspectGlyph.category === 'letter' ? 'HOOFDLETTER' : inspectGlyph.category === 'number' ? 'CIJFER' : 'SYMBOOL'}
                       </span>
                       <h3 className="text-2xl font-bold text-neutral-950 font-mono mt-1">
                         {inspectGlyph.name}
