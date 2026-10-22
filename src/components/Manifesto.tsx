@@ -107,20 +107,6 @@ export const Manifesto: React.FC = () => {
               Wij doorbreken het theater van vergaderen en bouwen direct aan de motor.
             </span>
           </h2>
-
-          {/* Wireframe Kop Onder De Kop */}
-          <div
-            className="mt-5 text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-[1.15] text-transparent select-none pointer-events-none"
-            style={{
-              WebkitTextStroke: '1.5px rgba(10, 10, 10, 0.32)',
-            }}
-            aria-hidden="true"
-          >
-            De software-industrie heeft zichzelf gegijzeld in overbodige lagen.{' '}
-            <span style={{ WebkitTextStroke: '1.5px rgba(10, 10, 10, 0.16)' }}>
-              Wij doorbreken het theater van vergaderen en bouwen direct aan de motor.
-            </span>
-          </div>
         </div>
 
         {/* Prologue: The Shift */}
