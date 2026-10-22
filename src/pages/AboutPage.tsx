@@ -16,7 +16,7 @@ export const AboutPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-28 pb-16 animate-fade-in space-y-12">
+    <div className="pt-20 pb-0 animate-fade-in">
       {/* 1. De Driehoek: Architect, Strateeg, Maker */}
       <Pillars />
 

@@ -30,27 +30,27 @@ export const ManifestPage: React.FC<ManifestPageProps> = ({
       <EngineVsWrapper />
 
       {/* Bottom Page Transition Banner */}
-      <section className="py-16 bg-[#06070a] border-t border-white/10 text-center">
+      <section className="py-16 bg-[#f4f3ef] border-t border-neutral-300 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-left">
-            <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+            <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 tracking-tight">
               Klaar om de gerealiseerde motoren te bekijken?
             </h3>
-            <p className="text-sm text-zinc-400 mt-1">
+            <p className="text-sm text-neutral-600 mt-1">
               Bekijk 5 geselecteerde cases: van zorgdiagnostiek tot eBPF telemetry.
             </p>
           </div>
           <div className="flex items-center gap-3">
             <button
               onClick={onNavigateToCases}
-              className="px-6 py-3 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer shadow-lg shadow-white/10"
+              className="px-6 py-3 rounded-xl bg-neutral-950 hover:bg-neutral-800 text-white font-bold font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer shadow-sm"
             >
               <span>Bekijk Cases</span>
               <ArrowRight className="w-4 h-4" />
             </button>
             <button
               onClick={onNavigateToAbout}
-              className="px-5 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-white/15 font-mono text-xs uppercase tracking-wider transition-all cursor-pointer"
+              className="px-5 py-3 rounded-xl bg-white hover:bg-neutral-100 text-neutral-800 border border-neutral-300 font-mono text-xs uppercase tracking-wider transition-all cursor-pointer shadow-sm"
             >
               Over Ons
             </button>

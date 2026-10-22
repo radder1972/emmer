@@ -50,21 +50,21 @@ export const TechRadar: React.FC = () => {
   ];
 
   return (
-    <section id="tech" className="py-24 bg-[#08090d] border-t border-white/10 relative">
+    <section id="tech" className="py-24 bg-[#f4f3ef] border-t border-neutral-300 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-left max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300 text-xs font-mono mb-4">
-            <Cpu className="w-3.5 h-3.5 text-white" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
+            <Cpu className="w-3.5 h-3.5 text-neutral-950" />
             <span>TECHNISCHE EN STRATEGISCHE TOOLKIT</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
             De Stack: Van Linux Kernel <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">
+            <span className="text-neutral-600">
               tot Fysieke Storefront.
             </span>
           </h2>
-          <p className="mt-4 text-zinc-400 text-base sm:text-lg">
+          <p className="mt-4 text-neutral-600 text-base sm:text-lg">
             Bewezen technologie waarmee complexe domeinlogica direct operationeel wordt.
           </p>
         </div>
@@ -76,16 +76,16 @@ export const TechRadar: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-[#11131a] border border-white/10 p-6 sm:p-8 flex flex-col justify-between hover:border-white/30 transition-all duration-300 group"
+                className="rounded-2xl bg-white border border-neutral-200/90 shadow-sm p-6 sm:p-8 flex flex-col justify-between hover:border-neutral-400 hover:shadow-md transition-all duration-300 group"
               >
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-white">
+                    <div className="p-2.5 rounded-lg bg-neutral-100 border border-neutral-200 text-neutral-950">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white">{sec.category}</h3>
-                      <p className="text-xs text-zinc-400">{sec.description}</p>
+                      <h3 className="text-lg font-bold text-neutral-950">{sec.category}</h3>
+                      <p className="text-xs text-neutral-600">{sec.description}</p>
                     </div>
                   </div>
 
@@ -93,13 +93,13 @@ export const TechRadar: React.FC = () => {
                     {sec.items.map((item, i) => (
                       <div
                         key={i}
-                        className="p-3 rounded-xl bg-black/40 border border-white/5 hover:border-white/20 transition-colors text-left"
+                        className="p-3 rounded-xl bg-neutral-50/70 border border-neutral-200/80 hover:border-neutral-300 transition-colors text-left"
                       >
-                        <div className="flex items-center justify-between text-xs font-mono text-white font-semibold">
+                        <div className="flex items-center justify-between text-xs font-mono text-neutral-950 font-semibold">
                           <span>{item.name}</span>
-                          <span className="text-[10px] text-zinc-400 font-normal">OPERATIONAL</span>
+                          <span className="text-[10px] text-neutral-500 font-normal">OPERATIONAL</span>
                         </div>
-                        <div className="text-xs text-zinc-400 mt-1">
+                        <div className="text-xs text-neutral-600 mt-1">
                           {item.detail}
                         </div>
                       </div>
@@ -107,9 +107,9 @@ export const TechRadar: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-zinc-500">
+                <div className="mt-6 pt-4 border-t border-neutral-200/80 flex items-center justify-between text-xs font-mono text-neutral-500">
                   <span>LEVEL: ENTERPRISE & PRODUCTION READY</span>
-                  <div className="w-2 h-2 rounded-full bg-white"></div>
+                  <div className="w-2 h-2 rounded-full bg-neutral-950"></div>
                 </div>
               </div>
             );

@@ -58,7 +58,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#090b10] text-zinc-100 selection:bg-white selection:text-black antialiased font-sans">
+    <div className="min-h-screen bg-[#f8f7f4] text-neutral-900 selection:bg-black selection:text-white antialiased font-sans">
       {/* Fixed Navigation Bar with exact items: Manifest | Cases | Over Ons */}
       <Navbar
         currentPage={currentPage}

@@ -22,34 +22,34 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Zorg & Healthtech':
-        return <Cpu className="w-4 h-4 text-white" />;
+        return <Cpu className="w-4 h-4 text-neutral-900" />;
       case 'Proptech & Geodata':
-        return <MapPin className="w-4 h-4 text-zinc-300" />;
+        return <MapPin className="w-4 h-4 text-neutral-800" />;
       case 'Enterprise Cloud':
-        return <Shield className="w-4 h-4 text-zinc-400" />;
+        return <Shield className="w-4 h-4 text-neutral-700" />;
       case 'Fysiek & Digitaal':
-        return <Globe className="w-4 h-4 text-zinc-200" />;
+        return <Globe className="w-4 h-4 text-neutral-800" />;
       case 'B2B & E-commerce':
-        return <Truck className="w-4 h-4 text-zinc-300" />;
+        return <Truck className="w-4 h-4 text-neutral-800" />;
       default:
-        return <Layers className="w-4 h-4 text-zinc-400" />;
+        return <Layers className="w-4 h-4 text-neutral-700" />;
     }
   };
 
   return (
-    <section id="cases" className="py-24 bg-[#0a0c11] relative">
+    <section id="cases" className="py-24 bg-[#f8f7f4] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="text-left max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300 text-xs font-mono mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
               <span>VOLWAARDIGE PRODUCTONTWIKKELING</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
               Geselecteerde Projecten & <br />
-              <span className="text-zinc-300">Domein-Architecturen</span>
+              <span className="text-neutral-600">Domein-Architecturen</span>
             </h2>
-            <p className="mt-4 text-zinc-400 text-base sm:text-lg">
+            <p className="mt-4 text-neutral-600 text-base sm:text-lg">
               Werkende producten met diepe logica, privacy-first data en tastbare realiteit.
             </p>
           </div>
@@ -62,8 +62,8 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer ${
                   selectedCategory === cat
-                    ? 'bg-white text-black font-bold shadow-md shadow-white/10'
-                    : 'bg-zinc-900 text-zinc-400 hover:text-white border border-white/5 hover:border-white/10'
+                    ? 'bg-neutral-950 text-white font-bold shadow-sm'
+                    : 'bg-white text-neutral-600 hover:text-neutral-950 border border-neutral-300 hover:border-neutral-400 shadow-sm'
                 }`}
               >
                 {cat}
@@ -77,46 +77,46 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
           {filteredCases.map((study) => (
             <div
               key={study.id}
-              className="rounded-2xl bg-[#11141c] border border-white/10 overflow-hidden flex flex-col justify-between hover:border-white/30 transition-all duration-300 hover:shadow-2xl hover:shadow-black/70 group relative"
+              className="rounded-2xl bg-white border border-neutral-200/90 shadow-sm overflow-hidden flex flex-col justify-between hover:border-neutral-400 hover:shadow-md transition-all duration-300 group relative"
             >
               {/* Subtle top right watermark */}
-              <div className="absolute top-4 right-4 w-12 h-12 opacity-10 pointer-events-none group-hover:opacity-25 transition-opacity text-white">
-                <RadderLogo size={48} />
+              <div className="absolute top-4 right-4 w-12 h-12 opacity-[0.06] pointer-events-none group-hover:opacity-20 transition-opacity">
+                <RadderLogo size={48} color="#0a0a0a" />
               </div>
 
               {/* Card Header */}
               <div className="p-6 sm:p-8">
                 <div className="flex items-center justify-between gap-2 mb-4">
-                  <div className="flex items-center gap-2 px-2.5 py-1 rounded bg-white/5 border border-white/10 text-xs font-mono text-zinc-300">
+                  <div className="flex items-center gap-2 px-2.5 py-1 rounded-md bg-neutral-100 border border-neutral-200/80 text-xs font-mono text-neutral-800">
                     {getCategoryIcon(study.category)}
                     <span>{study.category}</span>
                   </div>
-                  <span className="text-xs font-mono text-zinc-500">{study.year}</span>
+                  <span className="text-xs font-mono text-neutral-500">{study.year}</span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-white group-hover:text-zinc-200 transition-colors">
+                <h3 className="text-2xl font-bold text-neutral-950 group-hover:text-black transition-colors">
                   {study.title}
                 </h3>
-                <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
                   {study.subtitle}
                 </p>
 
                 {/* Impact Metrics Row */}
-                <div className="mt-6 grid grid-cols-3 gap-2 p-3.5 rounded-xl bg-black/60 border border-white/10">
+                <div className="mt-6 grid grid-cols-3 gap-2 p-3.5 rounded-xl bg-neutral-50 border border-neutral-200/80">
                   {study.impactMetrics.map((m, i) => (
                     <div key={i} className="text-left">
-                      <div className="text-[10px] font-mono uppercase text-zinc-500 truncate">{m.label}</div>
-                      <div className="text-sm font-bold text-white font-mono mt-0.5">{m.value}</div>
+                      <div className="text-[10px] font-mono uppercase text-neutral-500 truncate">{m.label}</div>
+                      <div className="text-sm font-bold text-neutral-950 font-mono mt-0.5">{m.value}</div>
                     </div>
                   ))}
                 </div>
 
                 {/* The "Motor" Difference Box */}
-                <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/15 text-left">
-                  <div className="text-[11px] font-mono uppercase tracking-wider text-white font-bold mb-1">
+                <div className="mt-6 p-4 rounded-xl bg-neutral-950 text-white border border-neutral-900 text-left shadow-sm">
+                  <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-300 font-bold mb-1">
                     DE MOTOR AANPAK:
                   </div>
-                  <p className="text-xs text-zinc-200 leading-relaxed">
+                  <p className="text-xs text-neutral-200 leading-relaxed">
                     {study.theEngineApproach}
                   </p>
                 </div>
@@ -126,13 +126,13 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
                   {study.techStack.slice(0, 4).map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/5 text-zinc-400"
+                      className="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 border border-neutral-200/80 text-neutral-700"
                     >
                       {tech}
                     </span>
                   ))}
                   {study.techStack.length > 4 && (
-                    <span className="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 border border-white/5 text-zinc-500">
+                    <span className="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 border border-neutral-200/80 text-neutral-500">
                       +{study.techStack.length - 4} meer
                     </span>
                   )}
@@ -140,14 +140,14 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
               </div>
 
               {/* Card Footer / Action */}
-              <div className="px-6 sm:px-8 py-4 bg-[#141822] border-t border-white/5 flex items-center justify-between">
-                <span className="text-xs font-mono text-zinc-400">
-                  Klant: <strong className="text-zinc-200">{study.client}</strong>
+              <div className="px-6 sm:px-8 py-4 bg-neutral-50/80 border-t border-neutral-200/80 flex items-center justify-between">
+                <span className="text-xs font-mono text-neutral-600">
+                  Klant: <strong className="text-neutral-950">{study.client}</strong>
                 </span>
 
                 <button
                   onClick={() => setActiveModalCase(study)}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-white hover:text-zinc-300 transition-colors cursor-pointer group-hover:translate-x-0.5"
+                  className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-neutral-950 hover:text-black transition-colors cursor-pointer group-hover:translate-x-0.5"
                 >
                   <span>Diepte-analyse bekijken</span>
                   <ChevronRight className="w-4 h-4" />

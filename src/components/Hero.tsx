@@ -9,44 +9,44 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-grid-pattern">
-      {/* Background ambient lighting - Stark monochrome / titanium silver glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-gradient-to-b from-white/10 via-zinc-500/5 to-transparent blur-[140px] -z-10 pointer-events-none" />
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
+      {/* Subtle Warm Paper Glow & Monograph Vignette */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-gradient-to-b from-black/[0.03] to-transparent blur-[140px] -z-10 pointer-events-none" />
 
-      {/* Hero Architectural Emblem Watermark */}
-      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 w-[320px] sm:w-[420px] lg:w-[500px] opacity-[0.06] pointer-events-none select-none text-white -z-10 transition-opacity">
-        <RadderLogo size={500} glow={true} />
+      {/* Hero Architectural Emblem Watermark (Deep Black Ink with subtle paper trace) */}
+      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 w-[320px] sm:w-[420px] lg:w-[500px] opacity-[0.04] pointer-events-none select-none text-neutral-950 -z-10 transition-opacity">
+        <RadderLogo size={500} glow={false} color="#0a0a0a" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Technical HUD Topline */}
-        <div className="flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-zinc-500 border-b border-white/10 pb-4 mb-12">
+        {/* Technical HUD Topline - Swiss Editorial */}
+        <div className="flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-neutral-500 border-b border-neutral-300 pb-4 mb-12">
           <div className="flex items-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-white animate-pulse"></span>
-            <span className="text-zinc-200 font-bold tracking-wider">RaddeR // SYSTEMS & PRODUCT ARCHITECTURE</span>
-            <span className="text-zinc-700">|</span>
+            <span className="inline-block w-2 h-2 rounded-full bg-neutral-900 animate-pulse"></span>
+            <span className="text-neutral-900 font-bold tracking-wider">RaddeR // SYSTEMS & PRODUCT ARCHITECTURE</span>
+            <span className="text-neutral-300">|</span>
             <span>CORE FOCUS: DOMAIN LOGIC + CODE + PHYSICAL REALITY</span>
           </div>
-          <div className="hidden sm:flex items-center gap-4 text-zinc-400">
+          <div className="hidden sm:flex items-center gap-4 text-neutral-500">
             <span>SPEC: LOCAL-FIRST // EBPF // CADASTRE MATCHING // PHYSICAL-TO-DIGITAL</span>
           </div>
         </div>
 
         {/* Hero Main Content */}
         <div className="max-w-4xl text-left space-y-7">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white/5 border border-white/15 text-zinc-300 text-xs font-mono shadow-inner">
-            <Sparkles className="w-3.5 h-3.5 text-white" />
-            <span>Niet het oppervlakkige sausje. <strong className="text-white font-bold">De motor.</strong></span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-neutral-900" />
+            <span>Niet het oppervlakkige sausje. <strong className="text-neutral-950 font-bold">De motor.</strong></span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.05]">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-neutral-950 leading-[1.05]">
             Waar een standaard bureau stopt bij de buitenkant,{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-950 via-neutral-800 to-neutral-600">
               bouwen wij de motor.
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed">
+          <p className="text-lg sm:text-xl text-neutral-600 max-w-2xl font-normal leading-relaxed">
             Wij vertalen complexe domeinlogica direct naar werkende, schaalbare software. Geen oppervlakkig sausje, maar robuuste productontwikkeling.
           </p>
 
@@ -54,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
           <div className="pt-2 flex flex-wrap items-center gap-4">
             <button
               onClick={onExploreCases}
-              className="px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold font-mono text-sm tracking-wide transition-all shadow-xl shadow-white/10 flex items-center gap-2 group cursor-pointer"
+              className="px-6 py-3.5 rounded-xl bg-neutral-950 hover:bg-neutral-800 text-white font-bold font-mono text-sm tracking-wide transition-all shadow-md flex items-center gap-2 group cursor-pointer"
             >
               <span>Bekijk Cases</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -62,61 +62,61 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
 
             <a
               href="#vergelijker"
-              className="px-5 py-3.5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border border-white/15 font-mono text-sm tracking-wide transition-all flex items-center gap-2 hover:border-white/30 cursor-pointer"
+              className="px-5 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-neutral-900 border border-neutral-300 font-mono text-sm tracking-wide transition-all flex items-center gap-2 shadow-sm cursor-pointer"
             >
-              <Layers className="w-4 h-4 text-white" />
+              <Layers className="w-4 h-4 text-neutral-900" />
               <span>Motor vs. Sausje</span>
             </a>
 
             <button
               onClick={onOpenContact}
-              className="px-4 py-3.5 rounded-xl text-zinc-400 hover:text-white font-mono text-sm transition-colors cursor-pointer"
+              className="px-4 py-3.5 rounded-xl text-neutral-600 hover:text-black font-mono text-sm transition-colors cursor-pointer"
             >
               Direct Sparren →
             </button>
           </div>
         </div>
 
-        {/* 3 Core Competence Micro-Stamps: Balanced Across 3 Columns */}
-        <div className="mt-16 pt-10 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="p-6 rounded-2xl bg-[#11131a] border border-white/10 hover:border-white/25 transition-all text-left">
-            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-white mb-2">
+        {/* 3 Core Competence Cards - Gallery Style */}
+        <div className="mt-16 pt-10 border-t border-neutral-300 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left">
+            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-2">
               <Cpu className="w-4 h-4" />
               <span>01. DE ARCHITECT</span>
             </div>
-            <p className="text-sm text-zinc-400 leading-relaxed">
+            <p className="text-sm text-neutral-600 leading-relaxed">
               Local-first applicaties, eBPF telemetrie en OpenShift cluster topologies.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#11131a] border border-white/10 hover:border-white/25 transition-all text-left">
-            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-zinc-200 mb-2">
+          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left">
+            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-2">
               <Terminal className="w-4 h-4" />
               <span>02. DE STRATEEG</span>
             </div>
-            <p className="text-sm text-zinc-400 leading-relaxed">
+            <p className="text-sm text-neutral-600 leading-relaxed">
               Zorgdiagnostiek, kadastrale geodata en schaalbare B2B ketenmodellen.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#11131a] border border-white/10 hover:border-white/25 transition-all text-left">
-            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-zinc-300 mb-2">
+          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left">
+            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-2">
               <Compass className="w-4 h-4" />
               <span>03. DE MAKER</span>
             </div>
-            <p className="text-sm text-zinc-400 leading-relaxed">
+            <p className="text-sm text-neutral-600 leading-relaxed">
               Van webapplicaties en design tokens tot fysieke storefronts en vloten.
             </p>
           </div>
         </div>
 
         {/* Telemetry Strip */}
-        <div className="mt-6 p-4 rounded-xl bg-black/50 border border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-zinc-400">
+        <div className="mt-6 p-4 rounded-xl bg-white/70 border border-neutral-200/90 shadow-sm flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-neutral-600">
           <div className="flex items-center gap-3">
-            <span className="w-2 h-2 rounded-full bg-white"></span>
-            <span className="text-white font-semibold">RaddeR STUDIO ENGINE</span>
+            <span className="w-2 h-2 rounded-full bg-neutral-950"></span>
+            <span className="text-neutral-950 font-semibold">RaddeR STUDIO ENGINE</span>
           </div>
-          <div className="flex flex-wrap gap-4 text-[11px] text-zinc-500">
+          <div className="flex flex-wrap gap-4 text-[11px] text-neutral-500">
             <span>• 100% AVG LOCAL-FIRST</span>
             <span>• LIVE PDOK / KADASTER</span>
             <span>• RED HAT OPENSHIFT / EBPF</span>
