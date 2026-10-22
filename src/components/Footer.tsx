@@ -35,24 +35,24 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 e.preventDefault();
                 handleNav('manifest');
               }}
-              className="flex flex-col items-start gap-4 group cursor-pointer text-left"
+              className="inline-flex items-center gap-4 sm:gap-5 group cursor-pointer text-left"
               title="RaddeR — Naar Manifest"
             >
-              {/* Logo flush left */}
-              <div className="text-[#ff451a] group-hover:opacity-80 transition-opacity">
-                <RadderLogo size={64} tight={true} color="#ff451a" glow={false} />
+              {/* Logo links in kleur */}
+              <div className="shrink-0 text-[#ff451a] group-hover:opacity-85 transition-opacity flex items-center">
+                <RadderLogo height={52} tight={true} color="#ff451a" glow={false} />
               </div>
 
-              {/* Wordmark + Subtitle flush left */}
-              <div className="space-y-1.5 text-left">
+              {/* Letterlogo en ondertekst rechts ernaast: totale hoogte gelijk aan logo links */}
+              <div className="h-[52px] flex flex-col justify-between text-left">
                 <RadderWordmark
-                  height={38}
+                  height={32}
                   tight={true}
                   color="#0a0a0a"
                   glow={false}
-                  className="text-neutral-950 group-hover:opacity-80 transition-opacity"
+                  className="text-neutral-950 group-hover:opacity-85 transition-opacity"
                 />
-                <div className="text-[10px] sm:text-[11px] font-mono text-neutral-600 uppercase tracking-wider font-semibold group-hover:text-neutral-950 transition-colors">
+                <div className="text-[10px] sm:text-[11px] font-mono text-neutral-600 uppercase tracking-wider font-semibold leading-none group-hover:text-neutral-950 transition-colors">
                   SYSTEMS & PRODUCT ARCHITECTURE
                 </div>
               </div>
