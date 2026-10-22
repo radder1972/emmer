@@ -23,13 +23,13 @@ export const CasesPage: React.FC<CasesPageProps> = ({
           <div className="text-left">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-[11px] font-mono text-neutral-700 mb-2">
               <RadderIconTerminal size={13} strokeWidth={2} color="#ff451a" />
-              <span>AANPAK // PLACEHOLDER</span>
+              <span>BOUWEN AAN DE MOTOR // PRAKTIJK</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 tracking-tight">
-              Lorem ipsum dolor sit amet consectetur?
+              Jouw domeinlogica vertalen naar een werkend platform?
             </h3>
             <p className="text-sm text-neutral-600 mt-1">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+              Van complexe B2B calculaties tot klinische tools: wij bouwen systemen die direct renderen en schalen.
             </p>
           </div>
           <div className="flex items-center gap-3">

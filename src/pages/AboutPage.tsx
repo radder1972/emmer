@@ -27,13 +27,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           <div className="text-left">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-[11px] font-mono text-neutral-700 mb-2">
               <RadderIconTerminal size={13} strokeWidth={2} color="#ff451a" />
-              <span>SPARREN // PLACEHOLDER</span>
+              <span>DIRECT CONTACT // GEEN TUSSENLAGEN</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 tracking-tight">
-              Lorem ipsum dolor sit amet consectetur?
+              Klaar om je idee om te zetten in werkende code?
             </h3>
             <p className="text-sm text-neutral-600 mt-1">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+              Binnen een half uur sparren bepalen we samen de architectuur en de snelste route naar productie.
             </p>
           </div>
           <div className="flex items-center gap-3">

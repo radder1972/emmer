@@ -73,7 +73,7 @@ export const EngineVsWrapper: React.FC = () => {
             </div>
 
             <div className="mt-8 pt-4 border-t border-neutral-200 text-xs font-mono text-neutral-500">
-              RESULTAAT: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              RESULTAAT: Trage platformen, vendor lock-in en stijgende kosten zonder echte vooruitgang.
             </div>
           </div>
 
@@ -95,7 +95,7 @@ export const EngineVsWrapper: React.FC = () => {
                       Product Level
                     </span>
                   </h3>
-                  <p className="text-xs font-mono text-neutral-300">Lorem ipsum dolor sit amet</p>
+                  <p className="text-xs font-mono text-neutral-300">Vlijmscherpe architectuur & directe executie</p>
                 </div>
               </div>
 
@@ -110,7 +110,7 @@ export const EngineVsWrapper: React.FC = () => {
             </div>
 
             <div className="mt-8 pt-4 border-t border-white/15 text-xs font-mono text-neutral-300 flex items-center justify-between">
-              <span>RESULTAAT: Sed do eiusmod tempor incididunt ut labore et dolore magna.</span>
+              <span>RESULTAAT: Binnen weken live, sub-second performance en 100% eigenaarschap van je code.</span>
               <ShieldCheck className="w-4 h-4 text-white" />
             </div>
           </div>
@@ -119,10 +119,10 @@ export const EngineVsWrapper: React.FC = () => {
         {/* Quote banner from the brief */}
         <div className="mt-12 p-8 rounded-2xl bg-white border border-neutral-200/90 shadow-sm text-center relative overflow-hidden">
           <div className="text-base sm:text-lg italic text-neutral-900 font-medium max-w-4xl mx-auto">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+            "Echte vooruitgang ontstaat niet in eindeloze stuurgroepen of gelikte marketingdecks, maar door direct te bouwen aan de motor. Werkende software is het enige eerlijke bewijs van succes."
           </div>
           <div className="mt-3 text-xs font-mono text-neutral-500 uppercase tracking-wider">
-            — LOREM IPSUM // PLACEHOLDER QUOTE
+            — RADDER FILOSOFIE // DE MOTOR ACHTER DE CODE
           </div>
         </div>
       </div>

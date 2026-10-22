@@ -167,7 +167,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="bijv. Alexander de Vries"
+                        placeholder="Naam"
                         className="w-full px-4 py-3 rounded-xl bg-neutral-50/70 border border-neutral-300 text-neutral-950 placeholder:text-neutral-400 text-sm focus:outline-none focus:border-neutral-950 font-mono transition-colors"
                       />
                     </div>
@@ -181,7 +181,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="alexander@bedrijf.nl"
+                        placeholder="naam@bedrijf.nl"
                         className="w-full px-4 py-3 rounded-xl bg-neutral-50/70 border border-neutral-300 text-neutral-950 placeholder:text-neutral-400 text-sm focus:outline-none focus:border-neutral-950 font-mono transition-colors"
                       />
                     </div>
@@ -215,7 +215,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                       required
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Beschrijf waar de complexiteit zit: welke regels, data of processen moeten de motor aandrijven?"
+                      placeholder="Korte toelichting op je casus, proces of gewenste systeem..."
                       className="w-full px-4 py-3 rounded-xl bg-neutral-50/70 border border-neutral-300 text-neutral-950 placeholder:text-neutral-400 text-sm focus:outline-none focus:border-neutral-950 font-mono transition-colors"
                     />
                   </div>
