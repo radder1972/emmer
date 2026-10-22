@@ -146,6 +146,18 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const PHILOSOPHY_PILLARS = [
   {
     number: '01',
+    title: 'De Strateeg',
+    subtitle: 'Productstrategie & Validatie',
+    description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
+    icon: 'Terminal',
+    bullets: [
+      'Duis aute irure dolor in reprehenderit in voluptate',
+      'Velit esse cillum dolore eu fugiat nulla pariatur',
+      'Excepteur sint occaecat cupidatat non proident',
+    ],
+  },
+  {
+    number: '02',
     title: 'De Architect',
     subtitle: 'Systeemarchitectuur & Domeinmodel',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
@@ -154,18 +166,6 @@ export const PHILOSOPHY_PILLARS = [
       'Lorem ipsum dolor sit amet consectetur',
       'Consectetur adipiscing elit sed do eiusmod',
       'Tempor incididunt ut labore et dolore magna',
-    ],
-  },
-  {
-    number: '02',
-    title: 'De Strateeg',
-    subtitle: 'Productstrategie & Validatie',
-    description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.',
-    icon: 'Layers',
-    bullets: [
-      'Duis aute irure dolor in reprehenderit in voluptate',
-      'Velit esse cillum dolore eu fugiat nulla pariatur',
-      'Excepteur sint occaecat cupidatat non proident',
     ],
   },
   {

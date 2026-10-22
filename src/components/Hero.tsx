@@ -67,31 +67,31 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
           </div>
         </div>
 
-        {/* 3 Core Competence Cards - Gallery Style */}
-        <div className="mt-16 pt-10 border-t border-neutral-300 grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left">
-            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-2">
-              <Cpu className="w-4 h-4" />
-              <span>01. DE ARCHITECT</span>
-            </div>
-            <p className="text-sm text-neutral-600 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left">
-            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-2">
-              <Terminal className="w-4 h-4" />
-              <span>02. DE STRATEEG</span>
+        {/* 3 Core Competence Cards - Gallery Style: Strateeg -> Architect -> Maker */}
+        <div className="mt-16 pt-10 border-t border-neutral-300 grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
+          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
+            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-3 h-5">
+              <Terminal className="w-4 h-4 text-[#ff451a]" />
+              <span>01. DE STRATEEG</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left">
-            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-2">
-              <Compass className="w-4 h-4" />
+          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
+            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-3 h-5">
+              <Cpu className="w-4 h-4 text-[#ff451a]" />
+              <span>02. DE ARCHITECT</span>
+            </div>
+            <p className="text-sm text-neutral-600 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
+            <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-3 h-5">
+              <Compass className="w-4 h-4 text-[#ff451a]" />
               <span>03. DE MAKER</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">

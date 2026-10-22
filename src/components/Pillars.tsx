@@ -1,6 +1,6 @@
 import React from 'react';
 import { PHILOSOPHY_PILLARS } from '../data/projects';
-import { Cpu, Layers, Compass, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Cpu, Layers, Compass, Terminal, CheckCircle2, ArrowRight } from 'lucide-react';
 
 interface PillarsProps {
   onNavigateToCases?: () => void;
@@ -9,6 +9,8 @@ interface PillarsProps {
 export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
+      case 'Terminal':
+        return <Terminal className="w-6 h-6 text-neutral-950" />;
       case 'Cpu':
         return <Cpu className="w-6 h-6 text-neutral-950" />;
       case 'Layers':
@@ -16,7 +18,7 @@ export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
       case 'Compass':
         return <Compass className="w-6 h-6 text-neutral-950" />;
       default:
-        return <Cpu className="w-6 h-6 text-neutral-950" />;
+        return <Terminal className="w-6 h-6 text-neutral-950" />;
     }
   };
 
@@ -26,6 +28,7 @@ export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
         {/* Header */}
         <div className="text-left max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#ff451a]" />
             <span>DE INTERDISCIPLINAIRE DRIEHOEK</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
@@ -39,16 +42,17 @@ export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
           </p>
         </div>
 
-        {/* 3 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* 3 Pillars Grid: Strateeg -> Architect -> Maker */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {PHILOSOPHY_PILLARS.map((pillar) => (
             <div
               key={pillar.number}
               className="rounded-2xl bg-white border border-neutral-200/90 shadow-sm p-8 flex flex-col justify-between hover:border-neutral-400 hover:shadow-md transition-all duration-300 group hover:-translate-y-0.5 relative"
             >
               <div>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="p-3 rounded-xl bg-neutral-100 border border-neutral-200/90 group-hover:scale-105 transition-transform text-neutral-950">
+                {/* Fixed-height icon bar to guarantee identical vertical baseline */}
+                <div className="h-12 flex items-center justify-between mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-neutral-100 border border-neutral-200/90 group-hover:scale-105 transition-transform text-neutral-950 flex items-center justify-center">
                     {getIcon(pillar.icon)}
                   </div>
                   <span className="font-mono text-2xl font-bold text-neutral-400 group-hover:text-neutral-800 transition-colors">
@@ -56,12 +60,16 @@ export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
                   </span>
                 </div>
 
-                <div className="text-xs font-mono uppercase tracking-wider text-neutral-500 mb-2 font-semibold">
-                  {pillar.subtitle}
-                </div>
-                <h3 className="text-xl font-bold text-neutral-950 mb-4">
+                {/* Card Title placed first: vertically aligned across all 3 columns */}
+                <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 tracking-tight mb-1">
                   {pillar.title}
                 </h3>
+
+                {/* Subtitle with guaranteed min-height */}
+                <div className="text-xs font-mono uppercase tracking-wider text-neutral-500 mb-4 font-semibold min-h-[1.25rem] flex items-center">
+                  {pillar.subtitle}
+                </div>
+
                 <p className="text-sm text-neutral-600 leading-relaxed mb-6">
                   {pillar.description}
                 </p>
@@ -70,7 +78,7 @@ export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
               <div className="space-y-2.5 pt-4 border-t border-neutral-200/90">
                 {pillar.bullets.map((bullet, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 text-xs text-neutral-700 font-mono">
-                    <CheckCircle2 className="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0 mt-0.5" />
                     <span>{bullet}</span>
                   </div>
                 ))}
