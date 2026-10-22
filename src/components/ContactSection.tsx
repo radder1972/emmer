@@ -49,7 +49,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                 <span className="text-zinc-300">voor jullie visie bouwen.</span>
               </h2>
               <p className="mt-4 text-zinc-400 text-base leading-relaxed">
-                Geen accountmanagers of bureau-laagjes. Spar rechtstreeks met ons over architectuur, domeinlogica, schaalbaarheid en commerciële realisatie.
+                Geen accountmanagers of tussenlagen. Spar direct met ons over architectuur, domeinlogica en realisatie.
               </p>
             </div>
 
@@ -118,7 +118,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                   </div>
                   <h3 className="text-2xl font-bold text-white">Aanvraag Ontvangen!</h3>
                   <p className="text-zinc-300 text-sm max-w-md mx-auto">
-                    Bedankt voor het delen van de briefing. RaddeR neemt binnen 24 uur persoonlijk contact op om te sparren over de technische en commerciële motor.
+                    Bedankt voor de briefing. RaddeR neemt binnen 24 uur contact op om te sparren over de technische motor.
                   </p>
                   <button
                     onClick={() => setFormSubmitted(false)}
@@ -130,9 +130,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="border-b border-white/10 pb-4">
-                    <h3 className="text-xl font-bold text-white">Plan een Strategische Sparringsessie</h3>
+                    <h3 className="text-xl font-bold text-white">Plan een Sparringsessie</h3>
                     <p className="text-xs text-zinc-400 mt-1">
-                      Vertel kort over de uitdaging, het domein en waar een standaardbureau te kort schiet.
+                      Vertel kort over de uitdaging en gewenste architectuur.
                     </p>
                   </div>
 

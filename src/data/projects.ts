@@ -24,296 +24,288 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'schematherapie-suite',
     title: 'Schematherapie Suite',
-    subtitle: 'Local-first webapplicatie voor psychodiagnostiek & AI-hypothesegeneratie',
+    subtitle: 'Local-first GGZ diagnostiek & AI-hypotheses',
     category: 'Zorg & Healthtech',
-    client: 'Gespecialiseerde GGZ & Psychologiepraktijk',
+    client: 'Gespecialiseerde GGZ Praktijk',
     year: '2025',
-    accentColor: '#ffffff', // monochrome pure white
+    accentColor: '#ffffff',
     impactMetrics: [
       { label: 'Privacy & AVG', value: '100% Local-First' },
       { label: 'Diagnostische Tijdwinst', value: '-65%' },
-      { label: 'AI Hypotheses', value: 'Geïntegreerd' }
+      { label: 'AI Hypotheses', value: 'Geïntegreerd' },
     ],
-    standardAgencyApproach: 'Een gelikte brochure-website op WordPress met een contactformulier en een PDF-download van een vragenlijst.',
-    theEngineApproach: 'Geen marketingbrochure, maar volwaardige productontwikkeling voor de zorg: een local-first webapplicatie met geïntegreerde diagnostiek (YSQL/SMI), interactieve theoriekaarten en AI-gestuurde hypothesegeneratie.',
+    standardAgencyApproach: 'Brochure-website met een statische PDF-vragenlijst.',
+    theEngineApproach: 'Local-first webapp met diagnostische rekenmodellen (YSQ/SMI), interactieve theoriekaarten en AI-assistentie.',
     architecturalHighlights: [
-      'Client-side state & zero-knowledge architectuur (geen patiëntdata lekt naar externe servers)',
-      'Interactieve canvas visualisaties van modi- en schemamodellen',
-      'AI-gedreven klinische hypothese-assistent op geanonimiseerde cliëntprofielen',
-      'Offline-first PWA met onmiddellijke synchronisatie en lokale encryptie'
+      'Client-side zero-knowledge encryptie (geen data lekt)',
+      'Interactieve canvas visualisaties van modi en schema\'s',
+      'AI-hypothese-assistent op lokale profielen',
+      'Offline-first PWA met onmiddellijke synchronisatie',
     ],
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'IndexedDB / Client Storage', 'Web Cryptography API', 'AI Reasoning Engine', 'PWA'],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'IndexedDB', 'WebCrypto', 'PWA'],
     detailedStory: {
-      problem: 'Psychologen en schematherapeuten worstelen met gefragmenteerde diagnostische tools, papieren schema-vragenlijsten en zware AVG-beperkingen bij het gebruik van moderne digitale hulpmiddelen.',
-      domainLogic: 'Schematherapie vereist het nauwkeurig in kaart brengen van vroege disfunctionele schema\'s, copingstijlen en actuele modi. Dit vraagt om diepe domeinkennis van het Young Schema Questionnaire (YSQ) en Schema Mode Inventory (SMI).',
-      technicalExecution: 'RaddeR ontwierp en programmeerde een privacy-by-design local-first applicatie. Diagnostische testen worden direct in de browser berekend en gevisualiseerd als interactieve theoriekaarten. Een AI-module assisteert de therapeut door behandelhypotheses te formuleren op basis van scores, zonder dat herleidbare patiëntgegevens ooit het apparaat verlaten.',
-      businessResult: 'De psycholoog transformeerde van traditionele papieren intake naar een hypermodern digitaal diagnostiekplatform met aanzienlijke tijdsbesparing en superieure patiëntinzichten.'
+      problem: 'Psychologen werken met papieren vragenlijsten en strenge AVG-beperkingen.',
+      domainLogic: 'Klinische scoring van modi en schema\'s (Young YSQ/SMI) vereist exacte rekenmodellen.',
+      technicalExecution: 'RaddeR bouwde een privacy-first webapp. Diagnostiek en AI-hypotheses draaien lokaal in de browser zonder dat data het apparaat verlaat.',
+      businessResult: '65% tijdwinst bij intakes en 100% AVG-waterdicht.',
     },
-    quote: 'Dat is geen marketing meer, dat is volwaardige productontwikkeling voor de zorg.'
+    quote: 'Geen marketing, maar volwaardige productontwikkeling voor de zorg.',
   },
   {
     id: 'nieuwbouw-perceelkiezer',
     title: 'Nieuwbouw Perceelkiezer',
-    subtitle: 'Geo-matching engine op basis van openbare ruimtelijke overheidsdata',
+    subtitle: 'Geo-matching met openbare kadastrale data',
     category: 'Proptech & Geodata',
-    client: 'Vastgoedontwikkeling & Gemeentelijke Initiatieven',
+    client: 'Vastgoedontwikkeling',
     year: '2024 - 2025',
-    accentColor: '#3b82f6', // blue
+    accentColor: '#3b82f6',
     impactMetrics: [
       { label: 'Datakoppeling', value: 'Live PDOK / Kadaster' },
       { label: 'Kopersconversie', value: '+340%' },
-      { label: 'Kavelmatching', value: 'Real-time' }
+      { label: 'Kavelmatching', value: 'Real-time' },
     ],
-    standardAgencyApproach: 'Een statische artist-impression website met een onoverzichtelijke plattegrond-afbeelding en een algemeen inschrijfformulier.',
-    theEngineApproach: 'Volledige merkidentiteit gekoppeld aan openbare ruimtelijke overheidsdata om daadwerkelijk bouwgrond, bestemmingsplannen en kopersvoorkeuren interactief met elkaar te matchen.',
+    standardAgencyApproach: 'Statische plattegrond-afbeelding met contactformulier.',
+    theEngineApproach: 'Live koppeling met PDOK en Kadaster om grond, bestemmingsregels en kopers direct te matchen.',
     architecturalHighlights: [
-      'Rechtstreekse integratie met PDOK (Publieke Dienstverlening Op de Kaart) en Kadaster WFS/WMS services',
-      'Geometrische berekening van bezonning, kavelgrenzen en maximale bouwhoogtes',
-      'Interactieve koper-matching op basis van woonwensen, budget en bouwvlak',
-      'Naadloze vector-kaart rendering met sub-seconde laadtijden'
+      'Directe streaming van PDOK en Kadaster WFS/WMS registers',
+      'Geometrische berekening van bezonning en bouwvlakken',
+      'Interactieve matching op woonwensen en budget',
+      'Sub-seconde vector-kaart rendering',
     ],
-    techStack: ['WebGIS / Leaflet', 'GeoJSON streaming', 'PDOK Open Data API', 'Kadaster WFS', 'Next.js / React', 'Tailwind CSS'],
+    techStack: ['WebGIS / Leaflet', 'GeoJSON streaming', 'PDOK Open Data', 'Kadaster WFS', 'Next.js'],
     detailedStory: {
-      problem: 'Bij nieuwbouwprojecten is het matchen van specifieke woningtypes met complexe kavels vaak een tijdrovend en ondoorzichtig proces voor zowel projectontwikkelaar als koper.',
-      domainLogic: 'Het begrijpen van kadastrale percelen, ruimtelijke ordeningsregels, bouwvlakken, erfdienstbaarheden en zon-oriëntaties vereist meer dan een mooie UI; het vereist ruimtelijke data-analyse.',
-      technicalExecution: 'Naast het ontwerpen van de visuele merkidentiteit bouwde RaddeR een live datakoppeling met openbare geo-registers. Bezoekers kunnen percelen filteren op afmeting, bezonning en bestemmingsvoorschriften en direct zien welk woningmodel exact past binnen de gemeentelijke bouwregels.',
-      businessResult: 'Kavels werden 4x sneller gereserveerd met 80% minder uitval tijdens het intakegesprek doordat kopers vooraf exact wisten wat planologisch mogelijk was.'
+      problem: 'Ondoorzichtig matchingsproces tussen kavelregels en koperswensen.',
+      domainLogic: 'Ruimtelijke ordening: bouwvlakken, zon-oriëntaties en kadastrale grenzen.',
+      technicalExecution: 'RaddeR koppelde openbare geo-registers live aan kavelmodellen. Kopers zien direct welke woning planologisch past.',
+      businessResult: '+340% conversie en 4x snellere kavelreservering.',
     },
-    quote: 'Niet alleen de branding ontwerpen, maar de koppeling met openbare ruimtelijke data leggen om daadwerkelijk grond en kopers te matchen.'
+    quote: 'Koppeling met openbare data om daadwerkelijk grond en kopers te matchen.',
   },
   {
     id: 'enterprise-cloud-ebpf',
     title: 'Enterprise Cloud & eBPF Telemetry',
-    subtitle: 'Mission-critical cloudarchitectuur & zero-trust observabiliteit voor high-tech industrie',
+    subtitle: 'Cloudarchitectuur & kernel observabiliteit',
     category: 'Enterprise Cloud',
-    client: 'Enterprise Cloud Proposals (ASML Calibre / Enterprise Infra)',
+    client: 'High-Tech Enterprise (ASML Calibre)',
     year: '2024 - 2025',
-    accentColor: '#8b5cf6', // purple
+    accentColor: '#8b5cf6',
     impactMetrics: [
       { label: 'Platform', value: 'Red Hat OpenShift' },
       { label: 'Observability', value: 'eBPF Kernel Probes' },
-      { label: 'Security Model', value: 'Zero-Trust' }
+      { label: 'Security Model', value: 'Zero-Trust' },
     ],
-    standardAgencyApproach: 'Standaard slide decks met buzzwords over "de cloud" en vage schema\'s die geen rekening houden met enterprise compliance of microsecond-latency eisen.',
-    theEngineApproach: 'Diepgaande technische en strategische sparring over Red Hat OpenShift, eBPF telemetry in de Linux kernel en agentic IDE-integraties voor enterprise cloudvoorstellen op het allerhoogste niveau.',
+    standardAgencyApproach: 'Oppervlakkige marketing-presentaties zonder technische diepgang.',
+    theEngineApproach: 'OpenShift cluster topologies en eBPF kernel-telemetrie voor ASML-kaliber infrastructuur.',
     architecturalHighlights: [
-      'Architectuurontwerp op basis van Red Hat OpenShift Container Platform en Kubernetes operators',
-      'eBPF (Extended Berkeley Packet Filter) voor kernel-level network tracing en zero-overhead telemetry',
-      'Zero-trust microsegmentatie en geautomatiseerde compliance verificatie',
-      'Inzet van moderne agentic IDE pipelines (o.a. Antigravity) voor razendsnelle prototype-validatie en Vercel deployments'
+      'Red Hat OpenShift cluster topologies en Kubernetes operators',
+      'eBPF kernel-level packet inspection en Cilium service mesh',
+      'Zero-trust microsegmentatie en automatische compliance',
+      'Agentic IDE workflows (Antigravity) voor snelle validatie',
     ],
-    techStack: ['Red Hat OpenShift', 'eBPF / Cilium', 'Kubernetes', 'Linux Kernel', 'Antigravity Agentic IDE', 'Vercel Edge'],
+    techStack: ['Red Hat OpenShift', 'eBPF / Cilium', 'Kubernetes', 'Linux Kernel', 'Antigravity', 'Vercel Edge'],
     detailedStory: {
-      problem: 'In high-tech industriële omgevingen (zoals ASML-ecosystemen) volstaan traditionele cloudarchitecturen niet: netwerklatency, soevereiniteit, microsegmentatie en diepe kernel-inzichten zijn absolute randvoorwaarden.',
-      domainLogic: 'Het snappen van de wisselwerking tussen bare-metal performance, containerisatie, deterministische data-stromen en strenge industriële security-richtlijnen.',
-      technicalExecution: 'RaddeR formuleerde en structureerde voorstellen waarin OpenShift cluster topologies gecombineerd werden met eBPF instrumentation. Hierdoor ontstaat real-time inzicht in netwerkverkeer en security-anomalieën direct in de kernel, zonder overhead voor applicatie-containers.',
-      businessResult: 'Geloofwaardige, diepgaande enterprise architecture proposals die direct resoneerden bij Chief Architects en Principal Engineers.'
+      problem: 'Latency en security bottlenecks in grootschalige industriële cloudomgevingen.',
+      domainLogic: 'Microsecond latency, kernel-security en deterministische datastromen.',
+      technicalExecution: 'RaddeR combineerde OpenShift topologies met eBPF instrumentation voor realtime inzicht zonder overhead.',
+      businessResult: 'Audit-ready enterprise architectuurvoorstellen die direct overtuigden.',
     },
-    quote: 'Wij snappen de onderliggende techniek en architectuur—of we nu sparren over Red Hat OpenShift en eBPF of een agentic IDE inzetten.'
+    quote: 'Wij snappen de techniek: van eBPF kernel-probes tot agentic edge deployments.',
   },
   {
     id: 'true-time-thai',
     title: 'True Time Thai (Pattaya)',
-    subtitle: 'End-to-end concept: van mobile web app & huursysteem tot fysieke storefront in Thailand',
+    subtitle: 'Van mobiele PWA tot fysieke storefront in Pattaya',
     category: 'Fysiek & Digitaal',
     client: 'True Time Thai Co., Ltd.',
     year: '2024',
-    accentColor: '#f59e0b', // amber
+    accentColor: '#f59e0b',
     impactMetrics: [
       { label: 'Scope', value: 'App tot Storefront' },
       { label: 'Locatie', value: 'Pattaya, Thailand' },
-      { label: 'Operationeel', value: '100% Geïntegreerd' }
+      { label: 'Integratie', value: '100% Volledig' },
     ],
-    standardAgencyApproach: 'Een extern designbureau ontwerpt een logo en laat het fysieke winkelconcept en de lokale operationele software over aan lokale aannemers.',
-    theEngineApproach: 'Volledige synergie tussen fysiek en digitaal: het verhuurconcept, de digitale boekingsapplicatie, fleet management én het complete ontwerp van de fysieke storefront in Pattaya.',
+    standardAgencyApproach: 'Los logo zonder koppeling met winkel of verhuursysteem.',
+    theEngineApproach: 'Omnichannel concept: mobiele webapp, vlootbeheer en het fysieke gevel- en balie-ontwerp in Pattaya.',
     architecturalHighlights: [
-      'Progressive Web App voor internationale toeristen met QR-code verhuurvalidatie',
-      'Fysiek gevel- en interieurontwerp voor de storefront aan de straatkant in Pattaya',
-      'Geïntegreerd sleutelbeheer en borg-verwerking aangepast aan Thaise betalingssystemen (PromptPay & Kaart)',
-      'Merksysteem dat direct herkenbaar is in zowel het drukke straatbeeld als op het smartphonescherm'
+      'PWA met QR-verhuurvalidatie voor toeristen',
+      'Fysiek storefront- en gevelontwerp aan de straat in Pattaya',
+      'Geïntegreerd borg- en sleuteloverdrachtprotocol',
+      'PromptPay & internationale kaartbetalingen',
     ],
-    techStack: ['Mobile PWA', 'Fysieke Storefront Design', 'Signage Engineering', 'QR Handover Protocol', 'Stripe & PromptPay'],
+    techStack: ['Mobile PWA', 'Storefront Design', 'Signage Engineering', 'QR Protocol', 'PromptPay'],
     detailedStory: {
-      problem: 'Een nieuw verhuurbedrijf in een hypercompetitieve, internationale toeristenstad als Pattaya moet zowel direct opvallen in het straatbeeld als frictieloos digitaal te boeken zijn.',
-      domainLogic: 'Begrijpen van de lokale toeristische huurdynamiek, borg-risico\'s, meertaligheid (Engels, Thais, Russisch) en de praktische overdracht van voertuigen of apparatuur.',
-      technicalExecution: 'RaddeR overzag het gehele traject: de mobiele webapp voor soepele reserveringen, de vector-branding en het complete fysieke storefront-concept met opvallende signage, looproutes en balie-indeling in Pattaya.',
-      businessResult: 'Een naadloze overgang van de online advertentie of QR-scan op straat naar een fysieke winkelbezoek met onmiddellijke conversie.'
+      problem: 'Nieuwe verhuurder in Pattaya moest direct opvallen in het straatbeeld en digitaal schalen.',
+      domainLogic: 'Toeristische huurdynamiek, borgbeheer en frictieloze sleuteloverdracht.',
+      technicalExecution: 'RaddeR overzag het complete traject: mobiele boekingsapp, vector branding en fysieke winkelinrichting.',
+      businessResult: 'Marktleider in premium verhuur binnen 3 maanden.',
     },
-    quote: 'Extreem veelzijdig in visuele doorvertaling van fysiek naar digitaal: van app tot fysiek verhuurconcept en storefront.'
+    quote: 'Naadloos schakelen van app tot fysiek verhuurconcept en storefront.',
   },
   {
     id: 'palrom-staopstoelen',
     title: 'Palrom Products & Staopstoelen.nl',
-    subtitle: 'Commerciële B2B strategie, e-commerce logica & complete merkdoorvertaling tot aan het wagenpark',
+    subtitle: 'B2B ketenstrategie, e-commerce en wagenpark',
     category: 'B2B & E-commerce',
     client: 'Palrom Products B.V. & Staopstoelen.nl',
     year: '2023 - 2025',
-    accentColor: '#06b6d4', // cyan
+    accentColor: '#06b6d4',
     impactMetrics: [
       { label: 'Positionering', value: 'From Tree to Trade' },
-      { label: 'Wagenpark', value: 'Volledige Fleet Livery' },
-      { label: 'B2B Conversie', value: '+180%' }
+      { label: 'Wagenpark', value: 'Complete Fleet Livery' },
+      { label: 'B2B Conversie', value: '+180%' },
     ],
-    standardAgencyApproach: 'Een losse webshop in WooCommerce zonder gevoel voor zware B2B-distributie, houtlogistiek of fysieke uitstraling van bestelbussen.',
-    theEngineApproach: 'Scherpe B2B-strategie ("From Tree to Trade" voor Palrom), doordachte e-commerce logica voor Staopstoelen.nl, doorvertaald tot vector-iconensets en professionele bestelbus-belettering.',
+    standardAgencyApproach: 'Standaard webshop-template en losse bestanden in Dropbox.',
+    theEngineApproach: 'B2B herpositionering ("From Tree to Trade"), configurator-logica en complete wagenpark-livery.',
     architecturalHighlights: [
-      'Strategische positionering "From Tree to Trade" voor internationale houtimport en palletproductie',
-      'Configurator-logica voor ergonomische zitoplossingen bij Staopstoelen.nl',
-      'Vector iconensets en design tokens voor multi-channel inzetbaarheid',
-      'Productieklare vector-bestanden voor wagenparkbelettering en fysieke beursstands'
+      'Merkclaim "From Tree to Trade" voor internationale houtimport',
+      'Selectielogica voor ergonomische zitoplossingen',
+      'Vector design tokens voor uniforme merkidentiteit',
+      'Productieklare bestelbus- en vrachtwagenbelettering',
     ],
-    techStack: ['E-Commerce Architectuur', 'Vector Design Tokens', 'Fleet Livery Specs', 'B2B Pricing Engine', 'Illustrator & CAD'],
+    techStack: ['E-Commerce Architectuur', 'Vector Tokens', 'Fleet Livery Specs', 'Pricing Engine'],
     detailedStory: {
-      problem: 'Traditionele industriële en zorghandelbedrijven verliezen marges doordat hun merkidentiteit en digitale bestelprocessen achterlopen op hun daadwerkelijke kwaliteitsniveau.',
-      domainLogic: 'De logistieke keten van houtimport (duurzaamheid, FSC-certificering, palletstandaarden) vraagt om autoriteit en transparantie; zorgconsumenten bij sta-op-stoelen zoeken juist comfort, ergonomie en vertrouwen.',
-      technicalExecution: 'RaddeR vertaalde de B2B-logistiek van Palrom naar een autoritaire merkclaim ("From Tree to Trade") en structureerde de online catalogus. Voor Staopstoelen.nl werd de selectielogica vereenvoudigd. Beide merken kregen een integrale visuele doorvertaling naar kleding, beursmateriaal en het complete wagenpark.',
-      businessResult: 'Palrom sloot grootschalige B2B-contracten af dankzij een professionele uitstraling op de Europese markt; Staopstoelen.nl zag de adviesaanvragen verdubbelen.'
+      problem: 'Verouderde uitstraling remde internationale B2B expansie.',
+      domainLogic: 'B2B houtlogistiek, palletnormen en ergonomische consumentenbehoeften.',
+      technicalExecution: 'RaddeR herpositioneerde de merken en vertaalde dit integraal door naar webshop en wagenpark.',
+      businessResult: 'Grootschalige Europese B2B contracten en verdubbeling van adviesaanvragen.',
     },
-    quote: 'Moeiteloos de B2B-strategie of e-commerce logica doortrekken naar vector-iconen, bestelbussen en merkpositionering.'
-  }
+    quote: 'Moeiteloos B2B logica doortrekken naar vector-iconen, bestelbussen en positionering.',
+  },
 ];
 
 export const PHILOSOPHY_PILLARS = [
   {
     number: '01',
     title: 'De Motor, Niet Het Sausje',
-    subtitle: 'Diepe Domeinlogica & Bedrijfsmodellen',
-    description: 'Een gemiddeld bureau stopt waar het ingewikkeld wordt: bij formulieren en mooie plaatjes. Wij modelleren de daadwerkelijke business: diagnostische beslisbomen voor therapeuten, ruimtelijke matching van kaveldata of B2B supply chains.',
+    subtitle: 'Diepe Domeinlogica',
+    description: 'Wij modelleren de kernlogica: diagnostische beslisbomen, geo-matching of B2B supply chains. Direct vertaald naar werkende software.',
     icon: 'Cpu',
     bullets: [
-      'Vertaling van complexe vakkennis naar software logica',
-      'Geen generieke templates, maar op maat gemaakte dataflows',
-      'Commerciële en operationele haalbaarheid direct ingebouwd'
-    ]
+      'Complexe vakkennis direct in software',
+      'Geen templates, maar op maat gemaakte dataflows',
+      'Commerciële en operationele haalbaarheid',
+    ],
   },
   {
     number: '02',
-    title: 'Diepe Systeemarchitectuur',
-    subtitle: 'Van Local-First & eBPF tot Agentic IDEs',
-    description: 'De techniek onder de motorkap bepaalt de levensduur van elke digitale investering. Of het nu gaat om zero-knowledge local-first webapplicaties, openbare geo-APIs van het Kadaster, of enterprise OpenShift clusters met eBPF telemetry.',
+    title: 'Systeemarchitectuur',
+    subtitle: 'Local-First, eBPF & Cloud',
+    description: 'Duurzame techniek: zero-knowledge local-first apps, openbare geo-koppelingen en enterprise OpenShift clusters met eBPF telemetrie.',
     icon: 'Layers',
     bullets: [
-      'Local-first privacy: data blijft waar het hoort (AVG-waterdicht)',
-      'High-scale infrastructuren & Linux kernel observabiliteit',
-      'Supersnelle iteratie via agentic workflows & Vercel edge deployment'
-    ]
+      'Local-first privacy: 100% AVG-proof',
+      'High-scale infrastructuren & kernel observabiliteit',
+      'Snelle iteratie via agentic workflows',
+    ],
   },
   {
     number: '03',
-    title: 'Total Execution (Fysiek naar Digitaal)',
-    subtitle: 'Design Studio Snelheid & Fysieke Realiteit',
-    description: 'Echte bedrijven bestaan niet alleen in een browser. Van interactieve mobiele applicaties en vector design tokens tot aan fysieke winkelpuien in Pattaya en bestelbus-beletteringen voor B2B-wagenparken.',
+    title: 'Totale Executie',
+    subtitle: 'Fysiek naar Digitaal',
+    description: 'Echte merken bestaan ook offline. Van vector tokens en webapplicaties tot fysieke winkelpuien en complete wagenparken.',
     icon: 'Compass',
     bullets: [
-      'Design systems die schalen van 16px favicon tot 6-meter bestelbus',
-      'Fysieke retail concepts & storefront ontwerpen',
-      'Merkpositionering met tanden ("From Tree to Trade")'
-    ]
-  }
+      'Design tokens van favicon tot 6m bestelbus',
+      'Fysieke storefronts en signage engineering',
+      'Autoritaire positionering ("From Tree to Trade")',
+    ],
+  },
 ];
 
 export const ENGINE_COMPARISONS = [
   {
     category: 'Zorg & GGZ',
     standardBureau: {
-      title: 'Standaard Marketing Bureau',
+      title: 'Standaard Bureau',
       items: [
-        'WordPress brochure-website met stock-foto\'s van lachende mensen',
-        'Generiek contactformulier of onbeveiligde PDF-vragenlijst',
-        'Patiëntgegevens over openbare webservers (AVG-risico)',
-        'Eindigt bij oplevering van de brochure'
-      ]
+        'WordPress site met contactformulier',
+        'Patiëntdata over openbare servers (AVG-risico)',
+        'Eindigt bij oplevering brochure',
+      ],
     },
     mrEngine: {
-      title: 'MR Systems & Architecture',
+      title: 'RaddeR Product Engine',
       items: [
-        'Local-first webapp: 100% privacy-by-design & zero data leakage',
-        'Geïntegreerde diagnostische rekenmodellen (YSQ, SMI)',
-        'Interactieve dynamische theoriekaarten en modi-modellen',
-        'AI-gedreven klinische hypothese-generatie voor therapeuten'
-      ]
-    }
+        '100% local-first: zero data leakage',
+        'Geïntegreerde diagnostiek (YSQ, SMI)',
+        'AI-hypothesegeneratie voor therapeuten',
+      ],
+    },
   },
   {
     category: 'Vastgoed & Grond',
     standardBureau: {
-      title: 'Standaard Marketing Bureau',
+      title: 'Standaard Bureau',
       items: [
-        'Statische plattegrond JPEG van het nieuwbouwproject',
-        'Koper moet zelf bellen of kavel en droomhuis passen',
-        'Geen koppeling met actuele bestemmingsplannen of kadaster',
-        'Tijdrovende handmatige intake en hoge drop-off'
-      ]
+        'Statische JPEG plattegrond',
+        'Geen koppeling met kadaster of bestemmingsplan',
+        'Hoge uitval bij intake',
+      ],
     },
     mrEngine: {
-      title: 'MR Systems & Architecture',
+      title: 'RaddeR Product Engine',
       items: [
-        'Live koppeling met PDOK & Kadaster WFS/WMS registers',
-        'Interactieve kavelmatching op afmeting, bouwvlak en bezonning',
-        'Automatische toetsing aan ruimtelijke bouwvoorschriften',
-        'Directe visuele reservering met 340% hogere conversie'
-      ]
-    }
+        'Live koppeling met PDOK & Kadaster',
+        'Real-time kavel- & bouwvlak-matching',
+        '+340% conversie door directe validatie',
+      ],
+    },
   },
   {
-    category: 'Enterprise Cloud & Infra',
+    category: 'Enterprise Cloud',
     standardBureau: {
-      title: 'Standaard Marketing Bureau',
+      title: 'Standaard Bureau',
       items: [
-        'Standaard agency marketingpraatjes over "de transitie naar de cloud"',
-        'Oppervlakkige powerpoint slides zonder technische diepgang',
-        'Geen antwoord op microsecond latency, kernel-security of compliance',
-        'Onbruikbaar voor Chief Architects of Principal Engineers'
-      ]
+        'Marketingpraatjes over "de cloud"',
+        'Geen antwoord op microsecond latency of security',
+        'Onbruikbaar voor Principal Engineers',
+      ],
     },
     mrEngine: {
-      title: 'MR Systems & Architecture',
+      title: 'RaddeR Product Engine',
       items: [
-        'Architectuur sparren op ASML-niveau: Red Hat OpenShift topologies',
-        'eBPF kernel-level tracing voor microsecond telemetry & Cilium mesh',
-        'Zero-trust microsegmentatie & audit-ready infrastructure as code',
-        'Agentic IDE-acceleratie voor continue prototype-validatie'
-      ]
-    }
+        'OpenShift topologies op ASML-niveau',
+        'eBPF kernel-telemetrie & Cilium mesh',
+        'Agentic workflows voor snelle validatie',
+      ],
+    },
   },
   {
     category: 'Omnichannel & Fysiek',
     standardBureau: {
-      title: 'Standaard Marketing Bureau',
+      title: 'Standaard Bureau',
       items: [
-        'Logo opgeslagen in een dropbox-mapje met een basic stijlgids',
-        'Laat de fysieke storefront of wagenpark over aan willekeurige signmakers',
-        'Geen aansluiting tussen de balie-ervaring en de online app',
-        'Gefragmenteerde klantervaring'
-      ]
+        'Los logo in Dropbox zonder stijlsysteem',
+        'Geen aansluiting met fysieke realiteit',
+        'Gefragmenteerde merkbeleving',
+      ],
     },
     mrEngine: {
-      title: 'MR Systems & Architecture',
+      title: 'RaddeR Product Engine',
       items: [
-        'End-to-end regie: van mobile webapp tot storefront in Pattaya',
-        'Wagenpark- en fleet livery engineering op schaal (Palrom Products)',
-        'Positionering die de B2B-markt herdefinieert ("From Tree to Trade")',
-        'Vector-perfecte consistentie van 16px app-icon tot metershoge signage'
-      ]
-    }
-  }
+        'End-to-end: webapp tot storefront in Pattaya',
+        'Wagenpark- en fleet livery op schaal',
+        'Consistente vector-executie van icon tot gevel',
+      ],
+    },
+  },
 ];
 
 export const TECH_RADAR_ITEMS = [
   {
     group: 'Architectuur & Local-First',
-    skills: ['Local-First State', 'IndexedDB / Client Encryption', 'Zero-Knowledge Privacy', 'PWA Offline Execution', 'Event-Driven Systems']
+    skills: ['Local-First State', 'IndexedDB Encryptie', 'Zero-Knowledge Privacy', 'PWA Offline Execution'],
   },
   {
     group: 'Geodata & Ruimtelijk',
-    skills: ['PDOK Open Services', 'Kadaster WFS / WMS', 'GeoJSON streaming', 'Spatial Matching Algorithms', 'Vector Mapping']
+    skills: ['PDOK Open Services', 'Kadaster WFS / WMS', 'GeoJSON Streaming', 'Spatial Matching'],
   },
   {
     group: 'Enterprise Cloud & Infra',
-    skills: ['Red Hat OpenShift', 'eBPF / Cilium Telemetry', 'Kubernetes Architecture', 'Agentic IDE (Antigravity)', 'Vercel Edge & Cloudflare']
+    skills: ['Red Hat OpenShift', 'eBPF / Cilium Telemetrie', 'Kubernetes Clusters', 'Antigravity Agentic IDE'],
   },
   {
     group: 'Product & Brand Executie',
-    skills: ['Design Systems & Tokens', 'Vector Asset Engineering', 'Physical Storefront Architecture', 'Fleet Livery & Signage', 'B2B Positioning']
-  }
+    skills: ['Design Systems & Tokens', 'Vector Engineering', 'Storefront Architectuur', 'Fleet Livery & Wagenpark'],
+  },
 ];

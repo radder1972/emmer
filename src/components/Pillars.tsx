@@ -31,7 +31,7 @@ export const Pillars: React.FC = () => {
             </span>
           </h2>
           <p className="mt-4 text-zinc-400 text-base sm:text-lg leading-relaxed">
-            In een traditioneel project raakt 60% van de visie verloren in de vertaalslag tussen business analist, UI-designer en extern softwarebureau. RaddeR combineert alle drie de disciplines in één naadloze feedbackloop.
+            Geen ruis tussen analist, designer en bouwer: RaddeR combineert strategie, architectuur en tastbare executie in één directe feedbackloop.
           </p>
         </div>
 

@@ -23,36 +23,30 @@ export const Manifesto: React.FC = () => {
         {/* Big quote statement */}
         <div className="relative pl-6 sm:pl-10 border-l-2 border-white mb-12">
           <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white leading-relaxed tracking-tight">
-            "Ons allergrootste onderscheidend vermogen zit niet in het visuele sausje, maar in het vermogen om{' '}
+            "Waar een standaard bureau stopt bij een mooi laagje verf,{' '}
             <span className="text-white font-bold underline decoration-white/40 underline-offset-8">
-              complexe, domeinspecifieke logica direct te vertalen naar werkende, schaalbare bedrijfsmodellen.
+              bouwen wij de motor: complexe domeinlogica direct vertaald naar werkende software.
             </span>"
           </p>
         </div>
 
         {/* Narrative columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-zinc-300 text-base leading-relaxed">
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h3 className="text-lg font-bold text-white font-mono uppercase tracking-wide">
               De Illusie van de Buitenkant
             </h3>
             <p>
-              In de wereld van digitale bureaus is er een gigantische kloof ontstaan. Aan de ene kant staan de design- en marketingbureaus: zij maken verbluffende praatplaatjes, hippe mockups en WordPress-sites die er leuk uitzien, totdat er gevraagd wordt naar de echte motor. Zodra er specifieke vakkennis, privacy-by-design, realtime datakoppelingen of enterprise security bij komt kijken, haken ze af.
-            </p>
-            <p>
-              Aan de andere kant staan de logge IT-consultancies: zij schrijven rapporten van honderden pagina's, rekenen torenhoge uurtarieven, maar hebben nog nooit een koper verliefd laten worden op een product of een winkelpui ontworpen.
+              Standaard bureaus leveren gelikte mockups, maar haken af zodra het aankomt op echte domeinlogica, privacy-by-design of live datakoppelingen. IT-consultancies verdrinken daarentegen in logge rapporten zonder commerciële executiekracht.
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h3 className="text-lg font-bold text-white font-mono uppercase tracking-wide">
               Waarom RaddeR de Motor Bouwt
             </h3>
             <p>
-              RaddeR opereert precies op het snijvlak waar die werelden elkaar raken. Wij stoppen niet bij het laagje verf. Of het nu gaat om een Schematherapie Suite met AI-gedreven diagnostiek voor psychologen, een perceelkiezer gekoppeld aan openbare PDOK/Kadaster data, of high-scale enterprise cloudvoorstellen rondom Red Hat OpenShift en eBPF.
-            </p>
-            <p>
-              En we trekken het door naar de echte wereld: van een mobiele boekings-app tot een fysieke storefront in Pattaya, of een vector design system doorgetrokken tot de bestelbussen van een internationale B2B houthandel.
+              RaddeR combineert diepe systeemarchitectuur met snelle executie. Van local-first zorgprotocollen en kadaster-koppelingen tot fysieke storefronts en complete transportvloten: wij bouwen systemen die direct renderen.
             </p>
           </div>
         </div>
@@ -61,19 +55,19 @@ export const Manifesto: React.FC = () => {
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="p-4 rounded-xl bg-white/5 border border-white/10">
             <div className="text-white font-mono text-sm font-bold mb-1">01 / GEEN SAUSJES</div>
-            <p className="text-xs text-zinc-400">Design dient de logica, niet andersom. Geen oppervlakkige verf over rotte fundamenten.</p>
+            <p className="text-xs text-zinc-400">Design dient de onderliggende logica, nooit andersom.</p>
           </div>
           <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-            <div className="text-zinc-300 font-mono text-sm font-bold mb-1">02 / LOCAL-FIRST & PRIVACY</div>
-            <p className="text-xs text-zinc-400">Zorg en bedrijfsgeheimen horen bij de gebruiker, niet in ondoorzichtige dataverzamelaars.</p>
+            <div className="text-zinc-300 font-mono text-sm font-bold mb-1">02 / LOCAL-FIRST</div>
+            <p className="text-xs text-zinc-400">Data en privacy blijven gegarandeerd bij de eindgebruiker.</p>
           </div>
           <div className="p-4 rounded-xl bg-white/5 border border-white/10">
             <div className="text-zinc-300 font-mono text-sm font-bold mb-1">03 / ENTERPRISE LEVEL</div>
-            <p className="text-xs text-zinc-400">Kennis van microsecond kernel telemetrie, OpenShift en ASML-kaliber infrastructuren.</p>
+            <p className="text-xs text-zinc-400">OpenShift, eBPF en mission-critical kernel observabiliteit.</p>
           </div>
           <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-            <div className="text-zinc-300 font-mono text-sm font-bold mb-1">04 / TASTBARE REALITEIT</div>
-            <p className="text-xs text-zinc-400">Van 16px app icons tot 6 meter bestelbus-livery en fysieke winkelgevels in Thailand.</p>
+            <div className="text-zinc-300 font-mono text-sm font-bold mb-1">04 / TASTBAAR</div>
+            <p className="text-xs text-zinc-400">Van app-interface tot winkelgevel en complete vloten.</p>
           </div>
         </div>
       </div>

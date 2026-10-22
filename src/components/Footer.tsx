@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="text-xs text-zinc-400 leading-relaxed font-sans max-w-sm">
-              Complexe, domeinspecifieke logica direct vertalen naar werkende, schaalbare bedrijfsmodellen. Van local-first zorgprotocollen tot enterprise cloudvoorstellen en fysieke merkuitrol.
+              Complexe domeinlogica direct vertaald naar werkende, schaalbare software.
             </p>
 
             <div className="text-[11px] text-zinc-500 space-y-1">

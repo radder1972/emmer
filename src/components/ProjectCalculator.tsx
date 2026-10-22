@@ -12,27 +12,27 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
   const [primaryFocus, setPrimaryFocus] = useState<string[]>(['domain-logic', 'local-first']);
 
   const goals = [
-    { id: 'new-product', title: 'Nieuw Product Bouwen', desc: 'Van nulpunt naar werkende motor & marktintroductie' },
-    { id: 'rebuild', title: 'Platform Herbouwen', desc: 'Weg van standaard template naar schaalbare architectuur' },
-    { id: 'enterprise-sparring', title: 'Enterprise Sparring', desc: 'OpenShift, eBPF & architectuurvoorstellen op directieniveau' },
-    { id: 'omnichannel', title: 'Fysiek + Digitaal', desc: 'App + storefront, signage of wagenparkbelettering' }
+    { id: 'new-product', title: 'Nieuw Product Bouwen', desc: 'Van nulpunt naar werkend product' },
+    { id: 'rebuild', title: 'Platform Herbouwen', desc: 'Van template naar schaalbare motor' },
+    { id: 'enterprise-sparring', title: 'Enterprise Sparring', desc: 'OpenShift, eBPF & architectuur' },
+    { id: 'omnichannel', title: 'Fysiek + Digitaal', desc: 'App + storefront of wagenpark' }
   ];
 
   const domains = [
-    { id: 'health', name: 'Zorg & Healthtech', hint: 'Bijv. diagnostiek, theoriekaarten, AVG local-first' },
-    { id: 'geo', name: 'Vastgoed & Ruimtelijk', hint: 'Bijv. PDOK/Kadaster geodata, kavelmatching' },
-    { id: 'enterprise', name: 'High-Tech & Enterprise', hint: 'Bijv. OpenShift, eBPF, ASML-kaliber proposals' },
-    { id: 'b2b-trade', name: 'B2B & Logistiek', hint: 'Bijv. "From Tree to Trade", supply chains, fleet' },
-    { id: 'retail-mobility', name: 'Retail & Mobiliteit', hint: 'Bijv. PWA huursystemen, winkelpuien in Pattaya' }
+    { id: 'health', name: 'Zorg & Healthtech', hint: 'Diagnostiek, local-first' },
+    { id: 'geo', name: 'Vastgoed & Ruimtelijk', hint: 'Kadaster, PDOK, kavels' },
+    { id: 'enterprise', name: 'High-Tech & Enterprise', hint: 'OpenShift, eBPF, telemetry' },
+    { id: 'b2b-trade', name: 'B2B & Logistiek', hint: 'Supply chain, fleet livery' },
+    { id: 'retail-mobility', name: 'Retail & Mobiliteit', hint: 'Verhuur, storefront' }
   ];
 
   const focusOptions = [
-    { id: 'domain-logic', label: 'Complexe Domeinlogica & Beslisbomen' },
-    { id: 'local-first', label: 'Local-First / Zero-Leak Data Privacy' },
-    { id: 'spatial-data', label: 'Live Kadaster & PDOK Koppelingen' },
-    { id: 'ai-reasoning', label: 'AI Hypothese- & Analyse Engines' },
-    { id: 'fleet-storefront', label: 'Fysieke Signage, Storefront of Wagenpark' },
-    { id: 'agentic-speed', label: 'Razendsnelle Agentic Ontwikkeling' }
+    { id: 'domain-logic', label: 'Domeinlogica & Beslisbomen' },
+    { id: 'local-first', label: 'Local-First Data Privacy' },
+    { id: 'spatial-data', label: 'Kadaster & PDOK Koppelingen' },
+    { id: 'ai-reasoning', label: 'AI Hypothese Engines' },
+    { id: 'fleet-storefront', label: 'Storefront & Wagenpark' },
+    { id: 'agentic-speed', label: 'Agentic IDE Snelheid' }
   ];
 
   const toggleFocus = (id: string) => {
@@ -80,11 +80,11 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
             <span>INTERACTIEVE PROJECT CONFIGURATOR</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Ontwerp Onze Architectuur- <br />
-            <span className="text-zinc-300">en Roadmap Blauwdruk</span>
+            Ontwerp Jouw <br />
+            <span className="text-zinc-300">Architectuur-Blauwdruk</span>
           </h2>
           <p className="mt-4 text-zinc-400 text-base sm:text-lg">
-            Kies het doel, het domein en de technische randvoorwaarden. Wij genereren direct een architecturaal voorstel.
+            Kies doel, domein en technische focus voor een direct architectuurvoorstel.
           </p>
         </div>
 

@@ -50,7 +50,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
               <span className="text-zinc-300">Domein-Architecturen</span>
             </h2>
             <p className="mt-4 text-zinc-400 text-base sm:text-lg">
-              Geen oppervlakkige mockups, maar live werkende systemen met diepe logica, privacy-first dataopslag en fysieke verankering.
+              Werkende producten met diepe logica, privacy-first data en tastbare realiteit.
             </p>
           </div>
 

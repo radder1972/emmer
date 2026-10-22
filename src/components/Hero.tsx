@@ -46,33 +46,31 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
             </span>
           </h1>
 
-          <p className="text-lg sm:text-2xl text-zinc-300 max-w-3xl font-normal leading-relaxed">
-            Ons allergrootste onderscheidend vermogen zit in het vermogen om{' '}
-            <span className="text-white font-semibold">complexe, domeinspecifieke logica direct te vertalen naar werkende, schaalbare bedrijfsmodellen</span>. 
-            Van local-first diagnostiek voor psychologen en ruimtelijke kadaster-matching, tot enterprise cloudvoorstellen en fysieke storefronts.
+          <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed">
+            Wij vertalen complexe domeinlogica direct naar werkende, schaalbare software. Geen oppervlakkig sausje, maar robuuste productontwikkeling.
           </p>
 
           {/* Quick Action CTAs */}
           <div className="pt-2 flex flex-wrap items-center gap-4">
             <button
               onClick={onExploreCases}
-              className="px-7 py-4 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold font-mono text-sm tracking-wide transition-all shadow-xl shadow-white/10 flex items-center gap-2 group cursor-pointer"
+              className="px-6 py-3.5 rounded-xl bg-white hover:bg-zinc-200 text-black font-bold font-mono text-sm tracking-wide transition-all shadow-xl shadow-white/10 flex items-center gap-2 group cursor-pointer"
             >
-              <span>Bekijk Cases & Architectuur</span>
+              <span>Bekijk Cases</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
 
             <a
               href="#vergelijker"
-              className="px-6 py-4 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border border-white/15 font-mono text-sm tracking-wide transition-all flex items-center gap-2 hover:border-white/30 cursor-pointer"
+              className="px-5 py-3.5 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border border-white/15 font-mono text-sm tracking-wide transition-all flex items-center gap-2 hover:border-white/30 cursor-pointer"
             >
               <Layers className="w-4 h-4 text-white" />
-              <span>Buitenkant vs. De Motor</span>
+              <span>Motor vs. Sausje</span>
             </a>
 
             <button
               onClick={onOpenContact}
-              className="px-5 py-4 rounded-xl text-zinc-400 hover:text-white font-mono text-sm transition-colors cursor-pointer"
+              className="px-4 py-3.5 rounded-xl text-zinc-400 hover:text-white font-mono text-sm transition-colors cursor-pointer"
             >
               Direct Sparren →
             </button>
@@ -87,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <span>01. DE ARCHITECT</span>
             </div>
             <p className="text-sm text-zinc-400 leading-relaxed">
-              Local-first webapps, eBPF kernel telemetry, Red Hat OpenShift cluster topologies en ruimtelijke open data registers.
+              Local-first applicaties, eBPF telemetrie en OpenShift cluster topologies.
             </p>
           </div>
 
@@ -97,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <span>02. DE STRATEEG</span>
             </div>
             <p className="text-sm text-zinc-400 leading-relaxed">
-              GGZ-diagnostische protocollen, kavelmatching met PDOK/Kadaster geodata en internationale B2B ketenlogica ("From Tree to Trade").
+              Zorgdiagnostiek, kadastrale geodata en schaalbare B2B ketenmodellen.
             </p>
           </div>
 
@@ -107,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <span>03. DE MAKER</span>
             </div>
             <p className="text-sm text-zinc-400 leading-relaxed">
-              Studio-executiesnelheid: van vector tokens en interactieve PWA's tot fysieke storefronts in Pattaya en complete wagenparkbelettering.
+              Van webapplicaties en design tokens tot fysieke storefronts en vloten.
             </p>
           </div>
         </div>

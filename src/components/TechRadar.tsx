@@ -6,45 +6,45 @@ export const TechRadar: React.FC = () => {
     {
       category: 'Agentic & Modern Engineering',
       icon: Terminal,
-      description: 'Razendsnelle iteratiecyclus: van idee naar werkende productiecode in uren i.p.v. maanden.',
+      description: 'Snelle iteratiecyclus: van concept naar productiecode in uren.',
       items: [
-        { name: 'Google Antigravity IDE', detail: 'Agentic context pipelines & autonomous task orchestration' },
-        { name: 'React 19 & TypeScript', detail: 'Type-safe interfaces, modern concurrent rendering' },
-        { name: 'Tailwind CSS & Design Tokens', detail: 'Strict visual consistency & atomic token scaling' },
-        { name: 'Vercel Edge & Cloudflare Workers', detail: 'Sub-30ms global latency & instant deployments' }
+        { name: 'Google Antigravity IDE', detail: 'Agentic context pipelines & taak-orkestratie' },
+        { name: 'React 19 & TypeScript', detail: 'Type-safe interfaces & concurrent rendering' },
+        { name: 'Tailwind CSS & Tokens', detail: 'Consistente design tokens & strakke styling' },
+        { name: 'Vercel Edge & Workers', detail: 'Sub-30ms global edge deployments' }
       ]
     },
     {
       category: 'Enterprise Cloud & Observability',
       icon: Shield,
-      description: 'Architectuur op enterprise-schaal (ASML-kaliber) met mission-critical beveiliging en auditing.',
+      description: 'Enterprise-schaal (ASML-kaliber) met mission-critical observabiliteit.',
       items: [
-        { name: 'Red Hat OpenShift Platform', detail: 'Container orchestration, enterprise operator workflows' },
-        { name: 'eBPF Kernel Telemetry (Cilium)', detail: 'Zero-overhead observability, kernel packet inspection' },
-        { name: 'Zero-Trust Architecture', detail: 'Microsegmentatie, mTLS & automated compliance policies' },
-        { name: 'Kubernetes Cluster Topologies', detail: 'Multi-tenant isolation & resilient self-healing state' }
+        { name: 'Red Hat OpenShift', detail: 'Container orchestration & operator workflows' },
+        { name: 'eBPF Telemetry (Cilium)', detail: 'Zero-overhead kernel packet inspection' },
+        { name: 'Zero-Trust Architecture', detail: 'Microsegmentatie & geautomatiseerde mTLS' },
+        { name: 'Kubernetes Topologies', detail: 'Multi-tenant isolation & self-healing state' }
       ]
     },
     {
       category: 'Local-First, AI & Ruimtelijke Data',
       icon: Database,
-      description: 'Privacy-by-design architectuur gecombineerd met openbare nationale registraties.',
+      description: 'Privacy-by-design gecombineerd met openbare nationale registraties.',
       items: [
-        { name: 'Local-First & Client Cryptography', detail: 'Zero-knowledge storage, 100% AVG-proof GGZ suites' },
-        { name: 'PDOK & Kadaster WFS/WMS', detail: 'Live streaming van ruimtelijke overheids- en kaveldata' },
-        { name: 'AI Hypothese & Reasoning Engines', detail: 'Contextuele diagnostische ondersteuning voor experts' },
-        { name: 'GeoJSON & Spatial Matching', detail: 'Real-time geometrische calculatie van bouwvlakken' }
+        { name: 'Local-First & Crypto', detail: 'Zero-knowledge client storage, 100% AVG-proof' },
+        { name: 'PDOK & Kadaster WFS/WMS', detail: 'Live streaming van ruimtelijke overheidsdata' },
+        { name: 'AI Hypothese Engines', detail: 'Contextuele ondersteuning voor domeinexperts' },
+        { name: 'GeoJSON Spatial Matching', detail: 'Real-time geometrische calculatie van kavels' }
       ]
     },
     {
       category: 'Fysiek naar Digitaal (Total Concept)',
       icon: Compass,
-      description: 'Geen grenzen tussen wat digitaal leeft en wat tastbaar op straat te zien is.',
+      description: 'Volledige synergie tussen webapplicaties en tastbare realiteit.',
       items: [
-        { name: 'Physical Storefront Architecture', detail: 'Gevelsigning, balie-indelingen & routing (o.a. Pattaya)' },
-        { name: 'Fleet Livery & Wagenpark', detail: 'Vector-perfecte belettering voor B2B transportvloten' },
-        { name: 'B2B Positionering ("From Tree to Trade")', detail: 'Commerciële autoriteit voor internationale ketens' },
-        { name: 'Omnichannel Reserverings- & QR Flows', detail: 'Naadloze overgang van straatscan naar webapp' }
+        { name: 'Storefront Architectuur', detail: 'Gevelsigning, balies & routing (Pattaya)' },
+        { name: 'Fleet Livery & Wagenpark', detail: 'Vector-perfecte belettering voor transportvloten' },
+        { name: 'B2B Positionering', detail: 'Commerciële autoriteit ("From Tree to Trade")' },
+        { name: 'Omnichannel QR Flows', detail: 'Frictieloze overgang van straat naar webapp' }
       ]
     }
   ];
@@ -65,7 +65,7 @@ export const TechRadar: React.FC = () => {
             </span>
           </h2>
           <p className="mt-4 text-zinc-400 text-base sm:text-lg">
-            Geen theoretische abstracties, maar bewezen frameworks en gereedschappen waarmee domeinspecifieke logica direct operationeel wordt.
+            Bewezen technologie waarmee complexe domeinlogica direct operationeel wordt.
           </p>
         </div>
 
