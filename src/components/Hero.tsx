@@ -19,19 +19,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Technical HUD Topline - Swiss Editorial */}
-        <div className="flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-neutral-500 border-b border-neutral-300 pb-4 mb-12">
-          <div className="flex items-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-neutral-900 animate-pulse"></span>
-            <span className="text-neutral-900 font-bold tracking-wider">RaddeR // SYSTEMS & PRODUCT ARCHITECTURE</span>
-            <span className="text-neutral-300">|</span>
-            <span>CORE FOCUS: DOMAIN LOGIC + CODE + PHYSICAL REALITY</span>
-          </div>
-          <div className="hidden sm:flex items-center gap-4 text-neutral-500">
-            <span>SPEC: LOCAL-FIRST // EBPF // CADASTRE MATCHING // PHYSICAL-TO-DIGITAL</span>
-          </div>
-        </div>
-
         {/* Hero Main Content */}
         <div className="max-w-4xl text-left space-y-7">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm">
