@@ -22,7 +22,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
         {/* Hero Main Content */}
         <div className="max-w-4xl text-left space-y-7">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-neutral-900" />
+            <Sparkles className="w-3.5 h-3.5 text-[#ff451a]" />
             <span>Lorem Ipsum Dolor // <strong className="text-neutral-950 font-bold">Placeholder</strong></span>
           </div>
 
@@ -103,7 +103,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
         {/* Telemetry Strip */}
         <div className="mt-6 p-4 rounded-xl bg-white/70 border border-neutral-200/90 shadow-sm flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-neutral-600">
           <div className="flex items-center gap-3">
-            <span className="w-2 h-2 rounded-full bg-neutral-950"></span>
+            <span className="w-2 h-2 rounded-full bg-[#ff451a] animate-pulse"></span>
             <span className="text-neutral-950 font-semibold">RaddeR STUDIO</span>
           </div>
           <div className="flex flex-wrap gap-4 text-[11px] text-neutral-500">

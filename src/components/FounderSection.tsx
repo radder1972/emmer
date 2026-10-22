@@ -42,7 +42,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
           {/* Right Column: Narrative & Philosophy */}
           <div className="lg:col-span-7 text-left space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono">
-              <Terminal className="w-3.5 h-3.5 text-neutral-950" />
+              <Terminal className="w-3.5 h-3.5 text-[#ff451a]" />
               <span>OVER ONS // PLACEHOLDER</span>
             </div>
 
@@ -58,19 +58,19 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
             {/* Three direct guarantees */}
             <div className="space-y-3 pt-2">
               <div className="flex items-start gap-3 text-sm text-neutral-700 font-mono">
-                <CheckCircle2 className="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0 mt-0.5" />
                 <span>
                   <strong className="text-neutral-950">Lorem ipsum dolor:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna.
                 </span>
               </div>
               <div className="flex items-start gap-3 text-sm text-neutral-700 font-mono">
-                <CheckCircle2 className="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0 mt-0.5" />
                 <span>
                   <strong className="text-neutral-950">Consectetur adipiscing:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                 </span>
               </div>
               <div className="flex items-start gap-3 text-sm text-neutral-700 font-mono">
-                <CheckCircle2 className="w-4 h-4 text-neutral-950 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0 mt-0.5" />
                 <span>
                   <strong className="text-neutral-950">Sed do eiusmod:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse.
                 </span>

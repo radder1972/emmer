@@ -136,7 +136,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             © {new Date().getFullYear()} RaddeR STUDIO. Alle rechten voorbehouden.
           </div>
           <div className="flex items-center gap-2 text-neutral-700">
-            <Cpu className="w-3.5 h-3.5 text-neutral-950" />
+            <Cpu className="w-3.5 h-3.5 text-[#ff451a]" />
             <span className="font-semibold">RaddeR — SYSTEMS & PRODUCT ARCHITECTURE</span>
           </div>
         </div>

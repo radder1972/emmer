@@ -13,12 +13,12 @@ export const Manifesto: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono mb-8 shadow-sm">
-          <Terminal className="w-3.5 h-3.5 text-neutral-900" />
+          <Terminal className="w-3.5 h-3.5 text-[#ff451a]" />
           <span>HET MANIFEST // PLACEHOLDER</span>
         </div>
 
         {/* Big quote statement */}
-        <div className="relative pl-6 sm:pl-10 border-l-2 border-neutral-950 mb-12">
+        <div className="relative pl-6 sm:pl-10 border-l-2 border-[#ff451a] mb-12">
           <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-neutral-950 leading-relaxed tracking-tight">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
             <span className="text-neutral-950 font-bold underline decoration-neutral-400 underline-offset-8">

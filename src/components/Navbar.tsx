@@ -70,8 +70,16 @@ export const Navbar: React.FC<NavbarProps> = ({
                         : 'text-neutral-600 hover:text-neutral-950 hover:bg-black/[0.03] border border-transparent'
                     }`}
                   >
-                    <RadderNavIcon id={link.id} size={15} strokeWidth={2} />
+                    <RadderNavIcon
+                      id={link.id}
+                      size={15}
+                      strokeWidth={2}
+                      color={isActive ? '#ff451a' : 'currentColor'}
+                    />
                     <span>{link.name}</span>
+                    {isActive && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff451a] shrink-0" />
+                    )}
                   </a>
                 );
               })}
@@ -130,14 +138,24 @@ export const Navbar: React.FC<NavbarProps> = ({
                     setMobileMenuOpen(false);
                     onNavigate(link.id);
                   }}
-                  className={`inline-flex items-center gap-3 text-left py-2.5 px-3 rounded-lg border-b border-neutral-200 transition-colors cursor-pointer ${
+                  className={`inline-flex items-center justify-between text-left py-2.5 px-3 rounded-lg border-b border-neutral-200 transition-colors cursor-pointer ${
                     isActive
                       ? 'text-neutral-950 bg-black/5 font-bold'
                       : 'text-neutral-600 hover:text-neutral-950'
                   }`}
                 >
-                  <RadderNavIcon id={link.id} size={18} strokeWidth={2} />
-                  <span>{link.name}</span>
+                  <div className="flex items-center gap-3">
+                    <RadderNavIcon
+                      id={link.id}
+                      size={18}
+                      strokeWidth={2}
+                      color={isActive ? '#ff451a' : 'currentColor'}
+                    />
+                    <span>{link.name}</span>
+                  </div>
+                  {isActive && (
+                    <span className="w-2 h-2 rounded-full bg-[#ff451a]" />
+                  )}
                 </a>
               );
             })}

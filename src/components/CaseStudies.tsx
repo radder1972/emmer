@@ -41,6 +41,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="text-left max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ff451a]" />
               <span>PORTFOLIO // PLACEHOLDER</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
@@ -58,13 +59,16 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer ${
+                className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer ${
                   selectedCategory === cat
                     ? 'bg-neutral-950 text-white font-bold shadow-sm'
                     : 'bg-white text-neutral-600 hover:text-neutral-950 border border-neutral-300 hover:border-neutral-400 shadow-sm'
                 }`}
               >
-                {cat}
+                {selectedCategory === cat && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#ff451a]" />
+                )}
+                <span>{cat}</span>
               </button>
             ))}
           </div>

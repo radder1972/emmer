@@ -41,7 +41,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
           <div className="lg:col-span-5 space-y-8">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
-                <Terminal className="w-3.5 h-3.5 text-neutral-950" />
+                <Terminal className="w-3.5 h-3.5 text-[#ff451a]" />
                 <span>SPARREN // PLACEHOLDER</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-950 tracking-tight">
@@ -199,9 +199,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-xl bg-neutral-950 hover:bg-neutral-800 text-white font-mono font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-4 rounded-xl bg-neutral-950 hover:bg-[#ff451a] text-white font-mono font-bold text-xs uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    <span>Verstuur Briefing naar RaddeR</span>
+                    <span>Verstuur Bericht</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </form>
