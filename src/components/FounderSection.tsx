@@ -19,7 +19,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
                 <img
                   src="/matthias-radder.png"
                   alt="Matthias Radder — Oprichter van RaddeR"
-                  className="w-full h-auto aspect-square object-cover object-top filter grayscale contrast-110 group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-auto aspect-square object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                 />
                 {/* Monograph caption bar */}
                 <div className="p-4 bg-white/95 backdrop-blur-sm border-t border-neutral-200 flex items-center justify-between text-left">
