@@ -9,7 +9,7 @@ interface FooterProps {
   onOpenContact?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -173,12 +173,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => 
                 >
                   → Over Ons
                 </a>
-                <button
-                  onClick={onOpenContact}
-                  className="text-neutral-950 font-bold hover:underline transition-all text-left cursor-pointer pt-1"
+                <a
+                  href="/sparren"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('sparren');
+                  }}
+                  className="hover:text-neutral-950 transition-colors text-left cursor-pointer"
                 >
-                  → Plan Sparringsessie
-                </button>
+                  → Sparren
+                </a>
               </div>
             </div>
 

@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderWordmark } from './RadderWordmark';
 
-export type PageId = 'manifest' | 'cases' | 'over-ons';
+export type PageId = 'manifest' | 'cases' | 'over-ons' | 'sparren';
 
 interface NavbarProps {
   currentPage: PageId;
   onNavigate: (page: PageId) => void;
-  onOpenContact: () => void;
+  onOpenContact?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   currentPage,
   onNavigate,
-  onOpenContact,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -22,6 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'manifest', name: 'Manifest' },
     { id: 'cases', name: 'Cases' },
     { id: 'over-ons', name: 'Over Ons' },
+    { id: 'sparren', name: 'Sparren' },
   ];
 
   return (
@@ -50,7 +50,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </span>
             </a>
 
-            {/* Desktop Navigation Links: Manifest | Cases | Over Ons */}
+            {/* Desktop Navigation Links: Manifest | Cases | Over Ons | Sparren */}
             <nav className="hidden lg:flex items-center gap-2">
               {navLinks.map((link) => {
                 const isActive = currentPage === link.id;
@@ -76,17 +76,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             </nav>
           </div>
 
-          {/* Right Side: Sparren CTA + Pure Vector Re-Drawn RaddeR Logo */}
+          {/* Right Side: Pure Vector Re-Drawn RaddeR Logo */}
           <div className="flex items-center gap-4 sm:gap-6">
-            <button
-              onClick={onOpenContact}
-              className="hidden sm:flex px-4 py-2.5 text-xs font-mono uppercase tracking-wider font-bold rounded-lg bg-neutral-950 text-white hover:bg-neutral-800 transition-all items-center gap-1.5 cursor-pointer shadow-sm"
-            >
-              <span>Sparren</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </button>
-
-            {/* Pure Mathematical Vector Logo on the Right */}
             <a
               href="/"
               onClick={(e) => {
@@ -148,15 +139,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               );
             })}
           </div>
-          <button
-            onClick={() => {
-              setMobileMenuOpen(false);
-              onOpenContact();
-            }}
-            className="w-full mt-4 py-3 text-center text-xs font-mono uppercase tracking-wider font-bold rounded-lg bg-neutral-950 text-white hover:bg-neutral-800 cursor-pointer"
-          >
-            Plan een Sparringsessie
-          </button>
         </div>
       )}
     </header>
