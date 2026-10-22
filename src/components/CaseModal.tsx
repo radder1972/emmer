@@ -16,21 +16,13 @@ export const CaseModal: React.FC<CaseModalProps> = ({ caseStudy, onClose, onSpar
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/60 backdrop-blur-sm animate-fade-in">
       {/* Modal Container */}
       <div className="relative w-full max-w-4xl bg-[#fcfbf9] border border-neutral-300 rounded-2xl shadow-2xl overflow-hidden my-8 text-left">
-        {/* Top Accent Line */}
-        <div
-          className="h-1.5 w-full"
-          style={{
-            background: `linear-gradient(90deg, ${caseStudy.accentColor}, ${caseStudy.accentColor}88 50%, transparent)`,
-          }}
-        />
-
         {/* Top Header Bar */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-200 bg-[#f4f3ef]">
           <div className="flex items-center gap-3">
-            <div className="w-6 h-6 flex items-center justify-center">
-              <RadderLogo size={22} color={caseStudy.accentColor} />
+            <div className="w-6 h-6 flex items-center justify-center text-[#ff451a]">
+              <RadderLogo size={22} color="#ff451a" />
             </div>
-            <span className="text-xs font-mono uppercase tracking-wider text-neutral-600 font-semibold">
+            <span className="text-xs font-mono uppercase tracking-wider text-neutral-600">
               {caseStudy.category} // {caseStudy.year}
             </span>
           </div>
@@ -75,32 +67,17 @@ export const CaseModal: React.FC<CaseModalProps> = ({ caseStudy, onClose, onSpar
           {/* Impact Metrics Badges */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {caseStudy.impactMetrics.map((metric, i) => (
-              <div
-                key={i}
-                className="p-4 rounded-xl bg-white border shadow-sm"
-                style={{
-                  backgroundColor: `${caseStudy.accentColor}08`,
-                  borderColor: `${caseStudy.accentColor}25`,
-                }}
-              >
-                <div className="text-xs font-mono text-neutral-600 uppercase font-medium">{metric.label}</div>
-                <div
-                  className="text-xl font-bold font-mono mt-1"
-                  style={{ color: caseStudy.accentColor }}
-                >
-                  {metric.value}
-                </div>
+              <div key={i} className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm">
+                <div className="text-xs font-mono text-neutral-500 uppercase">{metric.label}</div>
+                <div className="text-xl font-bold text-neutral-950 mt-1">{metric.value}</div>
               </div>
             ))}
           </div>
 
           {/* Quote callout */}
           {caseStudy.quote && (
-            <div
-              className="p-4 rounded-xl bg-neutral-100/80 border-l-4 flex items-start gap-3"
-              style={{ borderLeftColor: caseStudy.accentColor }}
-            >
-              <Quote className="w-5 h-5 shrink-0 mt-0.5" style={{ color: caseStudy.accentColor }} />
+            <div className="p-4 rounded-xl bg-neutral-100/80 border-l-4 border-neutral-950 flex items-start gap-3">
+              <Quote className="w-5 h-5 text-neutral-950 shrink-0 mt-0.5" />
               <p className="text-sm italic font-medium text-neutral-800">
                 "{caseStudy.quote}"
               </p>
@@ -118,16 +95,9 @@ export const CaseModal: React.FC<CaseModalProps> = ({ caseStudy, onClose, onSpar
               </p>
             </div>
 
-            <div
-              className="p-5 rounded-xl bg-neutral-950 text-white border-l-4 border-neutral-900 shadow-sm"
-              style={{ borderLeftColor: caseStudy.accentColor }}
-            >
-              <div
-                className="text-xs font-mono uppercase font-bold mb-2 flex items-center gap-1.5"
-                style={{ color: caseStudy.accentColor }}
-              >
-                <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: caseStudy.accentColor }} />
-                <span>WAT RaddeR BOUWDE</span>
+            <div className="p-5 rounded-xl bg-neutral-950 text-white border border-neutral-900 shadow-sm">
+              <div className="text-xs font-mono uppercase text-white font-bold mb-2">
+                WAT RaddeR BOUWDE
               </div>
               <p className="text-sm text-neutral-200 leading-relaxed">
                 {caseStudy.theEngineApproach}
