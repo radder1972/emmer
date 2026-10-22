@@ -3,6 +3,7 @@ import { ArrowUp } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderWordmark } from './RadderWordmark';
 import { RadderNavIcon } from './RadderNavIcons';
+import { LogoWireframe } from './RadderStudioDetails';
 import type { PageId } from './Navbar';
 
 interface FooterProps {
@@ -24,8 +25,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="bg-[#ece9e1] border-t border-neutral-300/90 py-16 text-neutral-600 font-mono text-xs text-left relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#ece9e1] border-t border-neutral-300/90 py-16 text-neutral-600 font-mono text-xs text-left relative overflow-hidden">
+      {/* Architectural Wireframe Logo in background */}
+      <div className="absolute right-0 sm:right-8 md:right-20 -bottom-12 pointer-events-none select-none z-0 opacity-[0.065] text-neutral-950">
+        <LogoWireframe size={380} opacity={1} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row items-start justify-between gap-10 pb-12 border-b border-neutral-300">
           {/* Identity & Emblem */}
           <div className="space-y-6 max-w-md text-left">
