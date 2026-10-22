@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, ArrowRight, Check, Copy, MapPin, ShieldCheck, Terminal } from 'lucide-react';
-import { EmmerLogo } from './EmmerLogo';
+import { RadderLogo } from './RadderLogo';
 
 interface ContactSectionProps {
   initialBrief?: string;
@@ -20,7 +20,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
     }
   }, [initialBrief]);
 
-  const contactEmail = 'contact@emmer.studio';
+  const contactEmail = 'contact@radder.studio';
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(contactEmail);
@@ -42,7 +42,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/5 border border-white/15 text-zinc-300 text-xs font-mono mb-4">
                 <Terminal className="w-3.5 h-3.5 text-white" />
-                <span>DIRECT SPARREN MET EMMER</span>
+                <span>DIRECT SPARREN MET RaddeR</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                 Laten we de motor <br />
@@ -59,8 +59,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                 <span className="text-xs font-mono uppercase tracking-wider text-zinc-400 font-bold">
                   DIRECT CONTACT
                 </span>
-                <div className="w-6 h-6 flex items-center justify-center">
-                  <EmmerLogo size={22} />
+                <div className="w-6 h-6 flex items-center justify-center text-white">
+                  <RadderLogo size={22} />
                 </div>
               </div>
 
@@ -118,7 +118,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                   </div>
                   <h3 className="text-2xl font-bold text-white">Aanvraag Ontvangen!</h3>
                   <p className="text-zinc-300 text-sm max-w-md mx-auto">
-                    Bedankt voor het delen van de briefing. EMMER neemt binnen 24 uur persoonlijk contact op om te sparren over de technische en commerciële motor.
+                    Bedankt voor het delen van de briefing. RaddeR neemt binnen 24 uur persoonlijk contact op om te sparren over de technische en commerciële motor.
                   </p>
                   <button
                     onClick={() => setFormSubmitted(false)}
@@ -202,7 +202,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                     type="submit"
                     className="w-full py-4 rounded-xl bg-white hover:bg-zinc-200 text-black font-mono font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-white/10 flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    <span>Verstuur Briefing naar EMMER</span>
+                    <span>Verstuur Briefing naar RaddeR</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </form>

@@ -1,11 +1,11 @@
-# EMMER — Systems & Product Architecture
+# RaddeR — Systems & Product Architecture
 
 <p align="center">
-  <img src="public/logo-emmer.png" alt="EMMER Emblem" width="220" />
+  <img src="public/logo-radder.png" alt="RaddeR Emblem" width="220" />
 </p>
 
 <p align="center">
-  <strong>"Waar een standaard bureau stopt bij de buitenkant, bouwt EMMER de motor."</strong>
+  <strong>"Waar een standaard bureau stopt bij de buitenkant, bouwt RaddeR de motor."</strong>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 
 In de wereld van digitale bureaus is er een kloof: designbureaus stoppen bij oppervlakkige templates en brochures; traditionele IT-consultancies verdrinken in logge rapporten. 
 
-**EMMER** combineert de creatieve executiesnelheid van een modern designbureau met de diepe systeemkennis van een softwareontwikkelaar en de commerciële scherpte van een business strateeg.
+**RaddeR** combineert de creatieve executiesnelheid van een modern designbureau met de diepe systeemkennis van een softwareontwikkelaar en de commerciële scherpte van een business strateeg.
 
 ---
 
@@ -77,7 +77,7 @@ npm run build
 
 ## 📬 Contact & Sparren
 
-- **Studio**: EMMER — Systems & Product Architecture
-- **E-mail**: `contact@emmer.studio`
+- **Studio**: RaddeR — Systems & Product Architecture
+- **E-mail**: `contact@radder.studio`
 - **Locatie**: Nederland (beschikbaar op locatie & remote wereldwijd)
 - **Status**: Beschikbaar voor selectieve Q4/Q1 producttrajecten & enterprise architectuur-sparring.

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
-import { EmmerLogo } from './EmmerLogo';
+import { RadderLogo } from './RadderLogo';
 
 interface NavbarProps {
   onOpenContact: () => void;
@@ -40,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
           <div className="flex items-center gap-8 lg:gap-12">
             <a href="#" className="flex flex-col text-left group">
               <span className="font-black text-white tracking-widest text-xl font-mono leading-none group-hover:text-zinc-200 transition-colors">
-                EMMER
+                RaddeR
               </span>
               <span className="text-[10px] font-mono text-zinc-400 tracking-wider uppercase mt-1">
                 Systems & Product Architecture
@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             </nav>
           </div>
 
-          {/* Right Side: Sparren CTA + Pure Vector Re-Drawn EMMER Logo */}
+          {/* Right Side: Sparren CTA + Pure Vector Re-Drawn RaddeR Logo */}
           <div className="flex items-center gap-4 sm:gap-6">
             <button
               onClick={onOpenContact}
@@ -74,15 +74,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             {/* Pure Mathematical Vector Logo on the Right */}
             <a
               href="#"
-              title="EMMER — Terug naar boven"
+              title="RaddeR — Terug naar boven"
               className="relative flex items-center justify-center p-1 rounded-xl hover:bg-white/5 transition-all group cursor-pointer"
             >
               <div className="transition-transform duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.35)]">
-                <EmmerLogo
+                <RadderLogo
                   size={scrolled ? 56 : 68}
                   variant="vector"
                   glow={true}
-                  className="transition-all duration-300"
+                  className="text-white transition-all duration-300"
                 />
               </div>
             </a>

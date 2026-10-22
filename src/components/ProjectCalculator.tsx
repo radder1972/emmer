@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Sliders, ArrowRight, CheckCircle2, Zap } from 'lucide-react';
-import { EmmerLogo } from './EmmerLogo';
+import { RadderLogo } from './RadderLogo';
 
 interface ProjectCalculatorProps {
   onPlanSparringWithBrief: (brief: string) => void;
@@ -174,8 +174,8 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
             <div className="rounded-2xl bg-gradient-to-b from-[#151824] to-[#0c0e14] border-2 border-white/30 p-6 sm:p-8 shadow-2xl text-left space-y-6">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-6 h-6 flex items-center justify-center">
-                    <EmmerLogo size={22} />
+                  <div className="w-6 h-6 flex items-center justify-center text-white">
+                    <RadderLogo size={22} />
                   </div>
                   <span className="text-xs font-mono uppercase tracking-wider text-white font-bold">
                     ARCHITECTUUR BLAUWDRUK

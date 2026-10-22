@@ -1,2 +1,1 @@
-export { EmmerLogo as MrLogo } from './EmmerLogo';
-export { EmmerLogo } from './EmmerLogo';
+export { RadderLogo as MrLogo, RadderLogo, EmmerLogo } from './RadderLogo';

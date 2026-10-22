@@ -46,7 +46,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     detailedStory: {
       problem: 'Psychologen en schematherapeuten worstelen met gefragmenteerde diagnostische tools, papieren schema-vragenlijsten en zware AVG-beperkingen bij het gebruik van moderne digitale hulpmiddelen.',
       domainLogic: 'Schematherapie vereist het nauwkeurig in kaart brengen van vroege disfunctionele schema\'s, copingstijlen en actuele modi. Dit vraagt om diepe domeinkennis van het Young Schema Questionnaire (YSQ) en Schema Mode Inventory (SMI).',
-      technicalExecution: 'EMMER ontwierp en programmeerde een privacy-by-design local-first applicatie. Diagnostische testen worden direct in de browser berekend en gevisualiseerd als interactieve theoriekaarten. Een AI-module assisteert de therapeut door behandelhypotheses te formuleren op basis van scores, zonder dat herleidbare patiëntgegevens ooit het apparaat verlaten.',
+      technicalExecution: 'RaddeR ontwierp en programmeerde een privacy-by-design local-first applicatie. Diagnostische testen worden direct in de browser berekend en gevisualiseerd als interactieve theoriekaarten. Een AI-module assisteert de therapeut door behandelhypotheses te formuleren op basis van scores, zonder dat herleidbare patiëntgegevens ooit het apparaat verlaten.',
       businessResult: 'De psycholoog transformeerde van traditionele papieren intake naar een hypermodern digitaal diagnostiekplatform met aanzienlijke tijdsbesparing en superieure patiëntinzichten.'
     },
     quote: 'Dat is geen marketing meer, dat is volwaardige productontwikkeling voor de zorg.'
@@ -76,7 +76,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     detailedStory: {
       problem: 'Bij nieuwbouwprojecten is het matchen van specifieke woningtypes met complexe kavels vaak een tijdrovend en ondoorzichtig proces voor zowel projectontwikkelaar als koper.',
       domainLogic: 'Het begrijpen van kadastrale percelen, ruimtelijke ordeningsregels, bouwvlakken, erfdienstbaarheden en zon-oriëntaties vereist meer dan een mooie UI; het vereist ruimtelijke data-analyse.',
-      technicalExecution: 'Naast het ontwerpen van de visuele merkidentiteit bouwde EMMER een live datakoppeling met openbare geo-registers. Bezoekers kunnen percelen filteren op afmeting, bezonning en bestemmingsvoorschriften en direct zien welk woningmodel exact past binnen de gemeentelijke bouwregels.',
+      technicalExecution: 'Naast het ontwerpen van de visuele merkidentiteit bouwde RaddeR een live datakoppeling met openbare geo-registers. Bezoekers kunnen percelen filteren op afmeting, bezonning en bestemmingsvoorschriften en direct zien welk woningmodel exact past binnen de gemeentelijke bouwregels.',
       businessResult: 'Kavels werden 4x sneller gereserveerd met 80% minder uitval tijdens het intakegesprek doordat kopers vooraf exact wisten wat planologisch mogelijk was.'
     },
     quote: 'Niet alleen de branding ontwerpen, maar de koppeling met openbare ruimtelijke data leggen om daadwerkelijk grond en kopers te matchen.'
@@ -106,7 +106,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     detailedStory: {
       problem: 'In high-tech industriële omgevingen (zoals ASML-ecosystemen) volstaan traditionele cloudarchitecturen niet: netwerklatency, soevereiniteit, microsegmentatie en diepe kernel-inzichten zijn absolute randvoorwaarden.',
       domainLogic: 'Het snappen van de wisselwerking tussen bare-metal performance, containerisatie, deterministische data-stromen en strenge industriële security-richtlijnen.',
-      technicalExecution: 'EMMER formuleerde en structureerde voorstellen waarin OpenShift cluster topologies gecombineerd werden met eBPF instrumentation. Hierdoor ontstaat real-time inzicht in netwerkverkeer en security-anomalieën direct in de kernel, zonder overhead voor applicatie-containers.',
+      technicalExecution: 'RaddeR formuleerde en structureerde voorstellen waarin OpenShift cluster topologies gecombineerd werden met eBPF instrumentation. Hierdoor ontstaat real-time inzicht in netwerkverkeer en security-anomalieën direct in de kernel, zonder overhead voor applicatie-containers.',
       businessResult: 'Geloofwaardige, diepgaande enterprise architecture proposals die direct resoneerden bij Chief Architects en Principal Engineers.'
     },
     quote: 'Wij snappen de onderliggende techniek en architectuur—of we nu sparren over Red Hat OpenShift en eBPF of een agentic IDE inzetten.'
@@ -136,7 +136,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     detailedStory: {
       problem: 'Een nieuw verhuurbedrijf in een hypercompetitieve, internationale toeristenstad als Pattaya moet zowel direct opvallen in het straatbeeld als frictieloos digitaal te boeken zijn.',
       domainLogic: 'Begrijpen van de lokale toeristische huurdynamiek, borg-risico\'s, meertaligheid (Engels, Thais, Russisch) en de praktische overdracht van voertuigen of apparatuur.',
-      technicalExecution: 'EMMER overzag het gehele traject: de mobiele webapp voor soepele reserveringen, de vector-branding en het complete fysieke storefront-concept met opvallende signage, looproutes en balie-indeling in Pattaya.',
+      technicalExecution: 'RaddeR overzag het gehele traject: de mobiele webapp voor soepele reserveringen, de vector-branding en het complete fysieke storefront-concept met opvallende signage, looproutes en balie-indeling in Pattaya.',
       businessResult: 'Een naadloze overgang van de online advertentie of QR-scan op straat naar een fysieke winkelbezoek met onmiddellijke conversie.'
     },
     quote: 'Extreem veelzijdig in visuele doorvertaling van fysiek naar digitaal: van app tot fysiek verhuurconcept en storefront.'
@@ -166,7 +166,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     detailedStory: {
       problem: 'Traditionele industriële en zorghandelbedrijven verliezen marges doordat hun merkidentiteit en digitale bestelprocessen achterlopen op hun daadwerkelijke kwaliteitsniveau.',
       domainLogic: 'De logistieke keten van houtimport (duurzaamheid, FSC-certificering, palletstandaarden) vraagt om autoriteit en transparantie; zorgconsumenten bij sta-op-stoelen zoeken juist comfort, ergonomie en vertrouwen.',
-      technicalExecution: 'EMMER vertaalde de B2B-logistiek van Palrom naar een autoritaire merkclaim ("From Tree to Trade") en structureerde de online catalogus. Voor Staopstoelen.nl werd de selectielogica vereenvoudigd. Beide merken kregen een integrale visuele doorvertaling naar kleding, beursmateriaal en het complete wagenpark.',
+      technicalExecution: 'RaddeR vertaalde de B2B-logistiek van Palrom naar een autoritaire merkclaim ("From Tree to Trade") en structureerde de online catalogus. Voor Staopstoelen.nl werd de selectielogica vereenvoudigd. Beide merken kregen een integrale visuele doorvertaling naar kleding, beursmateriaal en het complete wagenpark.',
       businessResult: 'Palrom sloot grootschalige B2B-contracten af dankzij een professionele uitstraling op de Europese markt; Staopstoelen.nl zag de adviesaanvragen verdubbelen.'
     },
     quote: 'Moeiteloos de B2B-strategie of e-commerce logica doortrekken naar vector-iconen, bestelbussen en merkpositionering.'

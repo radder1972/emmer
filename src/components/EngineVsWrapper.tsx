@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ENGINE_COMPARISONS } from '../data/projects';
 import { XCircle, CheckCircle2, Eye, ShieldCheck, Zap } from 'lucide-react';
-import { EmmerLogo } from './EmmerLogo';
+import { RadderLogo } from './RadderLogo';
 
 export const EngineVsWrapper: React.FC = () => {
   const [selectedIdx, setSelectedIdx] = useState(0);
@@ -76,20 +76,20 @@ export const EngineVsWrapper: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: EMMER (De Motor) */}
+          {/* Right Column: RaddeR (De Motor) */}
           <div className="rounded-2xl bg-gradient-to-b from-[#181b26] to-[#0d0f15] border-2 border-white/35 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden shadow-2xl shadow-black/80">
             <div className="absolute top-0 right-0 px-4 py-1.5 bg-white/10 border-b border-l border-white/20 text-white font-mono text-[11px] rounded-bl-lg font-bold">
-              EMMER ARCHITECTUUR // DE MOTOR
+              RaddeR ARCHITECTUUR // DE MOTOR
             </div>
 
             <div>
               <div className="flex items-center gap-3.5 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center p-1.5 shadow-md">
-                  <EmmerLogo size={36} />
+                  <RadderLogo size={36} />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                    EMMER
+                    RaddeR
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/15 text-white border border-white/25">
                       Product Level
                     </span>

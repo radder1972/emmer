@@ -1,6 +1,6 @@
 import React from 'react';
 import { Terminal } from 'lucide-react';
-import { EmmerLogo } from './EmmerLogo';
+import { RadderLogo } from './RadderLogo';
 
 export const Manifesto: React.FC = () => {
   return (
@@ -9,8 +9,8 @@ export const Manifesto: React.FC = () => {
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-white/5 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Subtle watermark */}
-      <div className="absolute -right-16 top-1/2 -translate-y-1/2 w-80 h-80 opacity-5 pointer-events-none select-none">
-        <EmmerLogo size={320} />
+      <div className="absolute -right-16 top-1/2 -translate-y-1/2 w-80 h-80 opacity-5 pointer-events-none select-none text-white">
+        <RadderLogo size={320} />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
@@ -46,10 +46,10 @@ export const Manifesto: React.FC = () => {
 
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-white font-mono uppercase tracking-wide">
-              Waarom EMMER de Motor Bouwt
+              Waarom RaddeR de Motor Bouwt
             </h3>
             <p>
-              EMMER opereert precies op het snijvlak waar die werelden elkaar raken. Wij stoppen niet bij het laagje verf. Of het nu gaat om een Schematherapie Suite met AI-gedreven diagnostiek voor psychologen, een perceelkiezer gekoppeld aan openbare PDOK/Kadaster data, of high-scale enterprise cloudvoorstellen rondom Red Hat OpenShift en eBPF.
+              RaddeR opereert precies op het snijvlak waar die werelden elkaar raken. Wij stoppen niet bij het laagje verf. Of het nu gaat om een Schematherapie Suite met AI-gedreven diagnostiek voor psychologen, een perceelkiezer gekoppeld aan openbare PDOK/Kadaster data, of high-scale enterprise cloudvoorstellen rondom Red Hat OpenShift en eBPF.
             </p>
             <p>
               En we trekken het door naar de echte wereld: van een mobiele boekings-app tot een fysieke storefront in Pattaya, of een vector design system doorgetrokken tot de bestelbussen van een internationale B2B houthandel.

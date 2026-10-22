@@ -17,7 +17,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
         <div className="flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-zinc-500 border-b border-white/10 pb-4 mb-12">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-white animate-pulse"></span>
-            <span className="text-zinc-200 font-bold tracking-wider">EMMER // SYSTEMS & PRODUCT ARCHITECTURE</span>
+            <span className="text-zinc-200 font-bold tracking-wider">RaddeR // SYSTEMS & PRODUCT ARCHITECTURE</span>
             <span className="text-zinc-700">|</span>
             <span>CORE FOCUS: DOMAIN LOGIC + CODE + PHYSICAL REALITY</span>
           </div>
@@ -110,7 +110,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
         <div className="mt-6 p-4 rounded-xl bg-black/50 border border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-zinc-400">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-white"></span>
-            <span className="text-white font-semibold">EMMER STUDIO ENGINE</span>
+            <span className="text-white font-semibold">RaddeR STUDIO ENGINE</span>
           </div>
           <div className="flex flex-wrap gap-4 text-[11px] text-zinc-500">
             <span>• 100% AVG LOCAL-FIRST</span>

@@ -3,7 +3,7 @@ import { CASE_STUDIES } from '../data/projects';
 import type { CaseStudy } from '../data/projects';
 import { CaseModal } from './CaseModal';
 import { Cpu, Layers, Shield, Globe, MapPin, Truck, ChevronRight } from 'lucide-react';
-import { EmmerLogo } from './EmmerLogo';
+import { RadderLogo } from './RadderLogo';
 
 interface CaseStudiesProps {
   onOpenContact: () => void;
@@ -80,8 +80,8 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
               className="rounded-2xl bg-[#11141c] border border-white/10 overflow-hidden flex flex-col justify-between hover:border-white/30 transition-all duration-300 hover:shadow-2xl hover:shadow-black/70 group relative"
             >
               {/* Subtle top right watermark */}
-              <div className="absolute top-4 right-4 w-12 h-12 opacity-10 pointer-events-none group-hover:opacity-25 transition-opacity">
-                <EmmerLogo size={48} />
+              <div className="absolute top-4 right-4 w-12 h-12 opacity-10 pointer-events-none group-hover:opacity-25 transition-opacity text-white">
+                <RadderLogo size={48} />
               </div>
 
               {/* Card Header */}
