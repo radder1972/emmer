@@ -14,7 +14,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
   onNavigateToSparren,
 }) => {
   return (
-    <div className="pt-8 pb-0 animate-fade-in">
+    <div className="animate-fade-in">
       {/* 1. Wie is RaddeR: Matthias Radder */}
       <FounderSection onNavigateToSparren={onNavigateToSparren} />
 

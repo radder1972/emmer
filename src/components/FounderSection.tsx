@@ -8,7 +8,7 @@ interface FounderSectionProps {
 
 export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSparren }) => {
   return (
-    <section className="pt-24 pb-16 bg-[#f8f7f4] relative">
+    <section className="pt-40 sm:pt-48 lg:pt-56 pb-16 bg-[#f8f7f4] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Portrait photo in Swiss Editorial styling */}

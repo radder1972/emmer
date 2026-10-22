@@ -69,7 +69,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
   };
 
   return (
-    <section className="pt-24 pb-20 bg-[#f8f7f4] relative">
+    <section className="pt-40 sm:pt-48 lg:pt-56 pb-20 bg-[#f8f7f4] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-left max-w-3xl mb-12">

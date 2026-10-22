@@ -9,12 +9,12 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
+    <section className="relative pt-40 sm:pt-48 lg:pt-56 pb-20 md:pb-24 overflow-hidden">
       {/* Subtle Warm Paper Glow & Monograph Vignette */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-gradient-to-b from-black/[0.03] to-transparent blur-[140px] -z-10 pointer-events-none" />
 
       {/* Hero Architectural Emblem Watermark (Deep Black Ink with subtle paper trace) */}
-      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 w-[320px] sm:w-[420px] lg:w-[500px] opacity-[0.04] pointer-events-none select-none text-neutral-950 -z-10 transition-opacity">
+      <div className="absolute right-4 sm:right-12 lg:right-24 top-36 sm:top-44 lg:top-52 w-[320px] sm:w-[420px] lg:w-[500px] opacity-[0.04] pointer-events-none select-none text-neutral-950 -z-10 transition-opacity">
         <RadderLogo size={500} glow={false} color="#0a0a0a" />
       </div>
 

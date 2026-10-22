@@ -14,7 +14,7 @@ export const SparrenPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-8 pb-0">
+    <div className="animate-fade-in">
       {/* 1. Interactive Architecture Blueprint Configurator */}
       <ProjectCalculator onPlanSparringWithBrief={handlePlanWithBrief} />
 

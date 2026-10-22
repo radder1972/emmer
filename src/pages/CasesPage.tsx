@@ -12,7 +12,7 @@ export const CasesPage: React.FC<CasesPageProps> = ({
   onNavigateToAbout,
 }) => {
   return (
-    <div className="pt-8 pb-0">
+    <div className="animate-fade-in">
       {/* 5 Real Deep-Dive Case Studies */}
       <CaseStudies onOpenContact={onOpenContact} />
 

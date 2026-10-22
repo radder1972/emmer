@@ -35,7 +35,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
   };
 
   return (
-    <section className="pt-24 pb-20 bg-[#f8f7f4] relative">
+    <section className="pt-40 sm:pt-48 lg:pt-56 pb-20 bg-[#f8f7f4] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
