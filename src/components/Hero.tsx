@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Layers } from 'lucide-react';
-import { RadderLogo } from './RadderLogo';
 import {
+  RadderIconManifest,
   RadderIconStrateeg,
   RadderIconArchitect,
   RadderIconMaker,
@@ -19,12 +19,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
       {/* Subtle Warm Paper Glow & Monograph Vignette */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-gradient-to-b from-black/[0.03] to-transparent blur-[140px] -z-10 pointer-events-none" />
 
-      {/* Hero Architectural Emblem Watermark (Deep Black Ink with subtle paper trace) */}
-      <div className="absolute right-4 sm:right-12 lg:right-24 top-36 sm:top-44 lg:top-52 w-[320px] sm:w-[420px] lg:w-[500px] opacity-[0.04] pointer-events-none select-none text-neutral-950 -z-10 transition-opacity">
-        <RadderLogo size={500} glow={false} color="#0a0a0a" />
+      {/* Page Watermark: Manifest Icon in Vermilion Accent */}
+      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 lg:top-40 pointer-events-none select-none text-[#ff451a] opacity-[0.05] sm:opacity-[0.07] -z-10 transition-opacity">
+        <RadderIconManifest size={480} strokeWidth={1.5} color="#ff451a" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Hero Main Content */}
         <div className="max-w-4xl text-left space-y-7">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm">

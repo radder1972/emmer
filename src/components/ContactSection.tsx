@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, ArrowRight, Check, Copy, MapPin, ShieldCheck } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
-import { RadderIconTerminal } from './RadderNavIcons';
+import { RadderIconTerminal, RadderIconSparren } from './RadderNavIcons';
 
 interface ContactSectionProps {
   initialBrief?: string;
@@ -35,8 +35,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
   };
 
   return (
-    <section id="contact" className="pt-40 sm:pt-48 lg:pt-56 pb-24 bg-[#f8f7f4] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="pt-40 sm:pt-48 lg:pt-56 pb-24 bg-[#f8f7f4] relative overflow-hidden">
+      {/* Page Watermark: Sparren Icon in Vermilion Accent */}
+      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 lg:top-40 pointer-events-none select-none text-[#ff451a] opacity-[0.05] sm:opacity-[0.07] z-0 transition-opacity">
+        <RadderIconSparren size={480} strokeWidth={1.5} color="#ff451a" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 text-left">
           {/* Left Column: Direct Info */}
           <div className="lg:col-span-5 space-y-8">

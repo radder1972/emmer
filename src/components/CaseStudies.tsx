@@ -4,6 +4,7 @@ import type { CaseStudy } from '../data/projects';
 import { CaseModal } from './CaseModal';
 import { Cpu, Layers, Globe, MapPin, Truck, ChevronRight } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
+import { RadderIconCases } from './RadderNavIcons';
 
 interface CaseStudiesProps {
   onOpenContact: () => void;
@@ -35,8 +36,13 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
   };
 
   return (
-    <section className="pt-40 sm:pt-48 lg:pt-56 pb-20 bg-[#f8f7f4] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="pt-40 sm:pt-48 lg:pt-56 pb-20 bg-[#f8f7f4] relative overflow-hidden">
+      {/* Page Watermark: Cases Icon in Vermilion Accent */}
+      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 lg:top-40 pointer-events-none select-none text-[#ff451a] opacity-[0.05] sm:opacity-[0.07] z-0 transition-opacity">
+        <RadderIconCases size={480} strokeWidth={1.5} color="#ff451a" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="text-left max-w-2xl">

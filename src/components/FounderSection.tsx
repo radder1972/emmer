@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
-import { RadderIconTerminal } from './RadderNavIcons';
+import { RadderIconTerminal, RadderIconAbout } from './RadderNavIcons';
 
 interface FounderSectionProps {
   onNavigateToSparren?: () => void;
@@ -9,8 +9,13 @@ interface FounderSectionProps {
 
 export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSparren }) => {
   return (
-    <section className="pt-40 sm:pt-48 lg:pt-56 pb-20 bg-[#f8f7f4] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="pt-40 sm:pt-48 lg:pt-56 pb-20 bg-[#f8f7f4] relative overflow-hidden">
+      {/* Page Watermark: Over Ons (Triad) Icon in Vermilion Accent */}
+      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 lg:top-40 pointer-events-none select-none text-[#ff451a] opacity-[0.05] sm:opacity-[0.07] z-0 transition-opacity">
+        <RadderIconAbout size={480} strokeWidth={1.5} color="#ff451a" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Portrait photo in Swiss Editorial styling (Sticky on Desktop) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-start lg:sticky lg:top-36">
