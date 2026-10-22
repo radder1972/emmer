@@ -44,7 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </div>
 
               {/* Letterlogo en ondertekst rechts ernaast: totale hoogte gelijk aan logo links */}
-              <div className="h-[52px] flex flex-col justify-between text-left">
+              <div className="h-[52px] flex flex-col justify-between items-start text-left">
                 <RadderWordmark
                   height={32}
                   tight={true}
@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   glow={false}
                   className="text-neutral-950 group-hover:opacity-85 transition-opacity"
                 />
-                <div className="text-[10px] sm:text-[11px] font-mono text-neutral-600 uppercase tracking-wider font-semibold leading-none group-hover:text-neutral-950 transition-colors">
+                <div className="text-[10px] sm:text-[11px] font-mono text-neutral-600 uppercase tracking-wider font-semibold leading-none group-hover:text-neutral-950 transition-colors text-left">
                   VAN PROMPT NAAR PRODUCTIE
                 </div>
               </div>

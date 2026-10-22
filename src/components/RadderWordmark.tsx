@@ -25,7 +25,7 @@ export const RadderWordmark: React.FC<RadderWordmarkProps> = ({
 
   return (
     <div
-      className={`relative inline-flex items-center justify-center select-none ${className} ${
+      className={`relative inline-flex items-center justify-start select-none ${className} ${
         glow ? "drop-shadow-[0_0_20px_rgba(255,255,255,0.35)]" : ""
       }`}
       style={{

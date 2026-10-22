@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 e.preventDefault();
                 onNavigate('manifest');
               }}
-              className="flex flex-col text-left group cursor-pointer"
+              className="flex flex-col items-start text-left group cursor-pointer"
               title="RaddeR — Naar Manifest"
             >
               <RadderWordmark
