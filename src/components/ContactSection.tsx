@@ -40,14 +40,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Unified Page Header Zone */}
         <div className="relative mb-12">
-          {/* Page Signature Icon Watermark: tilted half schuin behind heading & subhead */}
-          <div
-            className="absolute -top-12 sm:-top-16 left-8 sm:left-24 lg:left-36 pointer-events-none select-none text-[#ff451a] opacity-[0.06] sm:opacity-[0.08] -rotate-12 transform z-0"
-            aria-hidden="true"
-          >
-            <RadderIconSparren size={440} strokeWidth={1.5} color="#ff451a" />
-          </div>
-
           {/* Sparren Main Content: all left, exact same size */}
           <div className="relative z-10 max-w-4xl text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm mb-4">
