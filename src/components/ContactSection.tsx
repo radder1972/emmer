@@ -81,7 +81,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
 
               <div className="flex items-center justify-between p-3.5 rounded-xl bg-neutral-50 border border-neutral-200/80">
                 <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-neutral-950" />
+                  <div className="w-8 h-8 rounded-lg bg-[#ff451a]/10 border border-[#ff451a]/20 flex items-center justify-center text-[#ff451a] shrink-0">
+                    <Mail className="w-4 h-4" strokeWidth={2} />
+                  </div>
                   <span className="text-sm font-mono text-neutral-950 font-medium">{contactEmail}</span>
                 </div>
                 <button
@@ -90,26 +92,30 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                 >
                   {copied ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-emerald-600" />
+                      <Check className="w-3.5 h-3.5 text-emerald-600" strokeWidth={2.5} />
                       <span>Gekopieerd!</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-3.5 h-3.5" />
+                      <Copy className="w-3.5 h-3.5 text-neutral-700" strokeWidth={2} />
                       <span>Kopieer</span>
                     </>
                   )}
                 </button>
               </div>
 
-              <div className="space-y-2 text-xs font-mono text-neutral-600 pt-2">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-neutral-400" />
-                  <span>Nederland (Beschikbaar voor sparren op locatie & remote wereldwijd)</span>
+              <div className="space-y-3 text-xs font-mono text-neutral-700 pt-2">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-md bg-[#ff451a]/10 flex items-center justify-center text-[#ff451a] shrink-0 mt-0.5">
+                    <MapPin className="w-3.5 h-3.5" strokeWidth={2.2} />
+                  </div>
+                  <span className="leading-snug pt-0.5">Nederland (Beschikbaar voor sparren op locatie & remote wereldwijd)</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-neutral-950" />
-                  <span>NDA & Vertrouwelijkheid gegarandeerd bij vroege IP</span>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-md bg-[#ff451a]/10 flex items-center justify-center text-[#ff451a] shrink-0 mt-0.5">
+                    <ShieldCheck className="w-3.5 h-3.5" strokeWidth={2.2} />
+                  </div>
+                  <span className="leading-snug pt-0.5">NDA & Vertrouwelijkheid gegarandeerd bij vroege IP</span>
                 </div>
               </div>
             </div>
