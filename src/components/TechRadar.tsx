@@ -50,7 +50,7 @@ export const TechRadar: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#f4f3ef] border-t border-neutral-300 relative">
+    <section className="py-24 bg-[#f8f7f4] border-t border-neutral-300 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-left max-w-3xl mb-16">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FounderSection } from '../components/FounderSection';
 import { Pillars } from '../components/Pillars';
 import { TechRadar } from '../components/TechRadar';
 import { ArrowRight, Terminal } from 'lucide-react';
@@ -14,10 +15,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({
 }) => {
   return (
     <div className="pt-8 pb-0 animate-fade-in">
-      {/* 1. De Driehoek: Architect, Strateeg, Maker */}
+      {/* 1. Wie is RaddeR: Matthias Radder */}
+      <FounderSection onNavigateToSparren={onNavigateToSparren} />
+
+      {/* 2. De Driehoek: Architect, Strateeg, Maker */}
       <Pillars onNavigateToCases={onNavigateToCases} />
 
-      {/* 2. De Stack: Tech Toolkit Radar */}
+      {/* 3. De Stack: Tech Toolkit Radar */}
       <TechRadar />
 
       {/* Bottom CTA for About */}

@@ -21,7 +21,7 @@ export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
   };
 
   return (
-    <section className="pt-24 pb-20 bg-[#f8f7f4] relative">
+    <section className="py-24 bg-[#f4f3ef] border-t border-neutral-300 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-left max-w-3xl mb-16">
