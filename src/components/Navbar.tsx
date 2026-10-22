@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
+import { RadderWordmark } from './RadderWordmark';
 
 interface NavbarProps {
   onOpenContact: () => void;
@@ -39,9 +40,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
           {/* Left Side: Clean Studio Typographic Identity & Navigation Links */}
           <div className="flex items-center gap-8 lg:gap-12">
             <a href="#" className="flex flex-col text-left group">
-              <span className="font-black text-white tracking-widest text-xl font-mono leading-none group-hover:text-zinc-200 transition-colors">
-                RaddeR
-              </span>
+              <RadderWordmark
+                height={28}
+                className="text-white group-hover:text-zinc-200 transition-colors"
+              />
               <span className="text-[10px] font-mono text-zinc-400 tracking-wider uppercase mt-1">
                 Systems & Product Architecture
               </span>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUp, Cpu } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
+import { RadderWordmark } from './RadderWordmark';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -18,8 +19,8 @@ export const Footer: React.FC = () => {
                 <RadderLogo size={40} />
               </div>
               <div>
-                <div className="text-white font-extrabold text-base tracking-widest font-mono">RaddeR</div>
-                <div className="text-[10px] text-zinc-400 uppercase tracking-wider">SYSTEMS & PRODUCT ARCHITECTURE</div>
+                <RadderWordmark height={22} className="text-white" />
+                <div className="text-[10px] text-zinc-400 uppercase tracking-wider mt-0.5">SYSTEMS & PRODUCT ARCHITECTURE</div>
               </div>
             </div>
 
