@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 glow={false}
               />
               <span className="text-[10px] sm:text-[11px] font-mono text-neutral-600 tracking-wider uppercase mt-1 font-semibold group-hover:text-neutral-900 transition-colors">
-                Systems & Product Architecture
+                Van Prompt naar Productie
               </span>
             </a>
 

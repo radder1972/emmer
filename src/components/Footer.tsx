@@ -53,7 +53,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   className="text-neutral-950 group-hover:opacity-85 transition-opacity"
                 />
                 <div className="text-[10px] sm:text-[11px] font-mono text-neutral-600 uppercase tracking-wider font-semibold leading-none group-hover:text-neutral-950 transition-colors">
-                  SYSTEMS & PRODUCT ARCHITECTURE
+                  VAN PROMPT NAAR PRODUCTIE
                 </div>
               </div>
             </a>
@@ -137,7 +137,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
           <div className="flex items-center gap-2 text-neutral-700">
             <RadderLogo size={18} color="#ff451a" glow={false} />
-            <span className="font-semibold">RaddeR — SYSTEMS & PRODUCT ARCHITECTURE</span>
+            <span className="font-semibold">RaddeR — VAN PROMPT NAAR PRODUCTIE</span>
           </div>
         </div>
       </div>
