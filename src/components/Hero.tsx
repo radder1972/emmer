@@ -9,12 +9,12 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-grid-pattern">
+    <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden bg-grid-pattern">
       {/* Background ambient lighting - Stark monochrome / titanium silver glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-white/10 via-zinc-500/5 to-transparent blur-[150px] -z-10 pointer-events-none" />
       
       {/* Massive subtle watermark of the Hexagonal EMMER Logo in the background */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[850px] h-[850px] opacity-[0.035] -z-10 pointer-events-none select-none">
+      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[900px] h-[900px] opacity-[0.035] -z-10 pointer-events-none select-none">
         <img
           src="/logo-emmer.png"
           alt="EMMER Watermark"
@@ -24,7 +24,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Technical HUD Topline */}
-        <div className="flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-zinc-500 border-b border-white/10 pb-4 mb-10">
+        <div className="flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-zinc-500 border-b border-white/10 pb-4 mb-12">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-white animate-pulse"></span>
             <span className="text-zinc-200 font-bold tracking-wider">EMMER // SYSTEMS & PRODUCT ARCHITECTURE</span>
@@ -36,10 +36,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
           </div>
         </div>
 
-        {/* Main Grid: Headline & Interactive Massive Centerpiece */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        {/* Main Grid: Headline on the Left, Colossal Freestanding Logo on the Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-center">
           {/* Left Column: Core Positioning Statement */}
-          <div className="lg:col-span-7 text-left space-y-6">
+          <div className="lg:col-span-6 xl:col-span-6 text-left space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/5 border border-white/15 text-zinc-300 text-xs font-mono shadow-inner">
               <Sparkles className="w-3.5 h-3.5 text-white" />
               <span>Niet het oppervlakkige sausje. <strong className="text-white font-bold">De motor.</strong></span>
@@ -52,7 +52,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed">
+            <p className="text-lg sm:text-xl text-zinc-300 max-w-xl font-normal leading-relaxed">
               Ons allergrootste onderscheidend vermogen zit in het vermogen om{' '}
               <span className="text-white font-semibold">complexe, domeinspecifieke logica direct te vertalen naar werkende, schaalbare bedrijfsmodellen</span>. 
               Van local-first diagnostiek voor psychologen en ruimtelijke kadaster-matching, tot enterprise cloudvoorstellen en fysieke storefronts.
@@ -118,8 +118,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
             </div>
           </div>
 
-          {/* Right Column: Interactive Massive EMMER Centerpiece */}
-          <div className="lg:col-span-5">
+          {/* Right Column: Monumental Freestanding Logo on the Right */}
+          <div className="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-end">
             <HeroLogoCenterpiece />
           </div>
         </div>

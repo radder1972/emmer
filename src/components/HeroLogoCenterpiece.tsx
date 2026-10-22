@@ -5,70 +5,49 @@ import { Crosshair } from 'lucide-react';
 export const HeroLogoCenterpiece: React.FC = () => {
   const [mode, setMode] = useState<'retina' | 'vector' | 'blueprint'>('retina');
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
-    const rotateY = (x / (rect.width / 2)) * 16;
-    const rotateX = -(y / (rect.height / 2)) * 16;
+    // 3D tilt calculation
+    const rotateY = (x / (rect.width / 2)) * 18;
+    const rotateX = -(y / (rect.height / 2)) * 18;
     setTilt({ x: rotateX, y: rotateY });
   };
 
   const handleMouseLeave = () => {
     setTilt({ x: 0, y: 0 });
-    setIsHovered(false);
   };
 
   return (
-    <div className="w-full flex flex-col items-center">
-      {/* 3D Frame - Substantially larger & bolder */}
+    <div className="w-full flex flex-col items-center lg:items-end justify-center">
+      {/* Freestanding Massive 3D Logo Stage */}
       <div
-        ref={cardRef}
-        onMouseMove={(e) => {
-          setIsHovered(true);
-          handleMouseMove(e);
-        }}
+        ref={containerRef}
+        onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="w-full max-w-lg rounded-2xl bg-gradient-to-b from-[#14161f] via-[#0d0f15] to-[#08090d] border border-white/20 p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.9)] relative transition-all duration-200 group hover:border-white/40"
+        className="relative w-full max-w-[520px] xl:max-w-[580px] flex flex-col items-center cursor-pointer select-none"
         style={{ perspective: 1200 }}
       >
-        {/* Architectural corner markers */}
-        <div className="absolute top-2.5 left-2.5 w-3.5 h-3.5 border-t-2 border-l-2 border-white/70"></div>
-        <div className="absolute top-2.5 right-2.5 w-3.5 h-3.5 border-t-2 border-r-2 border-white/70"></div>
-        <div className="absolute bottom-2.5 left-2.5 w-3.5 h-3.5 border-b-2 border-l-2 border-white/70"></div>
-        <div className="absolute bottom-2.5 right-2.5 w-3.5 h-3.5 border-b-2 border-r-2 border-white/70"></div>
+        {/* Ambient Halo behind the massive logo */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[460px] h-[460px] bg-white/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
-        {/* Top Telemetry Header */}
-        <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/10 text-[11px] font-mono text-zinc-400">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-            <span className="text-white font-bold tracking-wider">EMMER // 3D MOTOR CHASSIS</span>
-          </div>
-          <div className="flex items-center gap-1.5 text-zinc-400">
-            <Crosshair className="w-3.5 h-3.5 text-white" />
-            <span>TILT: {tilt.y.toFixed(0)}° / {tilt.x.toFixed(0)}°</span>
-          </div>
-        </div>
-
-        {/* Massive Logo Display Area */}
+        {/* The Giant 3D Isometric Emblem */}
         <div
-          className="relative my-3 w-full h-80 sm:h-96 rounded-xl bg-black/60 border border-white/10 flex items-center justify-center overflow-hidden transition-transform duration-150 ease-out"
+          className="relative w-full aspect-[340/395] flex items-center justify-center transition-transform duration-150 ease-out"
           style={{
             transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
             transformStyle: 'preserve-3d',
           }}
         >
-          {/* Hexagonal Isometric Grid Background */}
+          {/* Subtle Isometric Wireframe Grid Halo */}
           <div
-            className="absolute inset-0 opacity-15 pointer-events-none"
+            className="absolute inset-0 opacity-10 pointer-events-none rounded-3xl"
             style={{
               backgroundImage: `
-                linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
-                linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
                 linear-gradient(30deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff),
                 linear-gradient(150deg, #ffffff 12%, transparent 12.5%, transparent 87%, #ffffff 87.5%, #ffffff)
               `,
@@ -76,75 +55,81 @@ export const HeroLogoCenterpiece: React.FC = () => {
             }}
           />
 
-          {/* Radial Spotlight */}
-          <div className="absolute inset-0 bg-radial from-white/15 via-transparent to-transparent pointer-events-none" />
-
-          {/* Logo Presentation in Selected Mode (Substantially larger) */}
+          {/* Logo Render: Freestanding & Colossal */}
           <div
-            className="relative transition-all duration-300 hover:scale-105"
-            style={{ transform: 'translateZ(50px)' }}
+            className="w-full h-full flex items-center justify-center transition-transform duration-300 hover:scale-105"
+            style={{ transform: 'translateZ(60px)' }}
           >
-            <EmmerLogo
-              size={300}
-              variant={mode}
-              glow={true}
-              className="drop-shadow-[0_20px_50px_rgba(255,255,255,0.2)]"
-            />
+            {mode === 'blueprint' ? (
+              <EmmerLogo
+                size="100%"
+                variant="blueprint"
+                className="w-full h-full drop-shadow-[0_20px_50px_rgba(255,255,255,0.25)]"
+              />
+            ) : mode === 'vector' ? (
+              <EmmerLogo
+                size="100%"
+                variant="vector"
+                glow={true}
+                className="w-full h-full drop-shadow-[0_25px_60px_rgba(0,0,0,0.9)]"
+              />
+            ) : (
+              <img
+                src="/logo-emmer.png"
+                alt="EMMER Monogram"
+                className="w-full h-full object-contain filter contrast-125 brightness-105 drop-shadow-[0_30px_70px_rgba(0,0,0,0.95)]"
+              />
+            )}
           </div>
 
-          {/* Interactive Hint */}
-          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 text-[10px] font-mono text-zinc-400 bg-black/80 px-3 py-1 rounded-full border border-white/15 pointer-events-none whitespace-nowrap">
-            {isHovered ? '3D PERSPECTIEF ACTIEF' : 'BEWEEG MUIS OVER LOGO VOOR 3D PERSPECTIEF'}
+          {/* Subtle 3D Coordinate Badge floating on the corner */}
+          <div
+            className="absolute top-2 right-2 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-[10px] font-mono text-zinc-300 flex items-center gap-1.5 shadow-lg pointer-events-none"
+            style={{ transform: 'translateZ(90px)' }}
+          >
+            <Crosshair className="w-3 h-3 text-white" />
+            <span>3D TILT: {tilt.y.toFixed(0)}° / {tilt.x.toFixed(0)}°</span>
           </div>
         </div>
 
-        {/* Mode Selector Buttons */}
-        <div className="grid grid-cols-3 gap-1.5 p-1 rounded-xl bg-black/60 border border-white/10 mb-4">
-          <button
-            onClick={() => setMode('retina')}
-            className={`py-2 px-2 rounded-lg text-xs font-mono transition-all cursor-pointer ${
-              mode === 'retina'
-                ? 'bg-white text-black font-bold shadow-md shadow-white/20'
-                : 'text-zinc-400 hover:text-white'
-            }`}
-          >
-            Retina HD
-          </button>
-          <button
-            onClick={() => setMode('vector')}
-            className={`py-2 px-2 rounded-lg text-xs font-mono transition-all cursor-pointer ${
-              mode === 'vector'
-                ? 'bg-white text-black font-bold shadow-md shadow-white/20'
-                : 'text-zinc-400 hover:text-white'
-            }`}
-          >
-            Vector SVG
-          </button>
-          <button
-            onClick={() => setMode('blueprint')}
-            className={`py-2 px-2 rounded-lg text-xs font-mono transition-all cursor-pointer ${
-              mode === 'blueprint'
-                ? 'bg-white text-black font-bold shadow-md shadow-white/20'
-                : 'text-zinc-400 hover:text-white'
-            }`}
-          >
-            Blueprint 60°
-          </button>
-        </div>
+        {/* Clean Minimalist Mode Selector Underneath (Not enclosing the logo!) */}
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+          <div className="inline-flex p-1 rounded-xl bg-zinc-900/90 border border-white/15 backdrop-blur-md shadow-xl">
+            <button
+              onClick={() => setMode('retina')}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer ${
+                mode === 'retina'
+                  ? 'bg-white text-black font-bold shadow-md shadow-white/15'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              Retina HD
+            </button>
+            <button
+              onClick={() => setMode('vector')}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer ${
+                mode === 'vector'
+                  ? 'bg-white text-black font-bold shadow-md shadow-white/15'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              Vector SVG
+            </button>
+            <button
+              onClick={() => setMode('blueprint')}
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer ${
+                mode === 'blueprint'
+                  ? 'bg-white text-black font-bold shadow-md shadow-white/15'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              Blueprint 60°
+            </button>
+          </div>
 
-        {/* Technical Specification Matrix */}
-        <div className="space-y-1.5 font-mono text-left text-xs pt-2 border-t border-white/10">
-          <div className="flex items-center justify-between py-1 border-b border-white/5">
-            <span className="text-zinc-500">STUDIO IDENTITEIT:</span>
-            <span className="text-white font-bold tracking-wider">EMMER (M // R)</span>
-          </div>
-          <div className="flex items-center justify-between py-1 border-b border-white/5">
-            <span className="text-zinc-500">CONSTRUCTIE:</span>
-            <span className="text-zinc-200">Equilateraal Hexagon (60°) & 3D Isometrisch</span>
-          </div>
-          <div className="flex items-center justify-between py-1">
-            <span className="text-zinc-500">FILOSOFIE:</span>
-            <span className="text-white font-bold">Wij bouwen de motor.</span>
+          <div className="text-[11px] font-mono text-zinc-500 flex items-center gap-2 px-3 py-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+            <span>EMMER // 3D MOTOR CHASSIS</span>
           </div>
         </div>
       </div>
