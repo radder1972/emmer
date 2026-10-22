@@ -8,11 +8,11 @@ interface FounderSectionProps {
 
 export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSparren }) => {
   return (
-    <section className="pt-40 sm:pt-48 lg:pt-56 pb-16 bg-[#f8f7f4] relative">
+    <section className="pt-40 sm:pt-48 lg:pt-56 pb-20 bg-[#f8f7f4] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Portrait photo in Swiss Editorial styling */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          {/* Left Column: Portrait photo in Swiss Editorial styling (Sticky on Desktop) */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-start lg:sticky lg:top-36">
             <div className="relative group max-w-sm w-full">
               {/* Subtle architectural frame */}
               <div className="relative rounded-2xl overflow-hidden border border-neutral-300 shadow-md bg-white">
@@ -39,50 +39,85 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
             </div>
           </div>
 
-          {/* Right Column: Narrative & Philosophy */}
-          <div className="lg:col-span-7 text-left space-y-6">
+          {/* Right Column: Authentic Narrative & Philosophy */}
+          <div className="lg:col-span-7 text-left space-y-7">
+            {/* Category Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono">
               <Terminal className="w-3.5 h-3.5 text-[#ff451a]" />
-              <span>OVER ONS // PLACEHOLDER</span>
+              <span>OVER RaddeR // DE MAKER ACHTER DE MOTOR</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight leading-[1.1]">
-              Lorem ipsum dolor sit amet, <br />
-              <span className="text-neutral-600">consectetur adipiscing elit.</span>
+              Complexe softwareproblemen los je op <br />
+              <span className="text-neutral-600">door direct te bouwen aan de motor.</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-neutral-700 leading-relaxed font-normal">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <p className="text-base sm:text-lg text-neutral-800 leading-relaxed font-normal">
+              Ik ben <strong className="text-neutral-950 font-bold">Matthias Radder</strong>, de maker achter RaddeR. Mijn werk draait om één fundamentele overtuiging: complexe softwareproblemen los je niet op met overdrachtsmomenten en managementlagen, maar door direct te bouwen aan de motor. Ik elimineer de ruis tussen analist, designer en bouwer door strategie, architectuur en code in één directe feedbackloop te vangen. Je spreekt met degene die het systeem daadwerkelijk ontwerpt en bouwt.
             </p>
 
-            {/* Three direct guarantees */}
-            <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3 text-sm text-neutral-700 font-mono">
-                <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0 mt-0.5" />
-                <span>
-                  <strong className="text-neutral-950">Lorem ipsum dolor:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna.
-                </span>
+            {/* Two Core Competence Pillars */}
+            <div className="space-y-6 pt-2 border-t border-neutral-300/80">
+              <div className="space-y-2">
+                <h2 className="text-lg sm:text-xl font-bold text-neutral-950 tracking-tight flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#ff451a] shrink-0" />
+                  <span>Van enterprise fundament tot naadloze executie</span>
+                </h2>
+                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
+                  Mijn expertise ligt op het snijvlak van robuuste infrastructuur en moderne applicatieontwikkeling. Ik combineer diepgaande ervaring in enterprise IT, cloud-architectuur en open-source technologie met vlijmscherpe front-end executie. Of het nu gaat om het vertalen van complexe zorgprotocollen, het ontsluiten van open kadastrale geodata, of het inrichten van zware B2B-configuratoren: ik bouw niet wat er simpelweg gevraagd wordt, maar ontwerp het systeem dat de bedrijfslogica daadwerkelijk nodig heeft.
+                </p>
               </div>
-              <div className="flex items-start gap-3 text-sm text-neutral-700 font-mono">
-                <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0 mt-0.5" />
-                <span>
-                  <strong className="text-neutral-950">Consectetur adipiscing:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </span>
+
+              <div className="space-y-2">
+                <h2 className="text-lg sm:text-xl font-bold text-neutral-950 tracking-tight flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-[#ff451a] shrink-0" />
+                  <span>Vooruitstrevende bouwkracht</span>
+                </h2>
+                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
+                  De manier waarop we software ontwikkelen is fundamenteel veranderd. Ik integreer geavanceerde AI-geassisteerde ontwikkelmethoden en agentic IDE-omgevingen in mijn dagelijkse workflow. Dit stelt me in staat om met ongekende snelheid en precisie complete platforms te realiseren—van lokale infrastructuur en datamodellen tot strak vormgegeven webapplicaties en custom interfaces. Het resultaat is snellere oplevering, 100% eigenaarschap van de code, en architectuur die staat als een huis.
+                </p>
               </div>
-              <div className="flex items-start gap-3 text-sm text-neutral-700 font-mono">
-                <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0 mt-0.5" />
-                <span>
-                  <strong className="text-neutral-950">Sed do eiusmod:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse.
-                </span>
+            </div>
+
+            {/* Three Direct Guarantees Summary */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between">
+                <div className="flex items-center gap-2 text-xs font-mono font-bold text-neutral-950">
+                  <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0" />
+                  <span>100% Eigenaarschap</span>
+                </div>
+                <div className="text-[11px] font-mono text-neutral-500 mt-1.5 leading-snug">
+                  Volledig eigenaarschap van alle code en intellectuele eigendom.
+                </div>
+              </div>
+
+              <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between">
+                <div className="flex items-center gap-2 text-xs font-mono font-bold text-neutral-950">
+                  <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0" />
+                  <span>Directe Feedbackloop</span>
+                </div>
+                <div className="text-[11px] font-mono text-neutral-500 mt-1.5 leading-snug">
+                  Geen ruis: strategie, architectuur en code in één hand.
+                </div>
+              </div>
+
+              <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between">
+                <div className="flex items-center gap-2 text-xs font-mono font-bold text-neutral-950">
+                  <CheckCircle2 className="w-4 h-4 text-[#ff451a] shrink-0" />
+                  <span>Agentic IDE Kracht</span>
+                </div>
+                <div className="text-[11px] font-mono text-neutral-500 mt-1.5 leading-snug">
+                  Ongekende iteratiesnelheid met AI-geassisteerde precisie.
+                </div>
               </div>
             </div>
 
             {/* Action button */}
             {onNavigateToSparren && (
-              <div className="pt-4">
+              <div className="pt-2">
                 <button
                   onClick={onNavigateToSparren}
-                  className="px-6 py-3.5 rounded-xl bg-neutral-950 hover:bg-neutral-800 text-white font-bold font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer shadow-sm"
+                  className="px-6 py-3.5 rounded-xl bg-neutral-950 hover:bg-[#ff451a] text-white font-bold font-mono text-xs uppercase tracking-wider transition-colors flex items-center gap-2 cursor-pointer shadow-sm"
                 >
                   <span>Direct Sparren met Matthias</span>
                   <ArrowRight className="w-4 h-4" />
