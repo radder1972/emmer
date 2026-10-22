@@ -14,7 +14,7 @@ export const RADDER_WORDMARK_PATH =
 
 export const RadderWordmark: React.FC<RadderWordmarkProps> = ({
   className = "",
-  height = 28,
+  height = 44,
   width,
   color,
   glow = false,
@@ -34,7 +34,7 @@ export const RadderWordmark: React.FC<RadderWordmarkProps> = ({
       }}
     >
       <svg
-        viewBox={tight ? "100 186 857 217" : "0 0 1024 572"}
+        viewBox={tight ? "108 192 842 204" : "0 0 1024 572"}
         fill={color || "currentColor"}
         fillRule="evenodd"
         xmlns="http://www.w3.org/2000/svg"

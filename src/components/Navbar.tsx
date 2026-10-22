@@ -31,8 +31,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#08090d]/95 backdrop-blur-md border-b border-white/10 py-2.5 shadow-2xl shadow-black/90'
-          : 'bg-transparent py-4 border-b border-transparent'
+          ? 'bg-[#08090d]/95 backdrop-blur-md border-b border-white/10 py-3 shadow-2xl shadow-black/90'
+          : 'bg-transparent py-5 sm:py-6 border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,10 +41,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
           <div className="flex items-center gap-8 lg:gap-12">
             <a href="#" className="flex flex-col text-left group">
               <RadderWordmark
-                height={28}
-                className="text-white group-hover:text-zinc-200 transition-colors"
+                height={scrolled ? 36 : 48}
+                className="text-white group-hover:text-zinc-200 transition-all duration-300"
+                glow={true}
               />
-              <span className="text-[10px] font-mono text-zinc-400 tracking-wider uppercase mt-1">
+              <span className="text-[10px] sm:text-[11px] font-mono text-zinc-400 tracking-wider uppercase mt-1 font-semibold">
                 Systems & Product Architecture
               </span>
             </a>
@@ -67,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
           <div className="flex items-center gap-4 sm:gap-6">
             <button
               onClick={onOpenContact}
-              className="hidden sm:flex px-4 py-2 text-xs font-mono uppercase tracking-wider font-bold rounded-lg bg-white text-black hover:bg-zinc-200 transition-all items-center gap-1.5 cursor-pointer shadow-md"
+              className="hidden sm:flex px-4 py-2.5 text-xs font-mono uppercase tracking-wider font-bold rounded-lg bg-white text-black hover:bg-zinc-200 transition-all items-center gap-1.5 cursor-pointer shadow-md"
             >
               <span>Sparren</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -77,11 +78,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             <a
               href="#"
               title="RaddeR — Terug naar boven"
-              className="relative flex items-center justify-center p-1 rounded-xl hover:bg-white/5 transition-all group cursor-pointer"
+              className="relative flex items-center justify-center p-1.5 rounded-2xl hover:bg-white/5 transition-all group cursor-pointer"
             >
-              <div className="transition-transform duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.35)]">
+              <div className="transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_35px_rgba(255,255,255,0.45)]">
                 <RadderLogo
-                  size={scrolled ? 56 : 68}
+                  size={scrolled ? 74 : 96}
                   variant="vector"
                   glow={true}
                   className="text-white transition-all duration-300"

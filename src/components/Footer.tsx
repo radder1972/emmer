@@ -14,13 +14,15 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/5">
           {/* Identity & Emblem */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center gap-3.5">
-              <div className="w-11 h-11 flex items-center justify-center p-0.5 text-white">
-                <RadderLogo size={40} />
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-14 flex items-center justify-center text-white">
+                <RadderLogo size={60} glow={true} />
               </div>
               <div>
-                <RadderWordmark height={22} className="text-white" />
-                <div className="text-[10px] text-zinc-400 uppercase tracking-wider mt-0.5">SYSTEMS & PRODUCT ARCHITECTURE</div>
+                <RadderWordmark height={32} className="text-white" glow={true} />
+                <div className="text-[10px] text-zinc-400 uppercase tracking-wider mt-1 font-semibold">
+                  SYSTEMS & PRODUCT ARCHITECTURE
+                </div>
               </div>
             </div>
 

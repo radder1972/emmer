@@ -3,9 +3,12 @@ import React from "react";
 interface RadderLogoProps {
   className?: string;
   size?: number | string;
+  width?: number | string;
+  height?: number | string;
   variant?: "vector" | "retina";
   glow?: boolean;
   color?: string;
+  tight?: boolean;
 }
 
 export const RADDER_LOGO_PATH =
@@ -13,12 +16,32 @@ export const RADDER_LOGO_PATH =
 
 export const RadderLogo: React.FC<RadderLogoProps> = ({
   className = "",
-  size = 48,
+  size,
+  width,
+  height,
   variant = "vector",
   glow = false,
   color,
+  tight = true,
 }) => {
-  const pixelSize = typeof size === "number" ? `${size}px` : size;
+  const defaultSize = size ?? 64;
+  const pixelWidth =
+    width !== undefined
+      ? typeof width === "number"
+        ? `${width}px`
+        : width
+      : typeof defaultSize === "number"
+      ? `${defaultSize}px`
+      : defaultSize;
+
+  const pixelHeight =
+    height !== undefined
+      ? typeof height === "number"
+        ? `${height}px`
+        : height
+      : typeof defaultSize === "number"
+      ? `${Math.round(defaultSize * (500 / 634))}px`
+      : "auto";
 
   if (variant === "retina") {
     return (
@@ -26,7 +49,7 @@ export const RadderLogo: React.FC<RadderLogoProps> = ({
         className={`relative inline-flex items-center justify-center select-none ${className} ${
           glow ? "drop-shadow-[0_10px_25px_rgba(255,255,255,0.25)]" : "drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
         }`}
-        style={{ width: pixelSize, height: pixelSize }}
+        style={{ width: pixelWidth, height: pixelHeight }}
       >
         <img
           src="/logo-radder.png"
@@ -41,12 +64,12 @@ export const RadderLogo: React.FC<RadderLogoProps> = ({
   return (
     <div
       className={`relative inline-flex items-center justify-center select-none ${className} ${
-        glow ? "drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]" : "drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+        glow ? "drop-shadow-[0_0_24px_rgba(255,255,255,0.4)]" : "drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
       }`}
-      style={{ width: pixelSize, height: pixelSize }}
+      style={{ width: pixelWidth, height: pixelHeight }}
     >
       <svg
-        viewBox="0 0 1024 768"
+        viewBox={tight ? "195 130 634 500" : "0 0 1024 768"}
         fill={color || "currentColor"}
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full"

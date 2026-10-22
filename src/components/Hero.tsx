@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Cpu, Layers, Terminal, Compass, Sparkles } from 'lucide-react';
+import { RadderLogo } from './RadderLogo';
 
 interface HeroProps {
   onOpenContact: () => void;
@@ -11,6 +12,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden bg-grid-pattern">
       {/* Background ambient lighting - Stark monochrome / titanium silver glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-gradient-to-b from-white/10 via-zinc-500/5 to-transparent blur-[140px] -z-10 pointer-events-none" />
+
+      {/* Hero Architectural Emblem Watermark */}
+      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 w-[320px] sm:w-[420px] lg:w-[500px] opacity-[0.06] pointer-events-none select-none text-white -z-10 transition-opacity">
+        <RadderLogo size={500} glow={true} />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Technical HUD Topline */}
