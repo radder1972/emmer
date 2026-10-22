@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderWordmark } from './RadderWordmark';
+import { RadderNavIcon } from './RadderNavIcons';
 
 export type PageId = 'manifest' | 'cases' | 'over-ons' | 'sparren';
 
@@ -63,13 +64,14 @@ export const Navbar: React.FC<NavbarProps> = ({
                       e.preventDefault();
                       onNavigate(link.id);
                     }}
-                    className={`text-xs uppercase tracking-wider font-mono transition-all px-4 py-2 rounded-xl cursor-pointer ${
+                    className={`inline-flex items-center gap-2 text-xs uppercase tracking-wider font-mono transition-all px-3.5 py-2 rounded-xl cursor-pointer ${
                       isActive
                         ? 'text-neutral-950 bg-black/5 font-bold border border-neutral-300/90 shadow-sm'
                         : 'text-neutral-600 hover:text-neutral-950 hover:bg-black/[0.03] border border-transparent'
                     }`}
                   >
-                    {link.name}
+                    <RadderNavIcon id={link.id} size={15} strokeWidth={2} />
+                    <span>{link.name}</span>
                   </a>
                 );
               })}
@@ -128,13 +130,14 @@ export const Navbar: React.FC<NavbarProps> = ({
                     setMobileMenuOpen(false);
                     onNavigate(link.id);
                   }}
-                  className={`text-left py-2.5 px-3 rounded-lg border-b border-neutral-200 transition-colors cursor-pointer ${
+                  className={`inline-flex items-center gap-3 text-left py-2.5 px-3 rounded-lg border-b border-neutral-200 transition-colors cursor-pointer ${
                     isActive
                       ? 'text-neutral-950 bg-black/5 font-bold'
                       : 'text-neutral-600 hover:text-neutral-950'
                   }`}
                 >
-                  {link.name}
+                  <RadderNavIcon id={link.id} size={18} strokeWidth={2} />
+                  <span>{link.name}</span>
                 </a>
               );
             })}

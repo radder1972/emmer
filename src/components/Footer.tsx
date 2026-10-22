@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowUp, Cpu } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderWordmark } from './RadderWordmark';
+import { RadderNavIcon } from './RadderNavIcons';
 import type { PageId } from './Navbar';
 
 interface FooterProps {
@@ -69,16 +70,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <div className="text-neutral-950 font-bold uppercase tracking-wider text-[11px]">
                 MENU
               </div>
-              <div className="flex flex-col space-y-2 font-mono text-xs">
+              <div className="flex flex-col space-y-2.5 font-mono text-xs">
                 <a
                   href="/"
                   onClick={(e) => {
                     e.preventDefault();
                     handleNav('manifest');
                   }}
-                  className="hover:text-neutral-950 transition-colors text-left cursor-pointer"
+                  className="inline-flex items-center gap-2 hover:text-neutral-950 transition-colors text-left cursor-pointer group"
                 >
-                  → Manifest
+                  <RadderNavIcon id="manifest" size={14} strokeWidth={2} className="text-neutral-500 group-hover:text-neutral-950 transition-colors" />
+                  <span>Manifest</span>
                 </a>
                 <a
                   href="/cases"
@@ -86,9 +88,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     e.preventDefault();
                     handleNav('cases');
                   }}
-                  className="hover:text-neutral-950 transition-colors text-left cursor-pointer"
+                  className="inline-flex items-center gap-2 hover:text-neutral-950 transition-colors text-left cursor-pointer group"
                 >
-                  → Cases
+                  <RadderNavIcon id="cases" size={14} strokeWidth={2} className="text-neutral-500 group-hover:text-neutral-950 transition-colors" />
+                  <span>Cases</span>
                 </a>
                 <a
                   href="/over-ons"
@@ -96,9 +99,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     e.preventDefault();
                     handleNav('over-ons');
                   }}
-                  className="hover:text-neutral-950 transition-colors text-left cursor-pointer"
+                  className="inline-flex items-center gap-2 hover:text-neutral-950 transition-colors text-left cursor-pointer group"
                 >
-                  → Over Ons
+                  <RadderNavIcon id="over-ons" size={14} strokeWidth={2} className="text-neutral-500 group-hover:text-neutral-950 transition-colors" />
+                  <span>Over Ons</span>
                 </a>
                 <a
                   href="/sparren"
@@ -106,9 +110,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     e.preventDefault();
                     handleNav('sparren');
                   }}
-                  className="hover:text-neutral-950 transition-colors text-left cursor-pointer"
+                  className="inline-flex items-center gap-2 hover:text-neutral-950 transition-colors text-left cursor-pointer group"
                 >
-                  → Sparren
+                  <RadderNavIcon id="sparren" size={14} strokeWidth={2} className="text-neutral-500 group-hover:text-neutral-950 transition-colors" />
+                  <span>Sparren</span>
                 </a>
               </div>
             </div>
