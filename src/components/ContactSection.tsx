@@ -34,7 +34,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#f4f3ef] border-t border-neutral-300 relative scroll-mt-24 sm:scroll-mt-28">
+    <section id="contact" className="pt-40 sm:pt-48 lg:pt-56 pb-24 bg-[#f8f7f4] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 text-left">
           {/* Left Column: Direct Info */}
