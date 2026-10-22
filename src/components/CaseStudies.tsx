@@ -21,22 +21,22 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
     ? CASE_STUDIES
     : CASE_STUDIES.filter(c => c.category === selectedCategory);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string, color: string = '#0a0a0a') => {
     switch (category) {
       case 'B2B & Configuratoren':
-        return <Cpu className="w-4 h-4 text-neutral-900" />;
+        return <Cpu className="w-4 h-4" style={{ color }} />;
       case 'HealthTech & Psychologie':
-        return <Layers className="w-4 h-4 text-neutral-900" />;
+        return <Layers className="w-4 h-4" style={{ color }} />;
       case 'Local SEO & Performance':
-        return <MapPin className="w-4 h-4 text-neutral-900" />;
+        return <MapPin className="w-4 h-4" style={{ color }} />;
       case 'Omnichannel & Retail':
-        return <Globe className="w-4 h-4 text-neutral-900" />;
+        return <Globe className="w-4 h-4" style={{ color }} />;
       case 'AI Hardware & Travel':
-        return <Truck className="w-4 h-4 text-neutral-900" />;
+        return <Truck className="w-4 h-4" style={{ color }} />;
       case 'Sport & Vitaliteit':
-        return <RadderIconTableTennis size={16} strokeWidth={2} color="#0a0a0a" />;
+        return <RadderIconTableTennis size={16} strokeWidth={2} color={color} />;
       default:
-        return <Layers className="w-4 h-4 text-neutral-700" />;
+        return <Layers className="w-4 h-4" style={{ color }} />;
     }
   };
 
@@ -88,25 +88,56 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
           {filteredCases.map((study) => (
             <div
               key={study.id}
-              className="rounded-2xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between hover:border-neutral-400 hover:shadow-md transition-all duration-300 group relative"
+              className="rounded-2xl bg-white border border-neutral-200/90 shadow-sm flex flex-col justify-between hover:border-neutral-400 hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
+              style={{
+                boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+              }}
             >
               <CornerReticles color="rgba(0,0,0,0.18)" />
 
-              {/* Subtle top right watermark */}
-              <div className="absolute top-4 right-4 w-12 h-12 opacity-[0.06] pointer-events-none group-hover:opacity-20 transition-opacity">
-                <RadderLogo size={48} color="#0a0a0a" />
+              {/* Luminous Ambient Color Glow in Card Corner */}
+              <div
+                className="absolute -top-20 -right-20 w-64 h-64 rounded-full pointer-events-none opacity-15 group-hover:opacity-30 transition-opacity duration-500 blur-3xl"
+                style={{ backgroundColor: study.accentColor }}
+              />
+
+              {/* Top Accent Gradient Bar in Signature Case Color */}
+              <div
+                className="h-1.5 w-full relative z-10"
+                style={{
+                  background: `linear-gradient(90deg, ${study.accentColor}, ${study.accentColor}aa 40%, transparent 95%)`,
+                }}
+              />
+
+              {/* Watermark Emblem in Signature Accent Color */}
+              <div
+                className="absolute top-5 right-5 w-12 h-12 pointer-events-none transition-all duration-300 group-hover:scale-110 z-0"
+                style={{ opacity: 0.14 }}
+              >
+                <RadderLogo size={48} color={study.accentColor} />
               </div>
 
-              {/* Card Header */}
-              <div className="p-6 sm:p-8">
+              {/* Card Header & Content */}
+              <div className="p-6 sm:p-8 relative z-10">
                 <div className="flex items-center justify-between gap-2 mb-4">
-                  <div className="flex items-center gap-2 px-2.5 py-1 rounded-md bg-neutral-100 border border-neutral-200/80 text-xs font-mono text-neutral-800">
-                    {getCategoryIcon(study.category)}
-                    <span>{study.category}</span>
+                  {/* Category Pill with Colored Indicator & Tint */}
+                  <div
+                    className="flex items-center gap-2 px-2.5 py-1 rounded-md text-xs font-mono font-medium border shadow-xs"
+                    style={{
+                      backgroundColor: `${study.accentColor}12`,
+                      borderColor: `${study.accentColor}35`,
+                      color: '#0a0a0a',
+                    }}
+                  >
+                    <span className="shrink-0 flex items-center">
+                      {getCategoryIcon(study.category, study.accentColor)}
+                    </span>
+                    <span className="font-semibold">{study.category}</span>
                   </div>
+
                   <div className="flex items-center gap-2">
                     <CalibrationScale label="SPEC // PROD" ticks={6} className="hidden sm:inline-flex" />
-                    <span className="text-xs font-mono text-neutral-500">{study.year}</span>
+                    <span className="text-xs font-mono text-neutral-500 font-semibold">{study.year}</span>
                   </div>
                 </div>
 
@@ -117,22 +148,49 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
                   {study.subtitle}
                 </p>
 
-                {/* Impact Metrics Row */}
-                <div className="mt-6 grid grid-cols-3 gap-2 p-3.5 rounded-xl bg-neutral-50 border border-neutral-200/80">
+                {/* Impact Metrics Row with Signature Accent Values */}
+                <div
+                  className="mt-6 grid grid-cols-3 gap-2 p-3.5 rounded-xl border transition-colors"
+                  style={{
+                    backgroundColor: `${study.accentColor}08`,
+                    borderColor: `${study.accentColor}25`,
+                  }}
+                >
                   {study.impactMetrics.map((m, i) => (
                     <div key={i} className="text-left">
-                      <div className="text-[10px] font-mono uppercase text-neutral-500 truncate">{m.label}</div>
-                      <div className="text-sm font-bold text-neutral-950 font-mono mt-0.5">{m.value}</div>
+                      <div className="text-[10px] font-mono uppercase text-neutral-600 truncate font-medium">
+                        {m.label}
+                      </div>
+                      <div
+                        className="text-base sm:text-lg font-extrabold font-mono mt-0.5 tracking-tight"
+                        style={{ color: study.accentColor }}
+                      >
+                        {m.value}
+                      </div>
                     </div>
                   ))}
                 </div>
 
-                {/* The "Motor" Difference Box */}
-                <div className="mt-6 p-4 rounded-xl bg-neutral-950 text-white border border-neutral-900 text-left shadow-sm">
-                  <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-300 font-bold mb-1">
-                    DE MOTOR AANPAK:
+                {/* The "Motor" Difference Box with Left Accent Line & Glowing Header */}
+                <div
+                  className="mt-6 p-4 rounded-xl bg-neutral-950 text-white text-left shadow-md relative overflow-hidden border-l-[3.5px] border-neutral-900"
+                  style={{
+                    borderLeftColor: study.accentColor,
+                  }}
+                >
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span
+                      className="w-1.5 h-1.5 rounded-full shrink-0"
+                      style={{ backgroundColor: study.accentColor }}
+                    />
+                    <div
+                      className="text-[11px] font-mono uppercase tracking-wider font-bold"
+                      style={{ color: study.accentColor }}
+                    >
+                      DE MOTOR AANPAK:
+                    </div>
                   </div>
-                  <p className="text-xs text-neutral-200 leading-relaxed">
+                  <p className="text-xs text-neutral-200 leading-relaxed font-normal">
                     {study.theEngineApproach}
                   </p>
                 </div>
@@ -142,21 +200,31 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
                   {study.techStack.slice(0, 4).map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 border border-neutral-200/80 text-neutral-700"
+                      className="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100/90 border text-neutral-700 transition-colors"
+                      style={{ borderColor: `${study.accentColor}25` }}
                     >
                       {tech}
                     </span>
                   ))}
                   {study.techStack.length > 4 && (
-                    <span className="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 border border-neutral-200/80 text-neutral-500">
+                    <span
+                      className="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100/70 border text-neutral-500"
+                      style={{ borderColor: `${study.accentColor}20` }}
+                    >
                       +{study.techStack.length - 4} meer
                     </span>
                   )}
                 </div>
               </div>
 
-              {/* Card Footer / Action */}
-              <div className="px-6 sm:px-8 py-4 bg-neutral-50/80 border-t border-neutral-200/80 rounded-b-2xl flex flex-wrap items-center justify-between gap-3">
+              {/* Card Footer / Action Row */}
+              <div
+                className="px-6 sm:px-8 py-4 border-t rounded-b-2xl flex flex-wrap items-center justify-between gap-3 relative z-10"
+                style={{
+                  backgroundColor: `${study.accentColor}06`,
+                  borderColor: `${study.accentColor}1f`,
+                }}
+              >
                 <span className="text-xs font-mono text-neutral-600 truncate max-w-full sm:max-w-[260px]">
                   Klant: <strong className="text-neutral-950">{study.client}</strong>
                 </span>
@@ -167,7 +235,9 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
                       href={study.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-mono text-neutral-600 hover:text-[#ff451a] transition-colors"
+                      className="inline-flex items-center gap-1 text-xs font-mono text-neutral-700 hover:text-black transition-colors"
+                      onMouseEnter={(e) => (e.currentTarget.style.color = study.accentColor)}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = '')}
                       title={`Bezoek ${study.title}`}
                     >
                       <span>Live site</span>
@@ -177,7 +247,8 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
 
                   <button
                     onClick={() => setActiveModalCase(study)}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-neutral-950 hover:text-[#ff451a] transition-colors cursor-pointer group-hover:translate-x-0.5"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono font-bold transition-transform cursor-pointer group-hover:translate-x-1"
+                    style={{ color: study.accentColor }}
                   >
                     <span>Diepte-analyse</span>
                     <ChevronRight className="w-4 h-4" />
