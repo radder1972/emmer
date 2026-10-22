@@ -1,32 +1,83 @@
-# React + TypeScript + Vite
+# Matthias Radder (MR Studio) — Systems & Product Architecture
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+<p align="center">
+  <img src="public/logo-mr.png" alt="MR Emblem" width="160" />
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <strong>"Waar een standaard bureau stopt bij de buitenkant, bouw jij de motor."</strong>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<p align="center">
+  <em>Complexe, domeinspecifieke logica direct vertalen naar werkende, schaalbare bedrijfsmodellen.</em>
+</p>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 De Filosofie
 
-## Expanding the Oxlint configuration
+In de wereld van digitale bureaus is er een kloof: designbureaus stoppen bij oppervlakkige templates en brochures; traditionele IT-consultancies verdrinken in logge rapporten. 
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+**MR Studio** combineert de creatieve executiesnelheid van een modern designbureau met de diepe systeemkennis van een softwareontwikkelaar en de commerciële scherpte van een business strateeg.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+---
+
+## 🚀 Kernprojecten & Domein-Architecturen
+
+- 🩺 **Schematherapie Suite (Zorg & Healthtech)**:
+  - Local-first webapplicatie met geïntegreerde diagnostiek (YSQL/SMI), interactieve theoriekaarten en AI-gestuurde hypothesegeneratie.
+  - Zero-knowledge encryptie en privacy-by-design (AVG-waterdicht).
+
+- 🗺️ **Nieuwbouw Perceelkiezer (Proptech & Geodata)**:
+  - Live koppeling met openbare ruimtelijke data van PDOK en het Kadaster (WFS/WMS).
+  - Real-time matchen van bouwgrond, bestemmingsplannen en kopersvoorkeuren.
+
+- 🛡️ **Enterprise Cloud & eBPF Telemetry (High-Tech Enterprise)**:
+  - Architectuursparring op ASML-niveau: Red Hat OpenShift topologies, Linux kernel packet inspection via eBPF en zero-trust security.
+  - Agentic workflows met Google Antigravity voor snelle Vercel edge deployments.
+
+- 🏝️ **True Time Thai — Pattaya (Fysiek naar Digitaal)**:
+  - Van mobiele Progressive Web App en digitaal sleuteloverdrachtprotocol tot de fysieke winkelpui en storefront in Pattaya.
+
+- 🌲 **Palrom Products & Staopstoelen.nl (B2B & E-Commerce)**:
+  - B2B ketenstrategie ("From Tree to Trade"), vector design tokens en complete doorvertaling naar transportvloten en bestelbus-livery.
+
+---
+
+## 🛠️ Tech Stack & Toolkit
+
+| Laag | Technologieën |
+| :--- | :--- |
+| **Frontend & UI** | React 19, TypeScript, Tailwind CSS v4, Lucide Icons |
+| **Local-First & Data** | IndexedDB, Web Cryptography API, PDOK Open Data, Kadaster WFS |
+| **Cloud & Infra** | Red Hat OpenShift, Kubernetes, eBPF / Cilium, Vercel Edge |
+| **Agentic Tooling** | Google Antigravity IDE, Autonomous Task Orchestration |
+| **Fysiek & Brand** | Vector Tokens, CAD Signage, Fleet Livery Engineering |
+
+---
+
+## 💻 Lokale Installatie
+
+```bash
+# Clone de repository
+git clone git@github.com:radder1972/emmer.git
+cd emmer
+
+# Installeer dependencies
+npm install
+
+# Start de ontwikkelomgeving
+npm run dev
+
+# Bouw voor productie
+npm run build
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## 📬 Contact & Sparren
+
+- **Studio**: Matthias Radder (MR Studio)
+- **E-mail**: `matthias@radder.studio`
+- **Locatie**: Nederland (beschikbaar op locatie & remote wereldwijd)
+- **Status**: Beschikbaar voor selectieve Q4/Q1 producttrajecten & enterprise architectuur-sparring.
