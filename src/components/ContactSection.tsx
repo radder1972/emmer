@@ -51,16 +51,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
           <div className="relative z-10 max-w-4xl text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm mb-4">
               <RadderIconSparren size={14} strokeWidth={2} color="#ff451a" />
-              <span>SPARREN // PLACEHOLDER</span>
+              <span>SPARREN MET MATTHIAS // VRIJBLIJVEND</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 leading-[1.08]">
-              Lorem ipsum dolor <br />
-              <span className="text-neutral-600">sit amet consectetur.</span>
+              Zullen we samen <br />
+              <span className="text-neutral-600">onder de motorkap kijken?</span>
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Een goed inhoudelijk gesprek van 30 minuten levert vaak meer op dan drie maanden vergaderen met tussenlagen. Vertel me waar je naartoe wilt met je product, platform of proces—ik denk direct met je mee in oplossingen en werkende code.
             </p>
           </div>
         </div>
@@ -116,9 +116,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
 
             {/* Availability Indicator */}
             <div className="p-5 rounded-2xl bg-white border border-neutral-200/90 shadow-sm flex items-center gap-4">
-              <span className="w-3 h-3 rounded-full bg-neutral-950 animate-ping"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#ff451a] shrink-0 animate-pulse"></span>
               <div className="text-xs font-mono text-neutral-700">
-                <strong className="text-neutral-950">Status Q4/Q1:</strong> Selectieve ruimte voor nieuwe strategische producttrajecten en enterprise architectuur-sparring.
+                <strong className="text-neutral-950">Status:</strong> Beschikbaar voor selectieve nieuwe producttrajecten, architectuur-sparring en audits.
               </div>
             </div>
           </div>
@@ -145,9 +145,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="border-b border-neutral-200 pb-4">
-                    <h3 className="text-xl font-bold text-neutral-950">Plan een Sparringsessie</h3>
-                    <p className="text-xs text-neutral-500 mt-1">
-                      Vertel kort over de uitdaging en gewenste architectuur.
+                    <h3 className="text-xl font-bold text-neutral-950">Plan een sparsessie met Matthias</h3>
+                    <p className="text-xs text-neutral-600 mt-1">
+                      Vertel kort over je casus, proces of knelpunt. Je spreekt direct met degene die de code en architectuur ontwerpt.
                     </p>
                   </div>
 
@@ -191,10 +191,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                       className="w-full px-4 py-3 rounded-xl bg-neutral-50/70 border border-neutral-300 text-neutral-950 text-sm focus:outline-none focus:border-neutral-950 font-mono cursor-pointer transition-colors"
                     >
                       <option value="Nieuw Softwareproduct & Domeinmotor">Nieuw Softwareproduct & Domeinmotor (from scratch)</option>
-                      <option value="Herbouw van Standaard Template naar Echte Motor">Herbouw van Standaard Template naar Echte Motor</option>
-                      <option value="Local-First & Zorgdiagnostiek">Local-First Zorgapplicatie & AI-Diagnostiek</option>
-                      <option value="Ruimtelijke Geodata (Kadaster / PDOK)">Ruimtelijke Geodata (Kadaster / PDOK Matching)</option>
-                      <option value="Omnichannel (App + Storefront of Wagenpark)">Omnichannel (App + Storefront of Wagenpark)</option>
+                      <option value="B2B Configurator of Calculatie-engine">B2B Configurator of Calculatie-engine (zoals Palrom)</option>
+                      <option value="HealthTech, Zorgapplicatie of AI-Diagnostiek">HealthTech, Zorgapplicatie of AI-Diagnostiek (zoals Schematherapie Suite)</option>
+                      <option value="Lokale Dominantie & High-Performance Platform">Lokale Dominantie & High-Performance Platform (zoals Staopstoelen.nl)</option>
+                      <option value="Boekingsengine, Hardware Rental of E-Commerce">Boekingsengine, Hardware Rental of E-Commerce (zoals True Time Thai / Schipper)</option>
+                      <option value="Architectuur-audit of Herbouw van Vastgelopen Project">Architectuur-audit of Herbouw van Vastgelopen Project</option>
                     </select>
                   </div>
 
