@@ -19,7 +19,7 @@ export const EngineVsWrapper: React.FC = () => {
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
             De Motor versus Het Sausje: <br />
-            <span className="text-neutral-500">Waarom traditionele bureaus vastlopen.</span>
+            <span className="text-neutral-400">Waarom traditionele bureaus vastlopen.</span>
           </h2>
           <p className="mt-4 text-neutral-600 text-base sm:text-lg leading-relaxed">
             Klassieke bureaus verkopen uren, meetings en een mooie visuele schil over logge standaardsoftware. RaddeR bouwt direct aan de kern: vlijmscherpe domeinlogica, schaalbare architectuur en 100% eigenaarschap.

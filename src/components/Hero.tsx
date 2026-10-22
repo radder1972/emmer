@@ -38,7 +38,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 leading-[1.08]">
               Van de eerste AI-stappen <br />
-              <span className="text-neutral-600">
+              <span className="text-neutral-400">
                 tot de snelle development van whatever.
               </span>
             </h1>

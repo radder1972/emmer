@@ -56,7 +56,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 leading-[1.08]">
               Zullen we samen <br />
-              <span className="text-neutral-600">onder de motorkap kijken?</span>
+              <span className="text-neutral-400">onder de motorkap kijken?</span>
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed">

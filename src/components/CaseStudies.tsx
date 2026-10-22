@@ -61,7 +61,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 leading-[1.08]">
               Geselecteerde Projecten & <br />
-              <span className="text-neutral-600">Architectuur Cases</span>
+              <span className="text-neutral-400">Architectuur Cases</span>
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed">

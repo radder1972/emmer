@@ -37,7 +37,7 @@ export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
             Drie werelden. <br />
-            <span className="text-neutral-600">
+            <span className="text-neutral-400">
               Eén coherente executie.
             </span>
           </h2>
