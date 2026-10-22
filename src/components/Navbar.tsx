@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderWordmark } from './RadderWordmark';
@@ -16,16 +16,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onNavigate,
   onOpenContact,
 }) => {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks: { id: PageId; name: string }[] = [
     { id: 'manifest', name: 'Manifest' },
@@ -34,13 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-[#f8f7f4]/95 backdrop-blur-md border-b border-neutral-300/80 py-3 shadow-sm'
-          : 'bg-transparent py-5 sm:py-6 border-b border-transparent'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#f8f7f4]/95 backdrop-blur-md border-b border-neutral-300/80 py-4 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Left Side: Clean Studio Typographic Identity & Navigation Links */}
@@ -51,8 +36,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               title="RaddeR — Naar Manifest"
             >
               <RadderWordmark
-                height={scrolled ? 36 : 48}
-                className="text-neutral-950 group-hover:text-neutral-700 transition-all duration-300"
+                height={48}
+                className="text-neutral-950 group-hover:text-neutral-700 transition-colors"
                 color="#0a0a0a"
                 glow={false}
               />
@@ -100,11 +85,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <div className="transition-transform duration-300 group-hover:scale-105">
                 <RadderLogo
-                  size={scrolled ? 74 : 96}
+                  size={96}
                   variant="vector"
                   glow={false}
                   color="#0a0a0a"
-                  className="text-neutral-950 transition-all duration-300"
+                  className="text-neutral-950"
                 />
               </div>
             </button>
@@ -125,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#f8f7f4] border-b border-neutral-300 px-6 py-6 mt-3 space-y-4 shadow-lg">
+        <div className="lg:hidden bg-[#f8f7f4] border-b border-neutral-300 px-6 py-6 mt-4 space-y-4 shadow-lg">
           <div className="flex flex-col space-y-2 font-mono text-sm text-left">
             {navLinks.map((link) => {
               const isActive = currentPage === link.id;
