@@ -1,6 +1,12 @@
 import React from 'react';
-import { ArrowRight, Cpu, Layers, Terminal, Compass, Sparkles } from 'lucide-react';
+import { ArrowRight, Layers } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
+import {
+  RadderIconStrateeg,
+  RadderIconArchitect,
+  RadderIconMaker,
+  RadderIconSparkles,
+} from './RadderNavIcons';
 
 interface HeroProps {
   onOpenContact: () => void;
@@ -22,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
         {/* Hero Main Content */}
         <div className="max-w-4xl text-left space-y-7">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#ff451a]" />
+            <RadderIconSparkles size={14} strokeWidth={2} color="#ff451a" />
             <span>Lorem Ipsum Dolor // <strong className="text-neutral-950 font-bold">Placeholder</strong></span>
           </div>
 
@@ -71,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
         <div className="mt-16 pt-10 border-t border-neutral-300 grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
           <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
             <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-3 h-5">
-              <Terminal className="w-4 h-4 text-[#ff451a]" />
+              <RadderIconStrateeg size={16} strokeWidth={2} color="#ff451a" />
               <span>01. DE STRATEEG</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">
@@ -81,7 +87,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
 
           <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
             <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-3 h-5">
-              <Cpu className="w-4 h-4 text-[#ff451a]" />
+              <RadderIconArchitect size={16} strokeWidth={2} color="#ff451a" />
               <span>02. DE ARCHITECT</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">
@@ -91,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
 
           <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm hover:border-neutral-400 hover:shadow-md transition-all text-left flex flex-col justify-start">
             <div className="flex items-center gap-2.5 text-xs font-mono font-bold text-neutral-950 mb-3 h-5">
-              <Compass className="w-4 h-4 text-[#ff451a]" />
+              <RadderIconMaker size={16} strokeWidth={2} color="#ff451a" />
               <span>03. DE MAKER</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">

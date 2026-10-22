@@ -1,6 +1,7 @@
 import React from 'react';
 import { CaseStudies } from '../components/CaseStudies';
-import { ArrowRight, Terminal } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { RadderIconTerminal } from '../components/RadderNavIcons';
 
 interface CasesPageProps {
   onOpenContact: () => void;
@@ -21,7 +22,7 @@ export const CasesPage: React.FC<CasesPageProps> = ({
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-left">
             <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-[11px] font-mono text-neutral-700 mb-2">
-              <Terminal className="w-3 h-3 text-neutral-900" />
+              <RadderIconTerminal size={13} strokeWidth={2} color="#ff451a" />
               <span>AANPAK // PLACEHOLDER</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 tracking-tight">

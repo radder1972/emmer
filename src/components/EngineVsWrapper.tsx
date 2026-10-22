@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ENGINE_COMPARISONS } from '../data/projects';
-import { XCircle, CheckCircle2, Eye, ShieldCheck, Zap } from 'lucide-react';
+import { XCircle, CheckCircle2, Eye, ShieldCheck } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
+import { RadderIconZap } from './RadderNavIcons';
 
 export const EngineVsWrapper: React.FC = () => {
   const [selectedIdx, setSelectedIdx] = useState(0);
@@ -13,7 +14,7 @@ export const EngineVsWrapper: React.FC = () => {
         {/* Section Header */}
         <div className="text-left max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono mb-4 shadow-sm">
-            <Zap className="w-3.5 h-3.5 text-[#ff451a]" />
+            <RadderIconZap size={14} strokeWidth={2} color="#ff451a" />
             <span>VERGELIJKING // PLACEHOLDER</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">

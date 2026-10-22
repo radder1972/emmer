@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2, Terminal } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
+import { RadderIconTerminal } from './RadderNavIcons';
 
 interface FounderSectionProps {
   onNavigateToSparren?: () => void;
@@ -43,7 +44,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
           <div className="lg:col-span-7 text-left space-y-7">
             {/* Category Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono">
-              <Terminal className="w-3.5 h-3.5 text-[#ff451a]" />
+              <RadderIconTerminal size={14} strokeWidth={2} color="#ff451a" />
               <span>OVER RaddeR // DE MAKER ACHTER DE MOTOR</span>
             </div>
 

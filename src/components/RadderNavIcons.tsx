@@ -27,7 +27,7 @@ export const RadderIconManifest: React.FC<RadderIconProps> = ({
     strokeWidth={strokeWidth}
     strokeLinecap="round"
     strokeLinejoin="round"
-    className={`inline-block shrink-0 ${className}`}
+    className={`inline-block shrink-0 align-middle ${className}`}
     aria-label="Manifest Icon"
   >
     {/* Architectural central spine */}
@@ -68,7 +68,7 @@ export const RadderIconCases: React.FC<RadderIconProps> = ({
     strokeWidth={strokeWidth}
     strokeLinecap="round"
     strokeLinejoin="round"
-    className={`inline-block shrink-0 ${className}`}
+    className={`inline-block shrink-0 align-middle ${className}`}
     aria-label="Cases Icon"
   >
     {/* RaddeR signature tubular arched handle */}
@@ -106,7 +106,7 @@ export const RadderIconAbout: React.FC<RadderIconProps> = ({
     strokeWidth={strokeWidth}
     strokeLinecap="round"
     strokeLinejoin="round"
-    className={`inline-block shrink-0 ${className}`}
+    className={`inline-block shrink-0 align-middle ${className}`}
     aria-label="Over Ons Icon"
   >
     {/* Central architect / maker head */}
@@ -144,7 +144,7 @@ export const RadderIconSparren: React.FC<RadderIconProps> = ({
     strokeWidth={strokeWidth}
     strokeLinecap="round"
     strokeLinejoin="round"
-    className={`inline-block shrink-0 ${className}`}
+    className={`inline-block shrink-0 align-middle ${className}`}
     aria-label="Sparren Icon"
   >
     {/* Left dialogue lobe mirroring Я */}
@@ -156,6 +156,202 @@ export const RadderIconSparren: React.FC<RadderIconProps> = ({
     {/* Central sparring spark / exchange cross */}
     <line x1="12" y1="8" x2="12" y2="13" />
     <line x1="9.5" y1="10.5" x2="14.5" y2="10.5" />
+  </svg>
+);
+
+/**
+ * 05. STRATEEG ICON (Header & Pillar)
+ * Strategic vision, direction and analytical trajectory in pure RaddeR geometry.
+ * Bilateral apex lens with central focal spark and horizon baseline.
+ */
+export const RadderIconStrateeg: React.FC<RadderIconProps> = ({
+  className = '',
+  size = 18,
+  color = 'currentColor',
+  strokeWidth = 2,
+}) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={color}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`inline-block shrink-0 align-middle ${className}`}
+    aria-label="De Strateeg Icon"
+  >
+    {/* Symmetrical upward strategic trajectory chevron */}
+    <path d="M 4 14.5 L 12 4.5 L 20 14.5" />
+    {/* Inner curved horizon arc matching RaddeR upper lobe */}
+    <path d="M 7.5 11.5 C 9.5 9.5, 14.5 9.5, 16.5 11.5" />
+    {/* Central focus spark node */}
+    <circle cx="12" cy="11.5" r="1.2" fill={color} />
+    {/* Foundational strategic baseline */}
+    <line x1="4" y1="20" x2="20" y2="20" />
+    {/* Vertical alignment strut */}
+    <line x1="12" y1="15.5" x2="12" y2="20" />
+  </svg>
+);
+
+/**
+ * 06. ARCHITECT ICON (Header & Pillar)
+ * Structural systems architecture & core engine blueprint.
+ * Direct architectural translation of the RaddeR symmetrical dual-arched hallmark.
+ */
+export const RadderIconArchitect: React.FC<RadderIconProps> = ({
+  className = '',
+  size = 18,
+  color = 'currentColor',
+  strokeWidth = 2,
+}) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={color}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`inline-block shrink-0 align-middle ${className}`}
+    aria-label="De Architect Icon"
+  >
+    {/* Top structural lintel plate */}
+    <line x1="4" y1="4" x2="20" y2="4" />
+    {/* Central architectural spine */}
+    <line x1="12" y1="4" x2="12" y2="20" />
+    {/* Left structural arch (mirrors RaddeR left lobe) */}
+    <path d="M 5 20 C 5 12, 12 11, 12 11" />
+    {/* Right structural arch (mirrors RaddeR right lobe) */}
+    <path d="M 19 20 C 19 12, 12 11, 12 11" />
+    {/* Horizontal tie beam */}
+    <line x1="7" y1="12.5" x2="17" y2="12.5" />
+    {/* Solid foundational plinth */}
+    <line x1="4" y1="20" x2="20" y2="20" />
+  </svg>
+);
+
+/**
+ * 07. MAKER ICON (Header & Pillar)
+ * Precision craft, direct execution and drafting caliper.
+ * Bilateral curved arms with central calibration axis and gauge node.
+ */
+export const RadderIconMaker: React.FC<RadderIconProps> = ({
+  className = '',
+  size = 18,
+  color = 'currentColor',
+  strokeWidth = 2,
+}) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={color}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`inline-block shrink-0 align-middle ${className}`}
+    aria-label="De Maker Icon"
+  >
+    {/* Top pivot head (maker node) */}
+    <circle cx="12" cy="4.5" r="2.2" />
+    {/* Left caliper arm with signature RaddeR curve */}
+    <path d="M 10 6 C 6.5 8.5, 4.5 13, 5.5 19.5" />
+    {/* Right caliper arm with signature RaddeR curve */}
+    <path d="M 14 6 C 17.5 8.5, 19.5 13, 18.5 19.5" />
+    {/* Precision measurement gauge crossbeam */}
+    <line x1="7.5" y1="13.5" x2="16.5" y2="13.5" />
+    {/* Center calibration gauge node */}
+    <circle cx="12" cy="13.5" r="1.2" fill={color} />
+    {/* Center vertical indicator ray */}
+    <line x1="12" y1="6.8" x2="12" y2="10.5" />
+  </svg>
+);
+
+/**
+ * 08. TERMINAL / PROMPT BADGE ICON
+ * Symmetrical CLI terminal bracket in RaddeR monoline aesthetic.
+ */
+export const RadderIconTerminal: React.FC<RadderIconProps> = ({
+  className = '',
+  size = 14,
+  color = 'currentColor',
+  strokeWidth = 2,
+}) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={color}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`inline-block shrink-0 align-middle ${className}`}
+    aria-label="Terminal Badge Icon"
+  >
+    {/* Prompt bracket */}
+    <path d="M 6 7 L 11.5 12 L 6 17" />
+    {/* Cursor underscore bar */}
+    <line x1="13.5" y1="17" x2="18.5" y2="17" />
+  </svg>
+);
+
+/**
+ * 09. SPARKLES / MOTOR IGNITION ICON
+ * Precise geometric ignition spark in RaddeR style.
+ */
+export const RadderIconSparkles: React.FC<RadderIconProps> = ({
+  className = '',
+  size = 14,
+  color = 'currentColor',
+  strokeWidth = 2,
+}) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={color}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`inline-block shrink-0 align-middle ${className}`}
+    aria-label="Sparkles Icon"
+  >
+    {/* Central primary diamond spark */}
+    <path d="M 12 3 L 13.5 9.5 L 20 11 L 13.5 12.5 L 12 19 L 10.5 12.5 L 4 11 L 10.5 9.5 Z" />
+    {/* Secondary micro satellite spark */}
+    <circle cx="18" cy="5" r="1" fill={color} />
+  </svg>
+);
+
+/**
+ * 10. ZAP / POWER ENGINE ICON
+ * Monoline angular lightning pulse in RaddeR style.
+ */
+export const RadderIconZap: React.FC<RadderIconProps> = ({
+  className = '',
+  size = 14,
+  color = 'currentColor',
+  strokeWidth = 2,
+}) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={color}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`inline-block shrink-0 align-middle ${className}`}
+    aria-label="Zap Icon"
+  >
+    <path d="M 13 2.5 L 5 13.5 L 12 13.5 L 11 21.5 L 19 10.5 L 12 10.5 Z" />
   </svg>
 );
 
@@ -181,4 +377,27 @@ export const RadderNavIcon: React.FC<{
     default:
       return null;
   }
+};
+
+/**
+ * Dispatcher component to render triad icon by role
+ */
+export const RadderPillarIcon: React.FC<{
+  role: 'strateeg' | 'architect' | 'maker' | string;
+  className?: string;
+  size?: number | string;
+  color?: string;
+  strokeWidth?: number;
+}> = ({ role, ...props }) => {
+  const normalized = role.toLowerCase();
+  if (normalized.includes('strateeg') || normalized === 'terminal') {
+    return <RadderIconStrateeg {...props} />;
+  }
+  if (normalized.includes('architect') || normalized === 'cpu') {
+    return <RadderIconArchitect {...props} />;
+  }
+  if (normalized.includes('maker') || normalized === 'compass') {
+    return <RadderIconMaker {...props} />;
+  }
+  return <RadderIconStrateeg {...props} />;
 };

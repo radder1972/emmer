@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, ArrowRight, Check, Copy, MapPin, ShieldCheck, Terminal } from 'lucide-react';
+import { Mail, ArrowRight, Check, Copy, MapPin, ShieldCheck } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
+import { RadderIconTerminal } from './RadderNavIcons';
 
 interface ContactSectionProps {
   initialBrief?: string;
@@ -41,7 +42,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
           <div className="lg:col-span-5 space-y-8">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
-                <Terminal className="w-3.5 h-3.5 text-[#ff451a]" />
+                <RadderIconTerminal size={14} strokeWidth={2} color="#ff451a" />
                 <span>SPARREN // PLACEHOLDER</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-950 tracking-tight">

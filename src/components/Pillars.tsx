@@ -1,24 +1,28 @@
 import React from 'react';
 import { PHILOSOPHY_PILLARS } from '../data/projects';
-import { Cpu, Layers, Compass, Terminal, CheckCircle2, ArrowRight } from 'lucide-react';
+import {
+  RadderIconStrateeg,
+  RadderIconArchitect,
+  RadderIconMaker,
+  RadderIconTerminal,
+} from './RadderNavIcons';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 interface PillarsProps {
   onNavigateToCases?: () => void;
 }
 
 export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
-  const getIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'Terminal':
-        return <Terminal className="w-6 h-6 text-neutral-950" />;
-      case 'Cpu':
-        return <Cpu className="w-6 h-6 text-neutral-950" />;
-      case 'Layers':
-        return <Layers className="w-6 h-6 text-neutral-950" />;
-      case 'Compass':
-        return <Compass className="w-6 h-6 text-neutral-950" />;
+  const renderPillarIcon = (number: string) => {
+    switch (number) {
+      case '01':
+        return <RadderIconStrateeg size={26} strokeWidth={2} color="#0a0a0a" />;
+      case '02':
+        return <RadderIconArchitect size={26} strokeWidth={2} color="#0a0a0a" />;
+      case '03':
+        return <RadderIconMaker size={26} strokeWidth={2} color="#0a0a0a" />;
       default:
-        return <Terminal className="w-6 h-6 text-neutral-950" />;
+        return <RadderIconStrateeg size={26} strokeWidth={2} color="#0a0a0a" />;
     }
   };
 
@@ -28,7 +32,7 @@ export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
         {/* Header */}
         <div className="text-left max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ff451a]" />
+            <RadderIconTerminal size={14} strokeWidth={2} color="#ff451a" />
             <span>DE INTERDISCIPLINAIRE DRIEHOEK</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
@@ -53,7 +57,7 @@ export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
                 {/* Fixed-height icon bar to guarantee identical vertical baseline */}
                 <div className="h-12 flex items-center justify-between mb-6">
                   <div className="w-12 h-12 rounded-xl bg-neutral-100 border border-neutral-200/90 group-hover:scale-105 transition-transform text-neutral-950 flex items-center justify-center">
-                    {getIcon(pillar.icon)}
+                    {renderPillarIcon(pillar.number)}
                   </div>
                   <span className="font-mono text-2xl font-bold text-neutral-400 group-hover:text-neutral-800 transition-colors">
                     {pillar.number}
@@ -61,8 +65,8 @@ export const Pillars: React.FC<PillarsProps> = ({ onNavigateToCases }) => {
                 </div>
 
                 {/* Card Title placed first: vertically aligned across all 3 columns */}
-                <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 tracking-tight mb-1">
-                  {pillar.title}
+                <h3 className="text-xl sm:text-2xl font-bold text-neutral-950 tracking-tight mb-1 flex items-center gap-2">
+                  <span>{pillar.title}</span>
                 </h3>
 
                 {/* Subtitle with guaranteed min-height */}

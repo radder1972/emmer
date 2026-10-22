@@ -1,6 +1,6 @@
 import React from 'react';
-import { Terminal } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
+import { RadderIconTerminal } from './RadderNavIcons';
 
 export const Manifesto: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ export const Manifesto: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left relative z-10">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono mb-8 shadow-sm">
-          <Terminal className="w-3.5 h-3.5 text-[#ff451a]" />
+          <RadderIconTerminal size={14} strokeWidth={2} color="#ff451a" />
           <span>HET MANIFEST // PLACEHOLDER</span>
         </div>
 
