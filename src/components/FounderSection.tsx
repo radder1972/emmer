@@ -42,14 +42,32 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Portrait photo in Swiss Editorial styling (Sticky on Desktop) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-start lg:sticky lg:top-36">
-            <div className="relative group max-w-sm w-full">
+            <div className="relative group max-w-sm w-full cursor-pointer select-none">
               {/* Subtle architectural frame */}
               <div className="relative rounded-2xl overflow-hidden border border-neutral-300 shadow-md bg-white">
-                <img
-                  src="/matthias-radder.png"
-                  alt="Matthias Radder — Oprichter van RaddeR"
-                  className="w-full h-auto aspect-square object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-                />
+                {/* Image Stage Container with Cross-Fade */}
+                <div className="relative aspect-square w-full overflow-hidden bg-neutral-100">
+                  {/* Default / Focused portrait */}
+                  <img
+                    src="/matthias-radder.png"
+                    alt="Matthias Radder — Oprichter van RaddeR"
+                    className="w-full h-full object-cover object-top transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:opacity-0"
+                  />
+                  {/* Smiling / Laughing portrait on mouseover */}
+                  <img
+                    src="/matthias-radder-smile.png"
+                    alt="Matthias Radder — Lachend"
+                    className="absolute inset-0 w-full h-full object-cover object-top opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out scale-100 group-hover:scale-105 pointer-events-none"
+                    aria-hidden="true"
+                  />
+                  {/* Subtle live indicator badge on top right */}
+                  <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/20 text-white text-[10px] font-mono flex items-center gap-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ff451a] animate-pulse"></span>
+                    <span className="group-hover:hidden">FOCUS</span>
+                    <span className="hidden group-hover:inline text-[#ff451a] font-bold">SPARREN</span>
+                  </div>
+                </div>
+
                 {/* Monograph caption bar */}
                 <div className="p-4 bg-white/95 backdrop-blur-sm border-t border-neutral-200 flex items-center justify-between text-left">
                   <div>
@@ -60,7 +78,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
                       Oprichter, Systeemarchitect & Maker
                     </div>
                   </div>
-                  <div className="w-6 h-6 flex items-center justify-center text-[#ff451a]">
+                  <div className="w-6 h-6 flex items-center justify-center text-[#ff451a] group-hover:scale-110 transition-transform">
                     <RadderLogo size={22} color="#ff451a" glow={false} />
                   </div>
                 </div>
