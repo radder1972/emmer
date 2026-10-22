@@ -5,7 +5,6 @@ import {
   RadderIconStrateeg,
   RadderIconArchitect,
   RadderIconMaker,
-  RadderIconSparkles,
 } from './RadderNavIcons';
 
 interface HeroProps {
@@ -17,59 +16,65 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
   return (
     <section className="relative pt-40 sm:pt-48 lg:pt-56 pb-20 md:pb-24 overflow-hidden">
       {/* Subtle Warm Paper Glow & Monograph Vignette */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-gradient-to-b from-black/[0.03] to-transparent blur-[140px] -z-10 pointer-events-none" />
-
-      {/* Page Watermark: Manifest Icon in Vermilion Accent */}
-      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 lg:top-40 pointer-events-none select-none text-[#ff451a] opacity-[0.05] sm:opacity-[0.07] -z-10 transition-opacity">
-        <RadderIconManifest size={480} strokeWidth={1.5} color="#ff451a" />
-      </div>
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-gradient-to-b from-black/[0.03] to-transparent blur-[140px] -z-20 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Hero Main Content */}
-        <div className="max-w-4xl text-left space-y-7">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm">
-            <RadderIconSparkles size={14} strokeWidth={2} color="#ff451a" />
-            <span>Lorem Ipsum Dolor // <strong className="text-neutral-950 font-bold">Placeholder</strong></span>
+        {/* Unified Page Header Zone */}
+        <div className="relative mb-12">
+          {/* Page Signature Icon Watermark: tilted half schuin behind heading & subhead */}
+          <div
+            className="absolute -top-12 sm:-top-16 left-8 sm:left-24 lg:left-36 pointer-events-none select-none text-[#ff451a] opacity-[0.06] sm:opacity-[0.08] -rotate-12 transform z-0"
+            aria-hidden="true"
+          >
+            <RadderIconManifest size={440} strokeWidth={1.5} color="#ff451a" />
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-neutral-950 leading-[1.05]">
-            Lorem ipsum dolor sit amet,{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-950 via-neutral-800 to-neutral-600">
-              consectetur adipiscing elit.
-            </span>
-          </h1>
+          {/* Hero Main Content: all left, exact same size */}
+          <div className="relative z-10 max-w-4xl text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm mb-4">
+              <RadderIconManifest size={14} strokeWidth={2} color="#ff451a" />
+              <span>HET MANIFEST // PLACEHOLDER</span>
+            </div>
 
-          <p className="text-lg sm:text-xl text-neutral-600 max-w-2xl font-normal leading-relaxed">
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 leading-[1.08]">
+              Lorem ipsum dolor sit amet, <br />
+              <span className="text-neutral-600">
+                consectetur adipiscing elit.
+              </span>
+            </h1>
 
-          {/* Quick Action CTAs */}
-          <div className="pt-2 flex flex-wrap items-center gap-4">
-            <button
-              onClick={onExploreCases}
-              className="px-6 py-3.5 rounded-xl bg-neutral-950 hover:bg-neutral-800 text-white font-bold font-mono text-sm tracking-wide transition-all shadow-md flex items-center gap-2 group cursor-pointer"
-            >
-              <span>Bekijk Cases</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed">
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
 
-            <button
-              onClick={() => {
-                const el = document.getElementById('motor-vs-sausje');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="px-5 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-neutral-900 border border-neutral-300 font-mono text-sm tracking-wide transition-all flex items-center gap-2 shadow-sm cursor-pointer"
-            >
-              <Layers className="w-4 h-4 text-neutral-900" />
-              <span>Vergelijking</span>
-            </button>
+            {/* Quick Action CTAs */}
+            <div className="pt-6 flex flex-wrap items-center gap-4">
+              <button
+                onClick={onExploreCases}
+                className="px-6 py-3.5 rounded-xl bg-neutral-950 hover:bg-neutral-800 text-white font-bold font-mono text-sm tracking-wide transition-all shadow-md flex items-center gap-2 group cursor-pointer"
+              >
+                <span>Bekijk Cases</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
 
-            <button
-              onClick={onOpenContact}
-              className="px-4 py-3.5 rounded-xl text-neutral-600 hover:text-black font-mono text-sm transition-colors cursor-pointer"
-            >
-              Direct Sparren →
-            </button>
+              <button
+                onClick={() => {
+                  const el = document.getElementById('motor-vs-sausje');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="px-5 py-3.5 rounded-xl bg-white hover:bg-neutral-100 text-neutral-900 border border-neutral-300 font-mono text-sm tracking-wide transition-all flex items-center gap-2 shadow-sm cursor-pointer"
+              >
+                <Layers className="w-4 h-4 text-neutral-900" />
+                <span>Vergelijking</span>
+              </button>
+
+              <button
+                onClick={onOpenContact}
+                className="px-4 py-3.5 rounded-xl text-neutral-600 hover:text-black font-mono text-sm transition-colors cursor-pointer"
+              >
+                Direct Sparren →
+              </button>
+            </div>
           </div>
         </div>
 

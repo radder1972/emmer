@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, ArrowRight, Check, Copy, MapPin, ShieldCheck } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
-import { RadderIconTerminal, RadderIconSparren } from './RadderNavIcons';
+import { RadderIconSparren } from './RadderNavIcons';
 
 interface ContactSectionProps {
   initialBrief?: string;
@@ -36,29 +36,38 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
 
   return (
     <section id="contact" className="pt-40 sm:pt-48 lg:pt-56 pb-24 bg-[#f8f7f4] relative overflow-hidden">
-      {/* Page Watermark: Sparren Icon in Vermilion Accent */}
-      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 lg:top-40 pointer-events-none select-none text-[#ff451a] opacity-[0.05] sm:opacity-[0.07] z-0 transition-opacity">
-        <RadderIconSparren size={480} strokeWidth={1.5} color="#ff451a" />
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Unified Page Header Zone */}
+        <div className="relative mb-12">
+          {/* Page Signature Icon Watermark: tilted half schuin behind heading & subhead */}
+          <div
+            className="absolute -top-12 sm:-top-16 left-8 sm:left-24 lg:left-36 pointer-events-none select-none text-[#ff451a] opacity-[0.06] sm:opacity-[0.08] -rotate-12 transform z-0"
+            aria-hidden="true"
+          >
+            <RadderIconSparren size={440} strokeWidth={1.5} color="#ff451a" />
+          </div>
+
+          {/* Sparren Main Content: all left, exact same size */}
+          <div className="relative z-10 max-w-4xl text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm mb-4">
+              <RadderIconSparren size={14} strokeWidth={2} color="#ff451a" />
+              <span>SPARREN // PLACEHOLDER</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 leading-[1.08]">
+              Lorem ipsum dolor <br />
+              <span className="text-neutral-600">sit amet consectetur.</span>
+            </h1>
+
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 text-left">
           {/* Left Column: Direct Info */}
           <div className="lg:col-span-5 space-y-8">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono mb-4">
-                <RadderIconTerminal size={14} strokeWidth={2} color="#ff451a" />
-                <span>SPARREN // PLACEHOLDER</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-950 tracking-tight">
-                Lorem ipsum dolor <br />
-                <span className="text-neutral-600">sit amet consectetur.</span>
-              </h2>
-              <p className="mt-4 text-neutral-600 text-base leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-
             {/* Direct Contact Card */}
             <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-sm space-y-4">
               <div className="flex items-center justify-between">

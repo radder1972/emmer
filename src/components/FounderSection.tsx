@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
-import { RadderIconTerminal, RadderIconAbout } from './RadderNavIcons';
+import { RadderIconAbout } from './RadderNavIcons';
 
 interface FounderSectionProps {
   onNavigateToSparren?: () => void;
@@ -10,12 +10,35 @@ interface FounderSectionProps {
 export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSparren }) => {
   return (
     <section className="pt-40 sm:pt-48 lg:pt-56 pb-20 bg-[#f8f7f4] relative overflow-hidden">
-      {/* Page Watermark: Over Ons (Triad) Icon in Vermilion Accent */}
-      <div className="absolute right-4 sm:right-12 lg:right-24 top-28 sm:top-36 lg:top-40 pointer-events-none select-none text-[#ff451a] opacity-[0.05] sm:opacity-[0.07] z-0 transition-opacity">
-        <RadderIconAbout size={480} strokeWidth={1.5} color="#ff451a" />
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Unified Page Header Zone */}
+        <div className="relative mb-12">
+          {/* Page Signature Icon Watermark: tilted half schuin behind heading & subhead */}
+          <div
+            className="absolute -top-12 sm:-top-16 left-8 sm:left-24 lg:left-36 pointer-events-none select-none text-[#ff451a] opacity-[0.06] sm:opacity-[0.08] -rotate-12 transform z-0"
+            aria-hidden="true"
+          >
+            <RadderIconAbout size={440} strokeWidth={1.5} color="#ff451a" />
+          </div>
+
+          {/* Over Ons Main Content: all left, exact same size */}
+          <div className="relative z-10 max-w-4xl text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/[0.04] border border-neutral-300 text-neutral-800 text-xs font-mono shadow-sm mb-4">
+              <RadderIconAbout size={14} strokeWidth={2} color="#ff451a" />
+              <span>OVER RaddeR // DE MAKER ACHTER DE MOTOR</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 leading-[1.08]">
+              Complexe softwareproblemen los je op <br />
+              <span className="text-neutral-600">door direct te bouwen aan de motor.</span>
+            </h1>
+
+            <p className="mt-4 text-base sm:text-lg text-neutral-600 max-w-2xl font-normal leading-relaxed">
+              Ik ben Matthias Radder, de maker achter RaddeR. Geen overdrachtsmomenten of managementlagen, maar strategie, architectuur en code in één directe feedbackloop.
+            </p>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Portrait photo in Swiss Editorial styling (Sticky on Desktop) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-start lg:sticky lg:top-36">
@@ -47,19 +70,8 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
 
           {/* Right Column: Authentic Narrative & Philosophy */}
           <div className="lg:col-span-7 text-left space-y-7">
-            {/* Category Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-neutral-200/60 border border-neutral-300 text-neutral-800 text-xs font-mono">
-              <RadderIconTerminal size={14} strokeWidth={2} color="#ff451a" />
-              <span>OVER RaddeR // DE MAKER ACHTER DE MOTOR</span>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight leading-[1.1]">
-              Complexe softwareproblemen los je op <br />
-              <span className="text-neutral-600">door direct te bouwen aan de motor.</span>
-            </h1>
-
             <p className="text-base sm:text-lg text-neutral-800 leading-relaxed font-normal">
-              Ik ben <strong className="text-neutral-950 font-bold">Matthias Radder</strong>, de maker achter RaddeR. Mijn werk draait om één fundamentele overtuiging: complexe softwareproblemen los je niet op met overdrachtsmomenten en managementlagen, maar door direct te bouwen aan de motor. Ik elimineer de ruis tussen analist, designer en bouwer door strategie, architectuur en code in één directe feedbackloop te vangen. Je spreekt met degene die het systeem daadwerkelijk ontwerpt en bouwt.
+              Mijn werk draait om één fundamentele overtuiging: complexe softwareproblemen los je niet op met overdrachtsmomenten en managementlagen, maar door direct te bouwen aan de motor. Ik elimineer de ruis tussen analist, designer en bouwer door strategie, architectuur en code in één directe feedbackloop te vangen. Je spreekt met degene die het systeem daadwerkelijk ontwerpt en bouwt.
             </p>
 
             {/* Two Core Competence Pillars */}
