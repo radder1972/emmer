@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Sliders, ArrowRight, CheckCircle2, Terminal, Zap } from 'lucide-react';
+import { Sliders, ArrowRight, CheckCircle2, Zap } from 'lucide-react';
+import { MrLogo } from './MrLogo';
 
 interface ProjectCalculatorProps {
   onPlanSparringWithBrief: (brief: string) => void;
@@ -74,15 +75,15 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-left max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-4">
-            <Sliders className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/5 border border-white/15 text-zinc-300 text-xs font-mono mb-4">
+            <Sliders className="w-3.5 h-3.5 text-white" />
             <span>INTERACTIEVE PROJECT CONFIGURATOR</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
             Ontwerp Jouw Architectuur- <br />
-            <span className="text-emerald-400">en Roadmap Blauwdruk</span>
+            <span className="text-zinc-300">en Roadmap Blauwdruk</span>
           </h2>
-          <p className="mt-4 text-neutral-400 text-base sm:text-lg">
+          <p className="mt-4 text-zinc-400 text-base sm:text-lg">
             Kies jouw doel, domein en technische randvoorwaarden. Wij genereren direct een architecturaal voorstel.
           </p>
         </div>
@@ -93,7 +94,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
           <div className="lg:col-span-7 space-y-8 text-left">
             {/* Step 1: Goal */}
             <div className="p-6 rounded-2xl bg-[#11131b] border border-white/10">
-              <label className="text-xs font-mono uppercase text-emerald-400 font-bold tracking-wider block mb-3">
+              <label className="text-xs font-mono uppercase text-white font-bold tracking-wider block mb-3">
                 01. WAT IS HET PRIMAIRE DOEL?
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -103,12 +104,12 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
                     onClick={() => setGoal(g.id)}
                     className={`p-4 rounded-xl text-left transition-all border cursor-pointer ${
                       goal === g.id
-                        ? 'bg-emerald-950/30 border-emerald-400 text-white shadow-lg shadow-emerald-950/40'
-                        : 'bg-black/30 border-white/5 text-neutral-400 hover:border-white/20 hover:text-white'
+                        ? 'bg-white/15 border-white text-white shadow-lg shadow-black/60'
+                        : 'bg-black/30 border-white/5 text-zinc-400 hover:border-white/20 hover:text-white'
                     }`}
                   >
                     <div className="text-sm font-bold">{g.title}</div>
-                    <div className="text-xs text-neutral-400 mt-1">{g.desc}</div>
+                    <div className="text-xs text-zinc-400 mt-1">{g.desc}</div>
                   </button>
                 ))}
               </div>
@@ -116,7 +117,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
 
             {/* Step 2: Domain */}
             <div className="p-6 rounded-2xl bg-[#11131b] border border-white/10">
-              <label className="text-xs font-mono uppercase text-cyan-400 font-bold tracking-wider block mb-3">
+              <label className="text-xs font-mono uppercase text-zinc-300 font-bold tracking-wider block mb-3">
                 02. IN WELK DOMEIN BEVINDT ZICH DE LOGICA?
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -126,12 +127,12 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
                     onClick={() => setDomain(d.id)}
                     className={`p-3.5 rounded-xl text-left transition-all border cursor-pointer ${
                       domain === d.id
-                        ? 'bg-cyan-950/30 border-cyan-400 text-white shadow-lg shadow-cyan-950/40'
-                        : 'bg-black/30 border-white/5 text-neutral-400 hover:border-white/20 hover:text-white'
+                        ? 'bg-white/15 border-white text-white shadow-lg shadow-black/60'
+                        : 'bg-black/30 border-white/5 text-zinc-400 hover:border-white/20 hover:text-white'
                     }`}
                   >
                     <div className="text-sm font-bold">{d.name}</div>
-                    <div className="text-[11px] text-neutral-400 mt-0.5">{d.hint}</div>
+                    <div className="text-[11px] text-zinc-400 mt-0.5">{d.hint}</div>
                   </button>
                 ))}
               </div>
@@ -139,7 +140,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
 
             {/* Step 3: Critical Requirements */}
             <div className="p-6 rounded-2xl bg-[#11131b] border border-white/10">
-              <label className="text-xs font-mono uppercase text-purple-400 font-bold tracking-wider block mb-3">
+              <label className="text-xs font-mono uppercase text-zinc-300 font-bold tracking-wider block mb-3">
                 03. KRITISCHE ARCHITECTUUR-EISEN (SELECTEER MEERDERE)
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -151,13 +152,13 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
                       onClick={() => toggleFocus(opt.id)}
                       className={`p-3 rounded-lg text-left text-xs font-mono flex items-center justify-between border transition-all cursor-pointer ${
                         isChecked
-                          ? 'bg-purple-950/40 border-purple-400 text-purple-200'
-                          : 'bg-black/30 border-white/5 text-neutral-400 hover:border-white/15'
+                          ? 'bg-white/15 border-white text-white font-semibold'
+                          : 'bg-black/30 border-white/5 text-zinc-400 hover:border-white/15'
                       }`}
                     >
                       <span>{opt.label}</span>
                       <div className={`w-4 h-4 rounded flex items-center justify-center shrink-0 ml-2 ${
-                        isChecked ? 'bg-purple-400 text-black' : 'border border-neutral-600'
+                        isChecked ? 'bg-white text-black' : 'border border-zinc-600'
                       }`}>
                         {isChecked && <CheckCircle2 className="w-3.5 h-3.5" />}
                       </div>
@@ -170,15 +171,17 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
 
           {/* Blueprint Output: Right 5 columns */}
           <div className="lg:col-span-5 sticky top-24">
-            <div className="rounded-2xl bg-gradient-to-b from-[#131722] to-[#0c0e14] border-2 border-emerald-500/40 p-6 sm:p-8 shadow-2xl text-left space-y-6">
+            <div className="rounded-2xl bg-gradient-to-b from-[#151824] to-[#0c0e14] border-2 border-white/30 p-6 sm:p-8 shadow-2xl text-left space-y-6">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <div className="flex items-center gap-2">
-                  <Terminal className="w-5 h-5 text-emerald-400" />
+                <div className="flex items-center gap-2.5">
+                  <div className="w-6 h-6 flex items-center justify-center">
+                    <MrLogo size={22} />
+                  </div>
                   <span className="text-xs font-mono uppercase tracking-wider text-white font-bold">
                     ARCHITECTUUR BLAUWDRUK
                   </span>
                 </div>
-                <span className="text-[10px] font-mono text-emerald-400 px-2 py-0.5 rounded bg-emerald-950/80 border border-emerald-500/30">
+                <span className="text-[10px] font-mono text-white px-2 py-0.5 rounded bg-white/10 border border-white/20">
                   AUTO_GENERATED
                 </span>
               </div>
@@ -186,27 +189,27 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
               {/* Blueprint details */}
               <div className="space-y-4">
                 <div>
-                  <div className="text-[11px] font-mono text-neutral-500 uppercase">GESCHATTE DOORLOOPTIJD</div>
+                  <div className="text-[11px] font-mono text-zinc-500 uppercase">GESCHATTE DOORLOOPTIJD</div>
                   <div className="text-lg font-bold text-white mt-0.5 flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-emerald-400" />
+                    <Zap className="w-4 h-4 text-white" />
                     <span>{getEstimatedTimeline()}</span>
                   </div>
                 </div>
 
                 <div>
-                  <div className="text-[11px] font-mono text-neutral-500 uppercase">DOMEIN & COMPATIBILITEIT</div>
-                  <div className="text-sm font-semibold text-neutral-200 mt-0.5">
+                  <div className="text-[11px] font-mono text-zinc-500 uppercase">DOMEIN & COMPATIBILITEIT</div>
+                  <div className="text-sm font-semibold text-zinc-200 mt-0.5">
                     {domains.find(d => d.id === domain)?.name} — Volledige domeinspecifieke logica
                   </div>
                 </div>
 
                 <div>
-                  <div className="text-[11px] font-mono text-neutral-500 uppercase">AANBEVOLEN MOTOR STACK</div>
+                  <div className="text-[11px] font-mono text-zinc-500 uppercase">AANBEVOLEN MOTOR STACK</div>
                   <div className="flex flex-wrap gap-1.5 mt-2">
                     {getRecommendedStack().map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 rounded bg-black/60 border border-emerald-500/20 text-xs font-mono text-emerald-300"
+                        className="px-2 py-1 rounded bg-black/60 border border-white/15 text-xs font-mono text-zinc-200"
                       >
                         {tech}
                       </span>
@@ -214,8 +217,8 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-black/50 border border-white/5 space-y-2 text-xs text-neutral-300 font-mono">
-                  <div className="text-neutral-500 font-bold">&gt; MR_DIRECT_APPROACH</div>
+                <div className="p-4 rounded-xl bg-black/50 border border-white/5 space-y-2 text-xs text-zinc-300 font-mono">
+                  <div className="text-white font-bold">&gt; MR_DIRECT_APPROACH</div>
                   <div>• Geen overbodige meetings met tussenpersonen</div>
                   <div>• Direct sparren met de architect & maker</div>
                   <div>• Eigenaarschap van alle intellectuele eigendom & code</div>
@@ -225,7 +228,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
               {/* Action Button */}
               <button
                 onClick={handleSendConfig}
-                className="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-mono font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-4 rounded-xl bg-white hover:bg-zinc-200 text-black font-mono font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-white/10 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Neem Deze Blauwdruk Mee Naar Sparringsessie</span>
                 <ArrowRight className="w-4 h-4" />

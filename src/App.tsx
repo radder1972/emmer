@@ -33,7 +33,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0b0d12] text-neutral-100 selection:bg-emerald-500 selection:text-black antialiased font-sans">
+    <div className="min-h-screen bg-[#090b10] text-zinc-100 selection:bg-white selection:text-black antialiased font-sans">
       {/* Fixed top navigation */}
       <Navbar onOpenContact={scrollToContact} />
 

@@ -28,7 +28,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     category: 'Zorg & Healthtech',
     client: 'Gespecialiseerde GGZ & Psychologiepraktijk',
     year: '2025',
-    accentColor: '#10b981', // emerald
+    accentColor: '#ffffff', // monochrome pure white
     impactMetrics: [
       { label: 'Privacy & AVG', value: '100% Local-First' },
       { label: 'Diagnostische Tijdwinst', value: '-65%' },
