@@ -396,10 +396,43 @@ export const RadderIconTableTennis: React.FC<RadderIconProps> = ({
 );
 
 /**
+ * 08. ENGINE ICON (DE MOTOR)
+ * Mechanical cylinder block, precision pistons and crankshaft.
+ * Direct visual emblem of "bouwen aan de motor".
+ */
+export const RadderIconEngine: React.FC<RadderIconProps> = ({
+  className = '',
+  size = 16,
+  color = 'currentColor',
+  strokeWidth = 2,
+}) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="none"
+    stroke={color}
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`inline-block shrink-0 align-middle ${className}`}
+    aria-label="De Motor Icon"
+  >
+    <rect x="4" y="8" width="16" height="12" rx="2" />
+    <path d="M 8 8 L 8 4 L 16 4 L 16 8" />
+    <path d="M 2 13 L 4 13" />
+    <path d="M 20 13 L 22 13" />
+    <circle cx="12" cy="14" r="3" />
+    <line x1="12" y1="11" x2="12" y2="9.5" />
+    <line x1="12" y1="17" x2="12" y2="18.5" />
+  </svg>
+);
+
+/**
  * Dispatcher component to render icon by PageId
  */
 export const RadderNavIcon: React.FC<{
-  id: 'manifest' | 'cases' | 'over-ons' | 'sparren';
+  id: 'manifest' | 'cases' | 'over-ons' | 'sparren' | 'iconen';
   className?: string;
   size?: number | string;
   color?: string;
@@ -414,6 +447,8 @@ export const RadderNavIcon: React.FC<{
       return <RadderIconAbout {...props} />;
     case 'sparren':
       return <RadderIconSparren {...props} />;
+    case 'iconen':
+      return <RadderIconEngine {...props} />;
     default:
       return null;
   }

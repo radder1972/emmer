@@ -115,6 +115,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   <RadderNavIcon id="sparren" size={14} strokeWidth={2} className="text-neutral-500 group-hover:text-neutral-950 transition-colors" />
                   <span>Sparren</span>
                 </a>
+                <a
+                  href="/iconen"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav('iconen');
+                  }}
+                  className="inline-flex items-center gap-2 hover:text-neutral-950 transition-colors text-left cursor-pointer group"
+                >
+                  <RadderNavIcon id="iconen" size={14} strokeWidth={2} className="text-neutral-500 group-hover:text-neutral-950 transition-colors" />
+                  <span>Iconen</span>
+                </a>
               </div>
             </div>
 

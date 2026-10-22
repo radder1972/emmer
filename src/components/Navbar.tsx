@@ -4,7 +4,7 @@ import { RadderLogo } from './RadderLogo';
 import { RadderWordmark } from './RadderWordmark';
 import { RadderNavIcon } from './RadderNavIcons';
 
-export type PageId = 'manifest' | 'cases' | 'over-ons' | 'sparren';
+export type PageId = 'manifest' | 'cases' | 'over-ons' | 'sparren' | 'iconen';
 
 interface NavbarProps {
   currentPage: PageId;
@@ -23,6 +23,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'cases', name: 'Cases' },
     { id: 'over-ons', name: 'Over Ons' },
     { id: 'sparren', name: 'Sparren' },
+    { id: 'iconen', name: 'Iconen' },
   ];
 
   return (

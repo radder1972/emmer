@@ -4,6 +4,7 @@ import { ManifestPage } from './pages/ManifestPage';
 import { CasesPage } from './pages/CasesPage';
 import { AboutPage } from './pages/AboutPage';
 import { SparrenPage } from './pages/SparrenPage';
+import { IconsPage } from './pages/IconsPage';
 import { Footer } from './components/Footer';
 
 const PAGE_TITLES: Record<PageId, string> = {
@@ -11,14 +12,16 @@ const PAGE_TITLES: Record<PageId, string> = {
   cases: 'RaddeR — Cases',
   'over-ons': 'RaddeR — Over Ons',
   sparren: 'RaddeR — Sparren',
+  iconen: 'RaddeR — Iconen // Design System',
 };
 
 const resolvePageFromLocation = (): PageId => {
-  // Check pathname first (e.g. /cases, /over-ons, /sparren, /manifest)
+  // Check pathname first (e.g. /cases, /over-ons, /sparren, /manifest, /iconen)
   const path = window.location.pathname.toLowerCase().replace(/^\/|\/$/g, '');
   if (path === 'cases') return 'cases';
   if (path === 'over-ons' || path === 'overons' || path === 'about') return 'over-ons';
   if (path === 'sparren' || path === 'contact') return 'sparren';
+  if (path === 'iconen' || path === 'icons') return 'iconen';
   if (path === 'manifest') return 'manifest';
 
   // Fallback to hash if on root or static file (e.g. /#cases)
@@ -26,6 +29,7 @@ const resolvePageFromLocation = (): PageId => {
   if (hash === 'cases') return 'cases';
   if (hash === 'over-ons' || hash === 'overons' || hash === 'about') return 'over-ons';
   if (hash === 'sparren' || hash === 'contact') return 'sparren';
+  if (hash === 'iconen' || hash === 'icons') return 'iconen';
 
   return 'manifest';
 };
@@ -100,6 +104,13 @@ export const App: React.FC = () => {
         )}
 
         {currentPage === 'sparren' && <SparrenPage />}
+
+        {currentPage === 'iconen' && (
+          <IconsPage
+            onOpenContact={openContact}
+            onNavigateToCases={() => navigateTo('cases')}
+          />
+        )}
       </main>
 
       {/* Global Footer with direct page navigation */}
