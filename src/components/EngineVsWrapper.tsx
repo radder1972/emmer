@@ -118,10 +118,10 @@ export const EngineVsWrapper: React.FC = () => {
         {/* Quote banner from the brief */}
         <div className="mt-12 p-6 rounded-xl bg-zinc-900/60 border border-white/10 text-center relative overflow-hidden">
           <div className="text-base sm:text-lg italic text-zinc-200 font-medium max-w-4xl mx-auto">
-            "Je combineert de creatieve executiesnelheid van een modern designbureau met de architectuurkennis van een softwareontwikkelaar en de commerciële blik van een business strateeg."
+            "Wij combineren de creatieve executiesnelheid van een modern designbureau met de architectuurkennis van een softwareontwikkelaar en de commerciële blik van een business strateeg."
           </div>
           <div className="mt-3 text-xs font-mono text-zinc-400">
-            — HET INTERDISCIPLINAIRE SCHAKELEN WAARDOOR JOUW OPLOSSINGEN DIEPER GAAN
+            — HET INTERDISCIPLINAIRE SCHAKELEN WAARDOOR ONZE OPLOSSINGEN DIEPER GAAN
           </div>
         </div>
       </div>

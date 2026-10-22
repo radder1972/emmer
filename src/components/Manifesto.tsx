@@ -23,7 +23,7 @@ export const Manifesto: React.FC = () => {
         {/* Big quote statement */}
         <div className="relative pl-6 sm:pl-10 border-l-2 border-white mb-12">
           <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white leading-relaxed tracking-tight">
-            "Jouw allergrootste onderscheidend vermogen zit niet in het visuele sausje, maar in het vermogen om{' '}
+            "Ons allergrootste onderscheidend vermogen zit niet in het visuele sausje, maar in het vermogen om{' '}
             <span className="text-white font-bold underline decoration-white/40 underline-offset-8">
               complexe, domeinspecifieke logica direct te vertalen naar werkende, schaalbare bedrijfsmodellen.
             </span>"
@@ -37,7 +37,7 @@ export const Manifesto: React.FC = () => {
               De Illusie van de Buitenkant
             </h3>
             <p>
-              In de wereld van digitale bureaus is er een gigantische kloof ontstaan. Aan de ene kant staan de design- en marketingbureaus: zij maken verbluffende praatplaatjes, hippe mockups en WordPress-sites die er leuk uitzien, totdat je vraagt naar de echte motor. Zodra er specifieke vakkennis, privacy-by-design, realtime datakoppelingen of enterprise security bij komt kijken, haken ze af.
+              In de wereld van digitale bureaus is er een gigantische kloof ontstaan. Aan de ene kant staan de design- en marketingbureaus: zij maken verbluffende praatplaatjes, hippe mockups en WordPress-sites die er leuk uitzien, totdat er gevraagd wordt naar de echte motor. Zodra er specifieke vakkennis, privacy-by-design, realtime datakoppelingen of enterprise security bij komt kijken, haken ze af.
             </p>
             <p>
               Aan de andere kant staan de logge IT-consultancies: zij schrijven rapporten van honderden pagina's, rekenen torenhoge uurtarieven, maar hebben nog nooit een koper verliefd laten worden op een product of een winkelpui ontworpen.

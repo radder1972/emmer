@@ -46,10 +46,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                 Laten we de motor <br />
-                <span className="text-zinc-300">voor jouw visie bouwen.</span>
+                <span className="text-zinc-300">voor jullie visie bouwen.</span>
               </h2>
               <p className="mt-4 text-zinc-400 text-base leading-relaxed">
-                Geen accountmanagers of bureau-laagjes. Je spart rechtstreeks met de architecten en makers van EMMER over domeinlogica, schaalbaarheid en commerciële realisatie.
+                Geen accountmanagers of bureau-laagjes. Spar rechtstreeks met ons over architectuur, domeinlogica, schaalbaarheid en commerciële realisatie.
               </p>
             </div>
 
@@ -118,7 +118,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                   </div>
                   <h3 className="text-2xl font-bold text-white">Aanvraag Ontvangen!</h3>
                   <p className="text-zinc-300 text-sm max-w-md mx-auto">
-                    Bedankt voor het delen van je briefing. EMMER neemt binnen 24 uur persoonlijk contact met je op om te sparren over de technische en commerciële motor.
+                    Bedankt voor het delen van de briefing. EMMER neemt binnen 24 uur persoonlijk contact op om te sparren over de technische en commerciële motor.
                   </p>
                   <button
                     onClick={() => setFormSubmitted(false)}
@@ -139,7 +139,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-xs font-mono text-zinc-400 uppercase tracking-wider block mb-2 font-bold">
-                        Jouw Naam
+                        Naam
                       </label>
                       <input
                         type="text"

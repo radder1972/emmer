@@ -80,11 +80,11 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
             <span>INTERACTIEVE PROJECT CONFIGURATOR</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Ontwerp Jouw Architectuur- <br />
+            Ontwerp Onze Architectuur- <br />
             <span className="text-zinc-300">en Roadmap Blauwdruk</span>
           </h2>
           <p className="mt-4 text-zinc-400 text-base sm:text-lg">
-            Kies jouw doel, domein en technische randvoorwaarden. Wij genereren direct een architecturaal voorstel.
+            Kies het doel, het domein en de technische randvoorwaarden. Wij genereren direct een architecturaal voorstel.
           </p>
         </div>
 

@@ -48,12 +48,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08]">
               Waar een standaard bureau stopt bij de buitenkant,{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-400">
-                bouwt EMMER de motor.
+                bouwen wij de motor.
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed">
-              Jouw allergrootste onderscheidend vermogen zit in het vermogen om{' '}
+              Ons allergrootste onderscheidend vermogen zit in het vermogen om{' '}
               <span className="text-white font-semibold">complexe, domeinspecifieke logica direct te vertalen naar werkende, schaalbare bedrijfsmodellen</span>. 
               Van local-first diagnostiek voor psychologen en ruimtelijke kadaster-matching, tot enterprise cloudvoorstellen en fysieke storefronts.
             </p>

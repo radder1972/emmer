@@ -109,7 +109,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       technicalExecution: 'EMMER formuleerde en structureerde voorstellen waarin OpenShift cluster topologies gecombineerd werden met eBPF instrumentation. Hierdoor ontstaat real-time inzicht in netwerkverkeer en security-anomalieën direct in de kernel, zonder overhead voor applicatie-containers.',
       businessResult: 'Geloofwaardige, diepgaande enterprise architecture proposals die direct resoneerden bij Chief Architects en Principal Engineers.'
     },
-    quote: 'Je snapt de onderliggende techniek en architectuur—of je nu spart over Red Hat OpenShift en eBPF of een agentic IDE inzet.'
+    quote: 'Wij snappen de onderliggende techniek en architectuur—of we nu sparren over Red Hat OpenShift en eBPF of een agentic IDE inzetten.'
   },
   {
     id: 'true-time-thai',
@@ -190,7 +190,7 @@ export const PHILOSOPHY_PILLARS = [
     number: '02',
     title: 'Diepe Systeemarchitectuur',
     subtitle: 'Van Local-First & eBPF tot Agentic IDEs',
-    description: 'De techniek onder de motorkap bepaalt de levensduur van je investering. Of het nu gaat om zero-knowledge local-first webapplicaties, openbare geo-APIs van het Kadaster, of enterprise OpenShift clusters met eBPF telemetry.',
+    description: 'De techniek onder de motorkap bepaalt de levensduur van elke digitale investering. Of het nu gaat om zero-knowledge local-first webapplicaties, openbare geo-APIs van het Kadaster, of enterprise OpenShift clusters met eBPF telemetry.',
     icon: 'Layers',
     bullets: [
       'Local-first privacy: data blijft waar het hoort (AVG-waterdicht)',
