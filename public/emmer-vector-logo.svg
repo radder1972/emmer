@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" fill="none" className="w-full h-full">
+  <!-- Outer Hexagon Chassis (Solid Onyx Black) -->
+  <polygon
+    points="200,20 373.2,120 373.2,320 200,420 26.8,320 26.8,120"
+    fill="#14151a"
+    stroke="#262832"
+    strokeWidth="2"
+  />
+
+  <!-- Top-Left Isometric 3D Cube Facet (Dark Slate Grey) -->
+  <polygon
+    points="200,60 110,112 110,230 200,282"
+    fill="#42454e"
+  />
+
+  <!-- Center Slope Transition Facet (Medium Slate Grey) -->
+  <polygon
+    points="110,112 155,138 155,205 110,230"
+    fill="#616674"
+  />
+
+  <!-- Letter M: Left Vertical Pillar (Pure White) -->
+  <polygon
+    points="62,140 102,117 102,310 62,333"
+    fill="#ffffff"
+  />
+
+  <!-- Letter M: Inner Dark Shadow Cavity -->
+  <polygon
+    points="102,190 152,255 152,320 102,260"
+    fill="#14151a"
+  />
+
+  <!-- Letter M: Center V Diagonal Slope (Pure White) -->
+  <polygon
+    points="102,190 126,176 172,236 152,255"
+    fill="#ffffff"
+  />
+
+  <!-- Letter R: Upper Loop Outer Contour (Pure White) -->
+  <polygon
+    points="200,60 305,120 338,140 338,225 305,245 200,185"
+    fill="#ffffff"
+  />
+
+  <!-- Letter R: Inner Hole Cavity (Dark Onyx Cutout) -->
+  <polygon
+    points="200,115 285,164 285,198 200,150"
+    fill="#14151a"
+  />
+
+  <!-- Letter R: Center Vertical Stem (Pure White) -->
+  <polygon
+    points="162,165 200,185 200,370 162,348"
+    fill="#ffffff"
+  />
+
+  <!-- Letter R: Diagonal Kick Leg (Pure White) -->
+  <polygon
+    points="200,225 305,285 280,328 175,268"
+    fill="#ffffff"
+  />
+
+  <!-- Letter R: Diagonal Leg Isometric Shadow Facet -->
+  <polygon
+    points="200,225 225,210 305,256 305,285"
+    fill="#32353d"
+  />
+</svg>

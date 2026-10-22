@@ -36,7 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Left Side: Brand Name & Minimalist Nav Links */}
+          {/* Left Side: Clean Studio Typographic Identity & Navigation Links */}
           <div className="flex items-center gap-8 lg:gap-12">
             <a href="#" className="flex flex-col text-left group">
               <span className="font-black text-white tracking-widest text-xl font-mono leading-none group-hover:text-zinc-200 transition-colors">
@@ -48,7 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             </a>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-6">
+            <nav className="hidden lg:flex items-center gap-7">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             </nav>
           </div>
 
-          {/* Right Side: Action Button + MUCH BIGGER EMMER LOGO ON THE RIGHT */}
+          {/* Right Side: Sparren CTA + Pure Vector Re-Drawn EMMER Logo */}
           <div className="flex items-center gap-4 sm:gap-6">
             <button
               onClick={onOpenContact}
@@ -71,16 +71,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
               <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
 
-            {/* The Prominent, Much Larger EMMER Logo on the Right */}
+            {/* Pure Mathematical Vector Logo on the Right */}
             <a
               href="#"
-              title="EMMER — Naar boven"
+              title="EMMER — Terug naar boven"
               className="relative flex items-center justify-center p-1 rounded-xl hover:bg-white/5 transition-all group cursor-pointer"
             >
-              <div className="transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.3)]">
+              <div className="transition-transform duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.35)]">
                 <EmmerLogo
-                  size={scrolled ? 58 : 72}
-                  variant="retina"
+                  size={scrolled ? 56 : 68}
+                  variant="vector"
                   glow={true}
                   className="transition-all duration-300"
                 />
