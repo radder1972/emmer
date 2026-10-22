@@ -24,24 +24,29 @@ export const RadderLogo: React.FC<RadderLogoProps> = ({
   color,
   tight = true,
 }) => {
-  const defaultSize = size ?? 64;
-  const pixelWidth =
-    width !== undefined
-      ? typeof width === "number"
-        ? `${width}px`
-        : width
-      : typeof defaultSize === "number"
-      ? `${defaultSize}px`
-      : defaultSize;
-
   const pixelHeight =
     height !== undefined
       ? typeof height === "number"
         ? `${height}px`
         : height
-      : typeof defaultSize === "number"
-      ? `${Math.round(defaultSize * (500 / 634))}px`
-      : "auto";
+      : size !== undefined
+      ? typeof size === "number"
+        ? `${Math.round(size * (490 / 624))}px`
+        : "auto"
+      : "50px";
+
+  const pixelWidth =
+    width !== undefined
+      ? typeof width === "number"
+        ? `${width}px`
+        : width
+      : height !== undefined && typeof height === "number"
+      ? `${Math.round(height * (624 / 490))}px`
+      : size !== undefined
+      ? typeof size === "number"
+        ? `${size}px`
+        : size
+      : "64px";
 
   if (variant === "retina") {
     return (
@@ -69,7 +74,7 @@ export const RadderLogo: React.FC<RadderLogoProps> = ({
       style={{ width: pixelWidth, height: pixelHeight }}
     >
       <svg
-        viewBox={tight ? "195 130 634 500" : "0 0 1024 768"}
+        viewBox={tight ? "200 136 624 490" : "0 0 1024 768"}
         fill={color || "currentColor"}
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full"

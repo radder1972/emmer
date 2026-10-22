@@ -28,34 +28,34 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="flex flex-col md:flex-row items-start justify-between gap-10 pb-12 border-b border-neutral-300">
           {/* Identity & Emblem */}
           <div className="space-y-4 max-w-md">
-            <div className="flex items-center gap-4">
-              <a
-                href="/"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNav('manifest');
-                }}
-                className="w-16 h-14 flex items-center justify-center text-neutral-950 cursor-pointer"
-                title="RaddeR — Naar Manifest"
-              >
-                <RadderLogo size={60} color="#0a0a0a" glow={false} />
-              </a>
-              <div>
-                <a
-                  href="/"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNav('manifest');
-                  }}
-                  className="text-left cursor-pointer"
-                >
-                  <RadderWordmark height={32} color="#0a0a0a" glow={false} />
-                </a>
-                <div className="text-[10px] text-neutral-600 uppercase tracking-wider mt-1 font-semibold">
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNav('manifest');
+              }}
+              className="inline-flex items-start gap-4 group cursor-pointer text-left"
+              title="RaddeR — Naar Manifest"
+            >
+              {/* Scaled logo flush-aligned at the top */}
+              <div className="shrink-0 flex items-start text-neutral-950 group-hover:opacity-85 transition-opacity">
+                <RadderLogo height={56} tight={true} color="#0a0a0a" glow={false} />
+              </div>
+
+              {/* Wordmark + Subtitle flush-aligned at the top to form a rectangular block */}
+              <div className="flex flex-col justify-between" style={{ height: 56 }}>
+                <RadderWordmark
+                  height={36}
+                  tight={true}
+                  color="#0a0a0a"
+                  glow={false}
+                  className="text-neutral-950 group-hover:opacity-85 transition-opacity"
+                />
+                <div className="text-[10px] sm:text-[11px] font-mono text-neutral-600 uppercase tracking-wider font-semibold leading-none group-hover:text-neutral-950 transition-colors">
                   SYSTEMS & PRODUCT ARCHITECTURE
                 </div>
               </div>
-            </div>
+            </a>
 
             <p className="text-xs text-neutral-700 leading-relaxed font-sans max-w-sm">
               Complexe domeinlogica direct vertaald naar werkende, schaalbare software.
