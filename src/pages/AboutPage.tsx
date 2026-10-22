@@ -1,7 +1,6 @@
 import React from 'react';
 import { FounderSection } from '../components/FounderSection';
 import { Pillars } from '../components/Pillars';
-import { TechRadar } from '../components/TechRadar';
 import { ArrowRight, Terminal } from 'lucide-react';
 
 interface AboutPageProps {
@@ -20,9 +19,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({
 
       {/* 2. De Driehoek: Architect, Strateeg, Maker */}
       <Pillars onNavigateToCases={onNavigateToCases} />
-
-      {/* 3. De Stack: Tech Toolkit Radar */}
-      <TechRadar />
 
       {/* Bottom CTA for About */}
       <section className="py-16 bg-[#f4f3ef] border-t border-neutral-300 text-center">
