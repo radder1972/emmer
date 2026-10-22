@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Cpu } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderWordmark } from './RadderWordmark';
 import { RadderNavIcon } from './RadderNavIcons';
@@ -136,7 +136,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             © {new Date().getFullYear()} RaddeR STUDIO. Alle rechten voorbehouden.
           </div>
           <div className="flex items-center gap-2 text-neutral-700">
-            <Cpu className="w-3.5 h-3.5 text-[#ff451a]" />
+            <RadderLogo size={18} color="#ff451a" glow={false} />
             <span className="font-semibold">RaddeR — SYSTEMS & PRODUCT ARCHITECTURE</span>
           </div>
         </div>
