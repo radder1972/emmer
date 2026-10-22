@@ -2,10 +2,24 @@ import React from 'react';
 import { ArrowUp, Cpu } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 import { RadderWordmark } from './RadderWordmark';
+import type { PageId } from './Navbar';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (page: PageId) => void;
+  onOpenContact?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenContact }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNav = (page: PageId) => {
+    if (onNavigate) {
+      onNavigate(page);
+    } else {
+      window.location.hash = `#${page}`;
+    }
   };
 
   return (
@@ -15,11 +29,20 @@ export const Footer: React.FC = () => {
           {/* Identity & Emblem */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-14 flex items-center justify-center text-white">
+              <button
+                onClick={() => handleNav('manifest')}
+                className="w-16 h-14 flex items-center justify-center text-white cursor-pointer"
+                title="RaddeR — Naar Manifest"
+              >
                 <RadderLogo size={60} glow={true} />
-              </div>
+              </button>
               <div>
-                <RadderWordmark height={32} className="text-white" glow={true} />
+                <button
+                  onClick={() => handleNav('manifest')}
+                  className="text-left cursor-pointer"
+                >
+                  <RadderWordmark height={32} className="text-white" glow={true} />
+                </button>
                 <div className="text-[10px] text-zinc-400 uppercase tracking-wider mt-1 font-semibold">
                   SYSTEMS & PRODUCT ARCHITECTURE
                 </div>
@@ -43,46 +66,79 @@ export const Footer: React.FC = () => {
             </div>
             <ul className="space-y-2 text-zinc-400">
               <li>
-                <a href="#cases" className="hover:text-white transition-colors">
-                  • Schematherapie Suite (Local-first & AI)
-                </a>
+                <button
+                  onClick={() => handleNav('cases')}
+                  className="hover:text-white transition-colors cursor-pointer text-left"
+                >
+                  • Schematherapie Suite (Local-First GGZ)
+                </button>
               </li>
               <li>
-                <a href="#cases" className="hover:text-white transition-colors">
+                <button
+                  onClick={() => handleNav('cases')}
+                  className="hover:text-white transition-colors cursor-pointer text-left"
+                >
                   • Nieuwbouw Perceelkiezer (PDOK / Kadaster)
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#cases" className="hover:text-white transition-colors">
+                <button
+                  onClick={() => handleNav('cases')}
+                  className="hover:text-white transition-colors cursor-pointer text-left"
+                >
                   • Enterprise OpenShift & eBPF Telemetry
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#cases" className="hover:text-white transition-colors">
+                <button
+                  onClick={() => handleNav('cases')}
+                  className="hover:text-white transition-colors cursor-pointer text-left"
+                >
                   • True Time Thai (Pattaya App & Storefront)
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#cases" className="hover:text-white transition-colors">
+                <button
+                  onClick={() => handleNav('cases')}
+                  className="hover:text-white transition-colors cursor-pointer text-left"
+                >
                   • Palrom Products ("From Tree to Trade" Fleet)
-                </a>
+                </button>
               </li>
             </ul>
           </div>
 
-          {/* Quick Jump & Back to top */}
+          {/* Quick Navigation & Back to top */}
           <div className="md:col-span-3 flex flex-col justify-between space-y-6">
             <div className="space-y-2">
               <div className="text-white font-bold uppercase tracking-wider text-[11px]">
-                SNEL NAAR
+                MENU
               </div>
-              <div className="flex flex-col space-y-1.5">
-                <a href="#manifest" className="hover:text-white transition-colors">Manifest</a>
-                <a href="#driehoek" className="hover:text-white transition-colors">De Interdisciplinaire Driehoek</a>
-                <a href="#vergelijker" className="hover:text-white transition-colors">Motor vs. Sausje</a>
-                <a href="#tech" className="hover:text-white transition-colors">Tech Toolkit Radar</a>
-                <a href="#calculator" className="hover:text-white transition-colors">Roadmap Blauwdruk</a>
-                <a href="#contact" className="hover:text-white transition-colors">Plan Sparringsessie</a>
+              <div className="flex flex-col space-y-2 font-mono text-xs">
+                <button
+                  onClick={() => handleNav('manifest')}
+                  className="hover:text-white transition-colors text-left cursor-pointer"
+                >
+                  → Manifest
+                </button>
+                <button
+                  onClick={() => handleNav('cases')}
+                  className="hover:text-white transition-colors text-left cursor-pointer"
+                >
+                  → Cases
+                </button>
+                <button
+                  onClick={() => handleNav('over-ons')}
+                  className="hover:text-white transition-colors text-left cursor-pointer"
+                >
+                  → Over Ons
+                </button>
+                <button
+                  onClick={onOpenContact}
+                  className="text-white font-bold hover:underline transition-all text-left cursor-pointer pt-1"
+                >
+                  → Plan Sparringsessie
+                </button>
               </div>
             </div>
 
@@ -112,4 +168,3 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
-

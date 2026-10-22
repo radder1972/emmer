@@ -1,73 +1,92 @@
-import React, { useState } from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Manifesto } from './components/Manifesto';
-import { EngineVsWrapper } from './components/EngineVsWrapper';
-import { Pillars } from './components/Pillars';
-import { CaseStudies } from './components/CaseStudies';
-import { TechRadar } from './components/TechRadar';
-import { ProjectCalculator } from './components/ProjectCalculator';
-import { ContactSection } from './components/ContactSection';
+import React, { useState, useEffect } from 'react';
+import { Navbar, type PageId } from './components/Navbar';
+import { ManifestPage } from './pages/ManifestPage';
+import { CasesPage } from './pages/CasesPage';
+import { AboutPage } from './pages/AboutPage';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
-  const [prefilledBrief, setPrefilledBrief] = useState<string>('');
-
-  const scrollToContact = () => {
-    const contactElem = document.getElementById('contact');
-    if (contactElem) {
-      contactElem.scrollIntoView({ behavior: 'smooth' });
-    }
+  // Parse initial page from hash or default to 'manifest'
+  const getInitialPage = (): PageId => {
+    const hash = window.location.hash.replace('#', '').toLowerCase();
+    if (hash === 'cases') return 'cases';
+    if (hash === 'over-ons' || hash === 'overons' || hash === 'about') return 'over-ons';
+    return 'manifest';
   };
 
-  const scrollToCases = () => {
-    const casesElem = document.getElementById('cases');
-    if (casesElem) {
-      casesElem.scrollIntoView({ behavior: 'smooth' });
-    }
+  const [currentPage, setCurrentPage] = useState<PageId>(getInitialPage);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '').toLowerCase();
+      if (hash === 'cases') {
+        setCurrentPage('cases');
+      } else if (hash === 'over-ons' || hash === 'overons' || hash === 'about') {
+        setCurrentPage('over-ons');
+      } else {
+        setCurrentPage('manifest');
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const navigateTo = (page: PageId) => {
+    setCurrentPage(page);
+    window.location.hash = `#${page}`;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handlePlanWithBrief = (brief: string) => {
-    setPrefilledBrief(brief);
-    scrollToContact();
+  const openContact = () => {
+    if (currentPage !== 'over-ons') {
+      setCurrentPage('over-ons');
+      window.location.hash = '#over-ons';
+      // Wait for DOM to render then scroll to contact
+      setTimeout(() => {
+        const contactElem = document.getElementById('contact');
+        if (contactElem) {
+          contactElem.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const contactElem = document.getElementById('contact');
+      if (contactElem) {
+        contactElem.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
     <div className="min-h-screen bg-[#090b10] text-zinc-100 selection:bg-white selection:text-black antialiased font-sans">
-      {/* Fixed top navigation */}
-      <Navbar onOpenContact={scrollToContact} />
+      {/* Fixed Navigation Bar with exact items: Manifest | Cases | Over Ons */}
+      <Navbar
+        currentPage={currentPage}
+        onNavigate={navigateTo}
+        onOpenContact={openContact}
+      />
 
       <main>
-        {/* Hero Section */}
-        <Hero
-          onOpenContact={scrollToContact}
-          onExploreCases={scrollToCases}
-        />
+        {currentPage === 'manifest' && (
+          <ManifestPage
+            onNavigateToCases={() => navigateTo('cases')}
+            onNavigateToAbout={() => navigateTo('over-ons')}
+            onOpenContact={openContact}
+          />
+        )}
 
-        {/* The Manifesto: "Waarom de Motor" */}
-        <Manifesto />
+        {currentPage === 'cases' && (
+          <CasesPage
+            onOpenContact={openContact}
+            onNavigateToAbout={() => navigateTo('over-ons')}
+          />
+        )}
 
-        {/* Interactive Comparison: Buitenkant vs. De Motor */}
-        <EngineVsWrapper />
-
-        {/* The 3 Pillars: Domein, Architectuur, Executie */}
-        <Pillars />
-
-        {/* 5 Real Deep-Dive Case Studies */}
-        <CaseStudies onOpenContact={scrollToContact} />
-
-        {/* The Tech Radar: OpenShift, eBPF, Local-First, GIS, Antigravity */}
-        <TechRadar />
-
-        {/* Interactive Architecture & Roadmap Builder */}
-        <ProjectCalculator onPlanSparringWithBrief={handlePlanWithBrief} />
-
-        {/* Direct Contact & Sparring Section */}
-        <ContactSection initialBrief={prefilledBrief} />
+        {currentPage === 'over-ons' && <AboutPage />}
       </main>
 
-      {/* Global Footer */}
-      <Footer />
+      {/* Global Footer with direct page navigation */}
+      <Footer onNavigate={navigateTo} onOpenContact={openContact} />
     </div>
   );
 };
