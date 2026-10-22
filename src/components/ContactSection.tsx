@@ -179,7 +179,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                       <option value="Herbouw van Standaard Template naar Echte Motor">Herbouw van Standaard Template naar Echte Motor</option>
                       <option value="Local-First & Zorgdiagnostiek">Local-First Zorgapplicatie & AI-Diagnostiek</option>
                       <option value="Ruimtelijke Geodata (Kadaster / PDOK)">Ruimtelijke Geodata (Kadaster / PDOK Matching)</option>
-                      <option value="Enterprise OpenShift & eBPF Sparring">Enterprise OpenShift & eBPF Telemetry Sparring</option>
                       <option value="Omnichannel (App + Storefront of Wagenpark)">Omnichannel (App + Storefront of Wagenpark)</option>
                     </select>
                   </div>

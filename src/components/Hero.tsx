@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
               <span>01. DE ARCHITECT</span>
             </div>
             <p className="text-sm text-neutral-600 leading-relaxed">
-              Local-first applicaties, eBPF telemetrie en OpenShift cluster topologies.
+              Local-first applicaties, robuuste data-architectuur en veilige webtechnologie.
             </p>
           </div>
 
@@ -109,7 +109,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onExploreCases }) => 
           <div className="flex flex-wrap gap-4 text-[11px] text-neutral-500">
             <span>• 100% AVG LOCAL-FIRST</span>
             <span>• LIVE PDOK / KADASTER</span>
-            <span>• RED HAT OPENSHIFT / EBPF</span>
+            <span>• VEILIGE DATA-ARCHITECTUUR</span>
             <span>• PHYSICAL STOREFRONTS & FLEETS</span>
           </div>
         </div>

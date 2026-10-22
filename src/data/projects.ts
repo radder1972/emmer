@@ -2,7 +2,7 @@ export interface CaseStudy {
   id: string;
   title: string;
   subtitle: string;
-  category: 'Zorg & Healthtech' | 'Proptech & Geodata' | 'Enterprise Cloud' | 'Fysiek & Digitaal' | 'B2B & E-commerce';
+  category: 'Zorg & Healthtech' | 'Proptech & Geodata' | 'Fysiek & Digitaal' | 'B2B & E-commerce';
   client: string;
   year: string;
   impactMetrics: { label: string; value: string }[];
@@ -82,36 +82,6 @@ export const CASE_STUDIES: CaseStudy[] = [
     quote: 'Koppeling met openbare data om daadwerkelijk grond en kopers te matchen.',
   },
   {
-    id: 'enterprise-cloud-ebpf',
-    title: 'Enterprise Cloud & eBPF Telemetry',
-    subtitle: 'Cloudarchitectuur & kernel observabiliteit',
-    category: 'Enterprise Cloud',
-    client: 'High-Tech Enterprise (ASML Calibre)',
-    year: '2024 - 2025',
-    accentColor: '#8b5cf6',
-    impactMetrics: [
-      { label: 'Platform', value: 'Red Hat OpenShift' },
-      { label: 'Observability', value: 'eBPF Kernel Probes' },
-      { label: 'Security Model', value: 'Zero-Trust' },
-    ],
-    standardAgencyApproach: 'Oppervlakkige marketing-presentaties zonder technische diepgang.',
-    theEngineApproach: 'OpenShift cluster topologies en eBPF kernel-telemetrie voor ASML-kaliber infrastructuur.',
-    architecturalHighlights: [
-      'Red Hat OpenShift cluster topologies en Kubernetes operators',
-      'eBPF kernel-level packet inspection en Cilium service mesh',
-      'Zero-trust microsegmentatie en automatische compliance',
-      'Agentic IDE workflows (Antigravity) voor snelle validatie',
-    ],
-    techStack: ['Red Hat OpenShift', 'eBPF / Cilium', 'Kubernetes', 'Linux Kernel', 'Antigravity', 'Vercel Edge'],
-    detailedStory: {
-      problem: 'Latency en security bottlenecks in grootschalige industriële cloudomgevingen.',
-      domainLogic: 'Microsecond latency, kernel-security en deterministische datastromen.',
-      technicalExecution: 'RaddeR combineerde OpenShift topologies met eBPF instrumentation voor realtime inzicht zonder overhead.',
-      businessResult: 'Audit-ready enterprise architectuurvoorstellen die direct overtuigden.',
-    },
-    quote: 'Wij snappen de techniek: van eBPF kernel-probes tot agentic edge deployments.',
-  },
-  {
     id: 'true-time-thai',
     title: 'True Time Thai (Pattaya)',
     subtitle: 'Van mobiele PWA tot fysieke storefront in Pattaya',
@@ -189,13 +159,13 @@ export const PHILOSOPHY_PILLARS = [
   {
     number: '02',
     title: 'Systeemarchitectuur',
-    subtitle: 'Local-First, eBPF & Cloud',
-    description: 'Duurzame techniek: zero-knowledge local-first apps, openbare geo-koppelingen en enterprise OpenShift clusters met eBPF telemetrie.',
+    subtitle: 'Robuust & Schaalbaar',
+    description: 'Duurzame techniek: zero-knowledge local-first applicaties, openbare datakoppelingen en veilige, snelle webapplicaties.',
     icon: 'Layers',
     bullets: [
       'Local-first privacy: 100% AVG-proof',
-      'High-scale infrastructuren & kernel observabiliteit',
-      'Snelle iteratie via agentic workflows',
+      'Directe API-koppelingen met openbare registers',
+      'Type-safe interfaces en snelle iteratie',
     ],
   },
   {
@@ -252,25 +222,6 @@ export const ENGINE_COMPARISONS = [
     },
   },
   {
-    category: 'Enterprise Cloud',
-    standardBureau: {
-      title: 'Standaard Bureau',
-      items: [
-        'Marketingpraatjes over "de cloud"',
-        'Geen antwoord op microsecond latency of security',
-        'Onbruikbaar voor Principal Engineers',
-      ],
-    },
-    mrEngine: {
-      title: 'RaddeR Product Engine',
-      items: [
-        'OpenShift topologies op ASML-niveau',
-        'eBPF kernel-telemetrie & Cilium mesh',
-        'Agentic workflows voor snelle validatie',
-      ],
-    },
-  },
-  {
     category: 'Omnichannel & Fysiek',
     standardBureau: {
       title: 'Standaard Bureau',
@@ -301,8 +252,8 @@ export const TECH_RADAR_ITEMS = [
     skills: ['PDOK Open Services', 'Kadaster WFS / WMS', 'GeoJSON Streaming', 'Spatial Matching'],
   },
   {
-    group: 'Enterprise Cloud & Infra',
-    skills: ['Red Hat OpenShift', 'eBPF / Cilium Telemetrie', 'Kubernetes Clusters', 'Antigravity Agentic IDE'],
+    group: 'Moderne Webtechnologie & APIs',
+    skills: ['React & TypeScript', 'Tailwind Tokens', 'REST & GraphQL APIs', 'Edge Deployments'],
   },
   {
     group: 'Product & Brand Executie',

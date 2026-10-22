@@ -15,14 +15,14 @@ export const TechRadar: React.FC = () => {
       ]
     },
     {
-      category: 'Enterprise Cloud & Observability',
+      category: 'Moderne Cloud & API Architectuur',
       icon: Shield,
-      description: 'Enterprise-schaal (ASML-kaliber) met mission-critical observabiliteit.',
+      description: 'Schaalbare backends, type-safe API\'s en veilige data-architectuur.',
       items: [
-        { name: 'Red Hat OpenShift', detail: 'Container orchestration & operator workflows' },
-        { name: 'eBPF Telemetry (Cilium)', detail: 'Zero-overhead kernel packet inspection' },
-        { name: 'Zero-Trust Architecture', detail: 'Microsegmentatie & geautomatiseerde mTLS' },
-        { name: 'Kubernetes Topologies', detail: 'Multi-tenant isolation & self-healing state' }
+        { name: 'TypeScript & Node.js', detail: 'End-to-end type safety en robuuste data-validatie' },
+        { name: 'Serverless & Edge APIs', detail: 'Snelle data-verwerking met sub-second latency' },
+        { name: 'Veilige Data Encryptie', detail: 'End-to-end beveiliging & privacy-by-design' },
+        { name: 'Geautomatiseerde CI/CD', detail: 'Stabiele deployments en betrouwbare release-pipelines' }
       ]
     },
     {
@@ -59,7 +59,7 @@ export const TechRadar: React.FC = () => {
             <span>TECHNISCHE EN STRATEGISCHE TOOLKIT</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-950 tracking-tight">
-            De Stack: Van Linux Kernel <br />
+            De Stack: Van Diepe Code <br />
             <span className="text-neutral-600">
               tot Fysieke Storefront.
             </span>

@@ -37,7 +37,7 @@ export const ManifestPage: React.FC<ManifestPageProps> = ({
               Klaar om de gerealiseerde motoren te bekijken?
             </h3>
             <p className="text-sm text-neutral-600 mt-1">
-              Bekijk 5 geselecteerde cases: van zorgdiagnostiek tot eBPF telemetry.
+              Bekijk 4 geselecteerde cases: van zorgdiagnostiek tot kadaster-koppelingen en complete wagenparken.
             </p>
           </div>
           <div className="flex items-center gap-3">

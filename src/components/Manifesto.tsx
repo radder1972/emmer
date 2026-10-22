@@ -59,8 +59,8 @@ export const Manifesto: React.FC = () => {
             <p className="text-xs text-neutral-600">Data en privacy blijven gegarandeerd bij de eindgebruiker.</p>
           </div>
           <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm">
-            <div className="text-neutral-950 font-mono text-sm font-bold mb-1">03 / ENTERPRISE LEVEL</div>
-            <p className="text-xs text-neutral-600">OpenShift, eBPF en mission-critical kernel observabiliteit.</p>
+            <div className="text-neutral-950 font-mono text-sm font-bold mb-1">03 / SCHAALBAAR</div>
+            <p className="text-xs text-neutral-600">Moderne webarchitectuur, veilige dataopslag en robuuste API-koppelingen.</p>
           </div>
           <div className="p-4 rounded-xl bg-white border border-neutral-200/90 shadow-sm">
             <div className="text-neutral-950 font-mono text-sm font-bold mb-1">04 / TASTBAAR</div>

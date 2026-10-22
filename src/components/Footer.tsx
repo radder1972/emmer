@@ -106,18 +106,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   }}
                   className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
                 >
-                  • Enterprise OpenShift & eBPF Telemetry
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/cases"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNav('cases');
-                  }}
-                  className="hover:text-neutral-950 transition-colors cursor-pointer text-left block"
-                >
                   • True Time Thai (Pattaya App & Storefront)
                 </a>
               </li>

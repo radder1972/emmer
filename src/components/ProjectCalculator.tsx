@@ -14,14 +14,13 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
   const goals = [
     { id: 'new-product', title: 'Nieuw Product Bouwen', desc: 'Van nulpunt naar werkend product' },
     { id: 'rebuild', title: 'Platform Herbouwen', desc: 'Van template naar schaalbare motor' },
-    { id: 'enterprise-sparring', title: 'Enterprise Sparring', desc: 'OpenShift, eBPF & architectuur' },
+    { id: 'api-architecture', title: 'Cloud & API Koppeling', desc: 'Robuuste data-architectuur' },
     { id: 'omnichannel', title: 'Fysiek + Digitaal', desc: 'App + storefront of wagenpark' }
   ];
 
   const domains = [
     { id: 'health', name: 'Zorg & Healthtech', hint: 'Diagnostiek, local-first' },
     { id: 'geo', name: 'Vastgoed & Ruimtelijk', hint: 'Kadaster, PDOK, kavels' },
-    { id: 'enterprise', name: 'High-Tech & Enterprise', hint: 'OpenShift, eBPF, telemetry' },
     { id: 'b2b-trade', name: 'B2B & Logistiek', hint: 'Supply chain, fleet livery' },
     { id: 'retail-mobility', name: 'Retail & Mobiliteit', hint: 'Verhuur, storefront' }
   ];
@@ -44,7 +43,7 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
   };
 
   const getEstimatedTimeline = () => {
-    if (goal === 'enterprise-sparring') return '1 tot 3 strategische sprints';
+    if (goal === 'api-architecture') return '2 tot 4 weken gerichte sprint';
     if (goal === 'new-product') return '4 tot 8 weken van nulpunt tot live motor';
     if (goal === 'rebuild') return '3 tot 6 weken refactoring & migratie';
     return '4 tot 6 weken integraal concept';
@@ -54,10 +53,9 @@ export const ProjectCalculator: React.FC<ProjectCalculatorProps> = ({ onPlanSpar
     const stack = ['TypeScript', 'Modern React', 'Tailwind CSS'];
     if (domain === 'health' || primaryFocus.includes('local-first')) stack.push('IndexedDB Local-First', 'WebCrypto');
     if (domain === 'geo' || primaryFocus.includes('spatial-data')) stack.push('PDOK Open Data API', 'Kadaster WFS', 'WebGIS');
-    if (domain === 'enterprise') stack.push('Red Hat OpenShift', 'eBPF / Cilium', 'Kubernetes');
     if (primaryFocus.includes('ai-reasoning')) stack.push('AI Hypothese Engine', 'Structured Reasoning');
     if (domain === 'retail-mobility' || primaryFocus.includes('fleet-storefront')) stack.push('Vector Livery CAD', 'Signage Specs');
-    stack.push('Agentic IDE Pipeline (Antigravity)');
+    stack.push('API Architecture & Edge Deployments');
     return stack;
   };
 

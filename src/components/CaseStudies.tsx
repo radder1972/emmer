@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CASE_STUDIES } from '../data/projects';
 import type { CaseStudy } from '../data/projects';
 import { CaseModal } from './CaseModal';
-import { Cpu, Layers, Shield, Globe, MapPin, Truck, ChevronRight } from 'lucide-react';
+import { Cpu, Layers, Globe, MapPin, Truck, ChevronRight } from 'lucide-react';
 import { RadderLogo } from './RadderLogo';
 
 interface CaseStudiesProps {
@@ -13,7 +13,7 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Alle');
   const [activeModalCase, setActiveModalCase] = useState<CaseStudy | null>(null);
 
-  const categories = ['Alle', 'Zorg & Healthtech', 'Proptech & Geodata', 'Enterprise Cloud', 'Fysiek & Digitaal', 'B2B & E-commerce'];
+  const categories = ['Alle', 'Zorg & Healthtech', 'Proptech & Geodata', 'Fysiek & Digitaal', 'B2B & E-commerce'];
 
   const filteredCases = selectedCategory === 'Alle'
     ? CASE_STUDIES
@@ -25,8 +25,6 @@ export const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenContact }) => {
         return <Cpu className="w-4 h-4 text-neutral-900" />;
       case 'Proptech & Geodata':
         return <MapPin className="w-4 h-4 text-neutral-800" />;
-      case 'Enterprise Cloud':
-        return <Shield className="w-4 h-4 text-neutral-700" />;
       case 'Fysiek & Digitaal':
         return <Globe className="w-4 h-4 text-neutral-800" />;
       case 'B2B & E-commerce':
