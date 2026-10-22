@@ -60,8 +60,8 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigateToSpar
                       Oprichter, Systeemarchitect & Maker
                     </div>
                   </div>
-                  <div className="w-6 h-6 flex items-center justify-center text-neutral-950">
-                    <RadderLogo size={22} color="#0a0a0a" glow={false} />
+                  <div className="w-6 h-6 flex items-center justify-center text-[#ff451a]">
+                    <RadderLogo size={22} color="#ff451a" glow={false} />
                   </div>
                 </div>
               </div>

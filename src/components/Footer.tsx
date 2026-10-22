@@ -39,8 +39,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               title="RaddeR — Naar Manifest"
             >
               {/* Logo flush left */}
-              <div className="text-neutral-950 group-hover:opacity-80 transition-opacity">
-                <RadderLogo size={64} tight={true} color="#0a0a0a" glow={false} />
+              <div className="text-[#ff451a] group-hover:opacity-80 transition-opacity">
+                <RadderLogo size={64} tight={true} color="#ff451a" glow={false} />
               </div>
 
               {/* Wordmark + Subtitle flush left */}

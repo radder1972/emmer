@@ -102,8 +102,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   size={96}
                   variant="vector"
                   glow={false}
-                  color="#0a0a0a"
-                  className="text-neutral-950"
+                  color="#ff451a"
+                  className="text-[#ff451a]"
                 />
               </div>
             </a>

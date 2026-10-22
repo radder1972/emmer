@@ -19,8 +19,8 @@ export const CaseModal: React.FC<CaseModalProps> = ({ caseStudy, onClose, onSpar
         {/* Top Header Bar */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-200 bg-[#f4f3ef]">
           <div className="flex items-center gap-3">
-            <div className="w-6 h-6 flex items-center justify-center text-neutral-950">
-              <RadderLogo size={22} color="#0a0a0a" />
+            <div className="w-6 h-6 flex items-center justify-center text-[#ff451a]">
+              <RadderLogo size={22} color="#ff451a" />
             </div>
             <span className="text-xs font-mono uppercase tracking-wider text-neutral-600">
               {caseStudy.category} // {caseStudy.year}

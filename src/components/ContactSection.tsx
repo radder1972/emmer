@@ -74,8 +74,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialBrief }) 
                 <span className="text-xs font-mono uppercase tracking-wider text-neutral-500 font-bold">
                   DIRECT CONTACT
                 </span>
-                <div className="w-6 h-6 flex items-center justify-center text-neutral-950">
-                  <RadderLogo size={22} color="#0a0a0a" />
+                <div className="w-6 h-6 flex items-center justify-center text-[#ff451a]">
+                  <RadderLogo size={22} color="#ff451a" />
                 </div>
               </div>
 
