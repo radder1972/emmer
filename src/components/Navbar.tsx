@@ -42,14 +42,15 @@ export const Navbar: React.FC<NavbarProps> = ({
               title="RaddeR — Naar Manifest"
             >
               <RadderWordmark
-                height={48}
+                height={42}
                 className="text-neutral-950 group-hover:text-neutral-700 transition-colors"
                 color="#0a0a0a"
                 glow={false}
               />
-              <span className="text-[10px] sm:text-[11px] font-mono text-neutral-600 tracking-wider uppercase mt-1 font-semibold group-hover:text-neutral-900 transition-colors">
-                Van Prompt naar Productie
-              </span>
+              <div className="mt-1.5 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-neutral-950 border border-[#ff451a]/60 text-[#ff451a] font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider group-hover:border-[#ff451a] transition-colors shadow-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#ff451a] animate-pulse shrink-0"></span>
+                <span>VAN PROMPT NAAR PRODUCTIE</span>
+              </div>
             </a>
 
             {/* Desktop Navigation Links: Manifest | Cases | Over Ons | Sparren */}
